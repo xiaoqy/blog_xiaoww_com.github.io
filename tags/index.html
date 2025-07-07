@@ -49,7 +49,7 @@
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     // 检查是否为微信或 QQ 浏览器
-    if (/MicroMessenger|QQBrowser|MQQBrowser/i.test(userAgent)) {
+    if (/MicroMessenger|/QQ\/([\d.]+)|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
 
         // 创建公告栏容器
         const announcementBar = document.createElement('div');
@@ -1102,14 +1102,50 @@
 				</li>
 			
 				<li>
-					<a data-weight="2" href="/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/">
-						<i class="fa-solid fa-hashtag"></i>红色舞台
+					<a data-weight="1" href="/tags/CKG48/">
+						<i class="fa-solid fa-hashtag"></i>CKG48
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%97%A5%E6%BC%AB%E9%9F%B3%E4%B9%90/">
+						<i class="fa-solid fa-hashtag"></i>日漫音乐
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%9B%BD%E6%BC%AB%E9%9F%B3%E4%B9%90/">
+						<i class="fa-solid fa-hashtag"></i>国漫音乐
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%81%B6%E5%83%8F%E4%B8%8E%E7%B2%89%E4%B8%9D/">
+						<i class="fa-solid fa-hashtag"></i>偶像与粉丝
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E5%85%AC%E6%BC%94/">
+						<i class="fa-solid fa-hashtag"></i>公演
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E8%B7%AF%E6%BC%94/">
+						<i class="fa-solid fa-hashtag"></i>路演
 					</a>
 				</li>
 			
 				<li>
 					<a data-weight="8" href="/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/">
 						<i class="fa-solid fa-hashtag"></i>高新区
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/">
+						<i class="fa-solid fa-hashtag"></i>红色舞台
 					</a>
 				</li>
 			
@@ -1168,120 +1204,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="1" href="/tags/%E4%B8%AD%E4%BF%84%E5%95%86%E5%93%81%E5%BA%97/">
-						<i class="fa-solid fa-hashtag"></i>中俄商品店
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E8%BF%9B%E5%8F%A3%E9%9B%B6%E9%A3%9F/">
-						<i class="fa-solid fa-hashtag"></i>进口零食
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="4" href="/tags/%E9%9B%B6%E9%A3%9F/">
-						<i class="fa-solid fa-hashtag"></i>零食
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%BE%BF%E5%88%A9%E5%BA%97/">
-						<i class="fa-solid fa-hashtag"></i>便利店
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E7%8B%97%E7%8B%97/">
-						<i class="fa-solid fa-hashtag"></i>狗狗
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E5%8A%A8%E7%89%A9/">
-						<i class="fa-solid fa-hashtag"></i>动物
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="5" href="/tags/%E4%B9%9D%E9%BE%99%E5%9D%A1%E5%8C%BA/">
-						<i class="fa-solid fa-hashtag"></i>九龙坡区
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/CKG48/">
-						<i class="fa-solid fa-hashtag"></i>CKG48
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%97%A5%E6%BC%AB%E9%9F%B3%E4%B9%90/">
-						<i class="fa-solid fa-hashtag"></i>日漫音乐
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%9B%BD%E6%BC%AB%E9%9F%B3%E4%B9%90/">
-						<i class="fa-solid fa-hashtag"></i>国漫音乐
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%81%B6%E5%83%8F%E4%B8%8E%E7%B2%89%E4%B8%9D/">
-						<i class="fa-solid fa-hashtag"></i>偶像与粉丝
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E5%85%AC%E6%BC%94/">
-						<i class="fa-solid fa-hashtag"></i>公演
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E8%B7%AF%E6%BC%94/">
-						<i class="fa-solid fa-hashtag"></i>路演
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%BF%AB%E9%80%92%E5%91%98/">
-						<i class="fa-solid fa-hashtag"></i>快递员
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%BF%AB%E9%80%92/">
-						<i class="fa-solid fa-hashtag"></i>快递
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%8C%85%E8%A3%B9/">
-						<i class="fa-solid fa-hashtag"></i>包裹
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E8%B5%94%E5%81%BF/">
-						<i class="fa-solid fa-hashtag"></i>赔偿
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E8%B5%94%E4%BB%98/">
-						<i class="fa-solid fa-hashtag"></i>赔付
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%90%8C%E5%90%8D%E5%90%8C%E5%A7%93/">
-						<i class="fa-solid fa-hashtag"></i>同名同姓
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="2" href="/tags/IShowSpeed/">
 						<i class="fa-solid fa-hashtag"></i>IShowSpeed
 					</a>
@@ -1326,6 +1248,84 @@
 				<li>
 					<a data-weight="1" href="/tags/%E8%8D%A3%E6%98%8C%E5%8C%BA/">
 						<i class="fa-solid fa-hashtag"></i>荣昌区
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%B8%AD%E4%BF%84%E5%95%86%E5%93%81%E5%BA%97/">
+						<i class="fa-solid fa-hashtag"></i>中俄商品店
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E8%BF%9B%E5%8F%A3%E9%9B%B6%E9%A3%9F/">
+						<i class="fa-solid fa-hashtag"></i>进口零食
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="4" href="/tags/%E9%9B%B6%E9%A3%9F/">
+						<i class="fa-solid fa-hashtag"></i>零食
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%BE%BF%E5%88%A9%E5%BA%97/">
+						<i class="fa-solid fa-hashtag"></i>便利店
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E7%8B%97%E7%8B%97/">
+						<i class="fa-solid fa-hashtag"></i>狗狗
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E5%8A%A8%E7%89%A9/">
+						<i class="fa-solid fa-hashtag"></i>动物
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="5" href="/tags/%E4%B9%9D%E9%BE%99%E5%9D%A1%E5%8C%BA/">
+						<i class="fa-solid fa-hashtag"></i>九龙坡区
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%BF%AB%E9%80%92%E5%91%98/">
+						<i class="fa-solid fa-hashtag"></i>快递员
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%BF%AB%E9%80%92/">
+						<i class="fa-solid fa-hashtag"></i>快递
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%8C%85%E8%A3%B9/">
+						<i class="fa-solid fa-hashtag"></i>包裹
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E8%B5%94%E5%81%BF/">
+						<i class="fa-solid fa-hashtag"></i>赔偿
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E8%B5%94%E4%BB%98/">
+						<i class="fa-solid fa-hashtag"></i>赔付
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%90%8C%E5%90%8D%E5%90%8C%E5%A7%93/">
+						<i class="fa-solid fa-hashtag"></i>同名同姓
 					</a>
 				</li>
 			
@@ -2044,48 +2044,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="1" href="/tags/Sony/">
-						<i class="fa-solid fa-hashtag"></i>Sony
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/JBL/">
-						<i class="fa-solid fa-hashtag"></i>JBL
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E7%B4%A2%E5%B0%BC/">
-						<i class="fa-solid fa-hashtag"></i>索尼
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%AE%9E%E4%BD%93%E5%BA%97/">
-						<i class="fa-solid fa-hashtag"></i>实体店
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E8%80%B3%E6%9C%BA/">
-						<i class="fa-solid fa-hashtag"></i>耳机
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E9%9F%B3%E5%93%8D/">
-						<i class="fa-solid fa-hashtag"></i>音响
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E9%BE%99%E6%B9%96%E9%87%8D%E5%BA%86%E6%98%9F%E6%B1%87%E5%A4%A9%E8%A1%97/">
-						<i class="fa-solid fa-hashtag"></i>龙湖重庆星汇天街
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/AR/">
 						<i class="fa-solid fa-hashtag"></i>AR
 					</a>
@@ -2164,6 +2122,48 @@
 				</li>
 			
 				<li>
+					<a data-weight="1" href="/tags/Sony/">
+						<i class="fa-solid fa-hashtag"></i>Sony
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/JBL/">
+						<i class="fa-solid fa-hashtag"></i>JBL
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E7%B4%A2%E5%B0%BC/">
+						<i class="fa-solid fa-hashtag"></i>索尼
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%AE%9E%E4%BD%93%E5%BA%97/">
+						<i class="fa-solid fa-hashtag"></i>实体店
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E8%80%B3%E6%9C%BA/">
+						<i class="fa-solid fa-hashtag"></i>耳机
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E9%9F%B3%E5%93%8D/">
+						<i class="fa-solid fa-hashtag"></i>音响
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E9%BE%99%E6%B9%96%E9%87%8D%E5%BA%86%E6%98%9F%E6%B1%87%E5%A4%A9%E8%A1%97/">
+						<i class="fa-solid fa-hashtag"></i>龙湖重庆星汇天街
+					</a>
+				</li>
+			
+				<li>
 					<a data-weight="1" href="/tags/%E8%87%AA%E5%8A%A9%E9%A4%90/">
 						<i class="fa-solid fa-hashtag"></i>自助餐
 					</a>
@@ -2214,6 +2214,12 @@
 				<li>
 					<a data-weight="1" href="/tags/%E8%8B%B1%E6%96%87%E5%9C%B0%E5%9D%80/">
 						<i class="fa-solid fa-hashtag"></i>英文地址
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/">
+						<i class="fa-solid fa-hashtag"></i>圣诞季
 					</a>
 				</li>
 			
@@ -2304,12 +2310,6 @@
 				<li>
 					<a data-weight="1" href="/tags/%E5%BD%A9%E7%BB%98/">
 						<i class="fa-solid fa-hashtag"></i>彩绘
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/">
-						<i class="fa-solid fa-hashtag"></i>圣诞季
 					</a>
 				</li>
 			
