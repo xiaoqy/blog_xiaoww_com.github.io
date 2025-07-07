@@ -49,7 +49,7 @@
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     // 检查是否为微信或 QQ 浏览器
-    if (/MicroMessenger|/QQ\/([\d.]+)|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
+    if (/MicroMessenger|QQ\/([\d.]+)|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
 
         // 创建公告栏容器
         const announcementBar = document.createElement('div');
