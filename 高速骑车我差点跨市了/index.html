@@ -49,7 +49,7 @@
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     // 检查是否为微信或 QQ 浏览器
-    if (/MicroMessenger|QQ\/([\d.]+)|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
+    if (/MicroMessenger|QQ|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
 
         // 创建公告栏容器
         const announcementBar = document.createElement('div');
@@ -59,15 +59,15 @@
         announcementBar.style.paddingTop = '80px';
         announcementBar.style.paddingBottom = '10px';
         announcementBar.style.textAlign = 'center';
-        announcementBar.style.fontSize = '18px';
+        announcementBar.style.fontSize = '16px';
         announcementBar.style.fontWeight = 'bold';
-        announcementBar.style.color = 'red';
+        announcementBar.style.color = '#000';
         announcementBar.style.position = 'static';
         announcementBar.style.width = '100%';
         announcementBar.style.boxSizing = 'border-box'; // 确保宽度计算一致
         
         // 设置公告内容
-        announcementBar.textContent = '不推荐使用微信、QQ浏览本站，因为加载速度慢，页面渲染不流畅，体验不佳。请使用Chrome、Safari或其他浏览器中打开吧！';
+        announcementBar.textContent = '检测到您正在通过 微信 或 QQ 浏览本站，可能会影响功能体验、页面渲染和加载速度。请多使用 Chrome、Safari 或其他浏览器中打开我吧！';
 
         // 将公告栏插入到页面顶部
         document.body.insertBefore(announcementBar, document.body.firstChild);
@@ -1023,7 +1023,7 @@
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">现场体验索尼中高端旗舰耳机</span>
+						<span class="post-nav-title-item truncate max-w-48">现场体验索尼中高端旗舰耳机</span>
 						<span class="post-nav-item">上一篇</span>
 					</span>
 				</a>
@@ -1033,7 +1033,7 @@
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
 				<a class="next" rel="next" href="/%E6%88%91%E5%9C%A8%E7%92%A7%E5%B1%B1%E8%A1%97%E5%A4%B4%E7%9C%8B%E8%A7%81%E5%BF%83%E9%85%B8%E7%9A%84%E4%B8%80%E5%B9%95/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">我在璧山街头看见心酸的一幕</span>
+						<span class="post-nav-title-item truncate max-w-48">我在璧山街头看见心酸的一幕</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">

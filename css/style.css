@@ -4978,12 +4978,11 @@ html.is-animating .transition-fade-down {
   text-align: center;
 }
 @font-face {
-  font-family: 'LXGWWenKai';
+  font-family: 'LXGWWenKai'; /* 你的字体名称 */
   src: url("/fonts/LXGWWenKai-Medium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-/* 设置全局字体 */
 body {
-  font-family: 'LXGWWenKai', serif;
+  font-family: 'LXGWWenKai', sans-serif;
 }
