@@ -74,7 +74,7 @@
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
   
     // 判断是否是微信或QQ浏览器
-    if (/MicroMessenger|Chrome|QQ|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
+    if (/MicroMessenger|QQ|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
       const container = document.getElementById('announcement-insert');
       if (container) {
         container.innerHTML = `
@@ -86,8 +86,9 @@
             </button>
           <hr style="border: 1px solid #FF1493;" />
           检测到您正在通过 <span style="color:#FF1493; font-weight: bold">微信</span> 或 <span style="color:#FF1493; font-weight: bold">QQ</span> 浏览本站，可能会影响页面渲染效果、功能体验和加载速度。<br />
-          您可以点击右上角 <span style="color:#FF1493; font-weight: bold">· · ·</span> 再 <span style="color:#FF1493; font-weight: bold">通过浏览器</span> 打开哦！<br />
-          请多使用 <span style="color:#FF1493; font-weight: bold">Chrome</span>、<span style="color:#FF1493; font-weight: bold">Safari</span> 或 <span style="color:#FF1493; font-weight: bold">其他浏览器</span> 中打开我吧！😊
+          请点击右上角 <span style="color:#FF1493; font-weight: bold">· · ·</span> 再点 <span style="color:#FF1493; font-weight: bold">浏览器</span> 来打开我吧！😊<br />
+          如遇页面内容过多，针对于图片和视频，建议您使用 💻<span style="color:#FF1493; font-weight: bold">电脑设备</span> 来获取最佳体验。<br /> 
+          推荐 <span style="color:#FF1493; font-weight: bold">Chrome</span>、<span style="color:#FF1493; font-weight: bold">Safari</span> 或 <span style="color:#FF1493; font-weight: bold">其他浏览器</span> 。
           </div>
         </div>
         `;
@@ -930,15 +931,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E5%95%86%E4%B8%9A%E8%A1%97/">商业街</a>&nbsp;
+                        <a href="/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/">现场表演</a>&nbsp;
                     </li>
                 
                     <li>
                         | <a href="/tags/%E9%87%8D%E5%BA%86/">重庆</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/">现场表演</a>&nbsp;
                     </li>
                 
                     <li>
@@ -951,6 +948,10 @@
                 
                     <li>
                         | <a href="/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/">重庆熙街</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%95%86%E4%B8%9A%E8%A1%97/">商业街</a>&nbsp;
                     </li>
                 
                     <li>
@@ -1104,15 +1105,11 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/%E5%95%86%E4%B8%9A%E8%A1%97/">#商业街</a>&nbsp;
+				<a href="/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/">#现场表演</a>&nbsp;
 			</li>
 			
 			<li class="tag-item mx-0.5">
 				<a href="/tags/%E9%87%8D%E5%BA%86/">#重庆</a>&nbsp;
-			</li>
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/">#现场表演</a>&nbsp;
 			</li>
 			
 			<li class="tag-item mx-0.5">
@@ -1125,6 +1122,10 @@
 			
 			<li class="tag-item mx-0.5">
 				<a href="/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/">#重庆熙街</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%95%86%E4%B8%9A%E8%A1%97/">#商业街</a>&nbsp;
 			</li>
 			
 			<li class="tag-item mx-0.5">
