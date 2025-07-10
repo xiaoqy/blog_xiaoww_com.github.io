@@ -44,177 +44,9 @@
     
             
                 
-                    <style>
-  .announcement-bar {
-    background-color: #FFFF99;
-    margin: 20px auto 20px;
-    padding: 5px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 14px;
-    color: #000;
-    position: static;
-    width: 95%;
-    box-sizing: border-box;
-    box-shadow: 5px 10px 5px 1px rgba(0, 0, 0, .2);
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, .5);
-    display: static;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .announcement-content {
-    flex: 1;
-  }
-</style>
-
-<script data-swup-reload-script type="text/javascript">
-  function insertAnnouncement() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  
-    // 判断是否是微信或QQ浏览器
-    if (/MicroMessenger|QQ|Qzone|QQBrowser|MQQBrowser/i.test(userAgent)) {
-      const container = document.getElementById('announcement-insert');
-      if (container) {
-        container.innerHTML = `
-        <div class="announcement-bar">
-          <div class="announcement-content">
-          ⚠️<span style="font-weight: bold">本站浏览建议 </span>
-            <button id="closeButton" style="width:30px;height: 30px; margin-bottom: 5px; background-color: rgba(255, 0, 0, 0.2); border-radius: 15px" aria-label="关闭公告栏">
-              <span style="color: red; font-weight: bold">x</span>
-            </button>
-          <hr style="border: 1px solid #FF1493;" />
-          检测到您正在通过 <span style="color:#FF1493; font-weight: bold">微信</span> 或 <span style="color:#FF1493; font-weight: bold">QQ</span> 浏览本站，可能会影响页面渲染效果、功能体验和加载速度。<br />
-          请点击右上角 <span style="color:#FF1493; font-weight: bold">· · ·</span> 再点 <span style="color:#FF1493; font-weight: bold">浏览器</span> 来打开我吧！😊<br />
-          如遇页面内容过多，针对于图片和视频，建议您使用 💻<span style="color:#FF1493; font-weight: bold">电脑设备</span> 来获取最佳体验。<br /> 
-          推荐 <span style="color:#FF1493; font-weight: bold">Chrome</span>、<span style="color:#FF1493; font-weight: bold">Safari</span> 或 <span style="color:#FF1493; font-weight: bold">其他浏览器</span> 。
-          </div>
-        </div>
-        `;
-    
-        // 绑定关闭按钮事件，仅移除 announcement-bar 块
-        const closeButton = container.querySelector('#closeButton');
-        closeButton.addEventListener('click', function () {
-        const announcementDiv = container.querySelector('.announcement-bar');
-        if (announcementDiv) {
-          announcementDiv.remove();
-        }
-        });
-      }
-    }
-  }
-  
-  // 首次加载或硬刷新时触发
-  document.addEventListener('DOMContentLoaded', insertAnnouncement);
-  
-  // Swup 导航时触发
-  document.addEventListener('swup:content:replace', insertAnnouncement);
-
-  document.addEventListener('copy', function (event) {
-    let clipboardData = event.clipboardData || window.clipboardData;
-    if (!clipboardData) return;
-
-    let text = window.getSelection().toString();
-    if (text) {
-      event.preventDefault();
-
-      let copyrightNotice = '\r\n\r\n------\r\n作者：Allen Shaw\r\n链接：' + window.location.href + '\r\n未经授权禁止转载或摘录，著作权归作者所有！\r\n商业转载请联系作者获得许可，非商业转载请注明出处并保留作者信息。';
-      clipboardData.setData('text/plain', text + copyrightNotice);
-
-      // 如果想加富文本（HTML），可以加这一行
-      // clipboardData.setData('text/html', '<p>' + text + '</p><p>版权所有</p>');
-    }
-  });
-
-  // 禁止右键菜单
-  document.oncontextmenu = function(){alert("本站禁止右键菜单！"); return false; };
-  // 禁止文字选择
-  document.onselectstart = function(){return false; };
-  // 禁止复制
-  document.oncopy = function(){alert("本站禁止复制！"); return false; };
-  // 禁止剪切 
-  document.oncut = function(){alert("本站禁止剪切！"); return false; };
-  // 监听按键
-  document.onkeydown = function () {
-    // f12
-    if (window.event && window.event.keyCode == 123) {
-        event.keyCode = 0;
-        event.returnValue = false;
-
-        document.documentElement.innerHTML = '';
-        window.location.href = 'about:blank';
-        // document.write("<style>@media print{body{display:none}}</style>");
-        
-        // 初始状态
-        history.pushState(null, document.title, window.location.href);
-
-        // 监听popstate事件（用户点击了后退按钮）
-        window.addEventListener('popstate', function (event) {
-          history.pushState(null, document.title, window.location.href = 'about:blank');
-        });
-
-        alert("本站禁止调试！");
-    }
-    // ctrl+shift+i
-    if (window.event.ctrlKey && window.event.shiftKey && window.event.keyCode == 73) {
-        event.keyCode = 0;
-        event.returnValue = false;
-
-        document.documentElement.innerHTML = '';
-        window.location.href = 'about:blank';
-        // document.write("<style>@media print{body{display:none}}</style>");
-        
-        // 初始状态
-        history.pushState(null, document.title, window.location.href);
-
-        // 监听popstate事件（用户点击了后退按钮）
-        window.addEventListener('popstate', function (event) {
-          history.pushState(null, document.title, window.location.href = 'about:blank');
-        });
-
-        alert("本站禁止调试！");
-    }
-    // ctrl+s
-    if (window.event.ctrlKey && window.event.keyCode == 83) {
-        event.keyCode = 0;
-        event.returnValue = false;
-
-        document.documentElement.innerHTML = '';
-        window.location.href = 'about:blank';
-        // document.write("<style>@media print{body{display:none}}</style>");
-        
-        // 初始状态
-        history.pushState(null, document.title, window.location.href);
-
-        // 监听popstate事件（用户点击了后退按钮）
-        window.addEventListener('popstate', function (event) {
-          history.pushState(null, document.title, window.location.href = 'about:blank');
-        });
-
-        alert("本站禁止保存！");
-    }
-    // ctrl+p
-    if (window.event.ctrlKey && window.event.keyCode == 80) {
-        event.keyCode = 0;
-        event.returnValue = false;
-
-        document.documentElement.innerHTML = '';
-        window.location.href = 'about:blank';
-        // document.write("<style>@media print{body{display:none}}</style>");
-        
-        // 初始状态
-        history.pushState(null, document.title, window.location.href);
-
-        // 监听popstate事件（用户点击了后退按钮）
-        window.addEventListener('popstate', function (event) {
-          history.pushState(null, document.title, window.location.href = 'about:blank');
-        });
-        
-        alert("本站禁止打印！");
-    }
-  }
-</script>
+                    <script data-swup-reload-script type="text/javascript" src="/js/web-protection.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/announcement.css"></style>
+<script type="text/javascript" src="/js/announcement.js"></script>
 
                 
     
@@ -974,84 +806,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="2" href="/tags/Cosplay/">
-						<i class="fa-solid fa-hashtag"></i>Cosplay
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/CKG48/">
-						<i class="fa-solid fa-hashtag"></i>CKG48
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%97%A5%E6%BC%AB%E9%9F%B3%E4%B9%90/">
-						<i class="fa-solid fa-hashtag"></i>日漫音乐
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%9B%BD%E6%BC%AB%E9%9F%B3%E4%B9%90/">
-						<i class="fa-solid fa-hashtag"></i>国漫音乐
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E6%A8%A1%E7%89%B9/">
-						<i class="fa-solid fa-hashtag"></i>模特
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%81%B6%E5%83%8F%E4%B8%8E%E7%B2%89%E4%B8%9D/">
-						<i class="fa-solid fa-hashtag"></i>偶像与粉丝
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E5%85%AC%E6%BC%94/">
-						<i class="fa-solid fa-hashtag"></i>公演
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E8%B7%AF%E6%BC%94/">
-						<i class="fa-solid fa-hashtag"></i>路演
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="8" href="/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/">
-						<i class="fa-solid fa-hashtag"></i>高新区
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="9" href="/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/">
-						<i class="fa-solid fa-hashtag"></i>沙坪坝区
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="8" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%8E/">
-						<i class="fa-solid fa-hashtag"></i>大学城
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="6" href="/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/">
-						<i class="fa-solid fa-hashtag"></i>重庆熙街
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="6" href="/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/">
-						<i class="fa-solid fa-hashtag"></i>步行街
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%86%99%E8%A1%97%E9%9F%B3%E4%B9%90%E8%8A%82/">
 						<i class="fa-solid fa-hashtag"></i>第十届熙街音乐节
 					</a>
@@ -1160,8 +914,44 @@
 				</li>
 			
 				<li>
+					<a data-weight="9" href="/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/">
+						<i class="fa-solid fa-hashtag"></i>沙坪坝区
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="8" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%8E/">
+						<i class="fa-solid fa-hashtag"></i>大学城
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="6" href="/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/">
+						<i class="fa-solid fa-hashtag"></i>重庆熙街
+					</a>
+				</li>
+			
+				<li>
 					<a data-weight="2" href="/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97%E5%8D%81%E5%85%AD%E5%91%A8%E5%B9%B4/">
 						<i class="fa-solid fa-hashtag"></i>重庆熙街十六周年
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="6" href="/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/">
+						<i class="fa-solid fa-hashtag"></i>步行街
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E6%A8%A1%E7%89%B9/">
+						<i class="fa-solid fa-hashtag"></i>模特
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/Cosplay/">
+						<i class="fa-solid fa-hashtag"></i>Cosplay
 					</a>
 				</li>
 			
@@ -1174,6 +964,48 @@
 				<li>
 					<a data-weight="3" href="/tags/%E9%87%8D%E5%BA%86%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E5%91%A8%E8%BE%B9/">
 						<i class="fa-solid fa-hashtag"></i>重庆师范大学周边
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/CKG48/">
+						<i class="fa-solid fa-hashtag"></i>CKG48
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%97%A5%E6%BC%AB%E9%9F%B3%E4%B9%90/">
+						<i class="fa-solid fa-hashtag"></i>日漫音乐
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%9B%BD%E6%BC%AB%E9%9F%B3%E4%B9%90/">
+						<i class="fa-solid fa-hashtag"></i>国漫音乐
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%81%B6%E5%83%8F%E4%B8%8E%E7%B2%89%E4%B8%9D/">
+						<i class="fa-solid fa-hashtag"></i>偶像与粉丝
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E5%85%AC%E6%BC%94/">
+						<i class="fa-solid fa-hashtag"></i>公演
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E8%B7%AF%E6%BC%94/">
+						<i class="fa-solid fa-hashtag"></i>路演
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="8" href="/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/">
+						<i class="fa-solid fa-hashtag"></i>高新区
 					</a>
 				</li>
 			
@@ -1364,6 +1196,30 @@
 				</li>
 			
 				<li>
+					<a data-weight="1" href="/tags/Mcdonalds/">
+						<i class="fa-solid fa-hashtag"></i>Mcdonalds
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E9%BA%A6%E5%BD%93%E5%8A%B3/">
+						<i class="fa-solid fa-hashtag"></i>麦当劳
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="5" href="/tags/%E7%BE%8E%E9%A3%9F/">
+						<i class="fa-solid fa-hashtag"></i>美食
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="5" href="/tags/%E7%92%A7%E5%B1%B1%E5%8C%BA/">
+						<i class="fa-solid fa-hashtag"></i>璧山区
+					</a>
+				</li>
+			
+				<li>
 					<a data-weight="1" href="/tags/%E6%B1%A0%E5%A5%88/">
 						<i class="fa-solid fa-hashtag"></i>池奈
 					</a>
@@ -1388,12 +1244,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="5" href="/tags/%E7%BE%8E%E9%A3%9F/">
-						<i class="fa-solid fa-hashtag"></i>美食
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/%E6%97%A5%E9%A4%90/">
 						<i class="fa-solid fa-hashtag"></i>日餐
 					</a>
@@ -1402,24 +1252,6 @@
 				<li>
 					<a data-weight="1" href="/tags/%E4%B8%AD%E9%A4%90/">
 						<i class="fa-solid fa-hashtag"></i>中餐
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Mcdonalds/">
-						<i class="fa-solid fa-hashtag"></i>Mcdonalds
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E9%BA%A6%E5%BD%93%E5%8A%B3/">
-						<i class="fa-solid fa-hashtag"></i>麦当劳
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="5" href="/tags/%E7%92%A7%E5%B1%B1%E5%8C%BA/">
-						<i class="fa-solid fa-hashtag"></i>璧山区
 					</a>
 				</li>
 			
@@ -1766,96 +1598,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="1" href="/tags/%E4%B8%BB%E9%A2%98%E4%B9%A6%E5%BA%97/">
-						<i class="fa-solid fa-hashtag"></i>主题书店
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%BA%94%E6%B4%B2%E4%B9%A6%E5%BA%97/">
-						<i class="fa-solid fa-hashtag"></i>五洲书店
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%BD%A9%E8%99%B9%E4%B9%A6%E5%A2%99/">
-						<i class="fa-solid fa-hashtag"></i>彩虹书墙
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%BA%94%E6%B4%B2%E5%AE%B4%E4%BC%9A/">
-						<i class="fa-solid fa-hashtag"></i>五洲宴会
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%9B%BE%E4%B9%A6%E9%A6%86/">
-						<i class="fa-solid fa-hashtag"></i>图书馆
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E9%98%85%E8%AF%BB/">
-						<i class="fa-solid fa-hashtag"></i>阅读
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%BB%A9%E5%AD%90%E5%8F%A3/">
-						<i class="fa-solid fa-hashtag"></i>滩子口
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E7%89%B9%E4%BA%A7%E7%BE%8E%E9%A3%9F/">
-						<i class="fa-solid fa-hashtag"></i>特产美食
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%B8%AD%E8%B6%8A%E8%BE%B9%E5%A2%83/">
-						<i class="fa-solid fa-hashtag"></i>中越边境
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%99%AF%E7%82%B9/">
-						<i class="fa-solid fa-hashtag"></i>景点
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%BA%91%E5%8D%97/">
-						<i class="fa-solid fa-hashtag"></i>云南
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%98%86%E6%98%8E/">
-						<i class="fa-solid fa-hashtag"></i>昆明
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E6%B2%B3%E5%8F%A3%E5%8E%BF/">
-						<i class="fa-solid fa-hashtag"></i>河口县
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E8%BF%9B%E5%8F%A3/">
-						<i class="fa-solid fa-hashtag"></i>俄罗斯进口
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="2" href="/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/">
-						<i class="fa-solid fa-hashtag"></i>四川美术学院周边
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/">
 						<i class="fa-solid fa-hashtag"></i>业余无线电
 					</a>
@@ -2078,6 +1820,96 @@
 				</li>
 			
 				<li>
+					<a data-weight="1" href="/tags/%E7%89%B9%E4%BA%A7%E7%BE%8E%E9%A3%9F/">
+						<i class="fa-solid fa-hashtag"></i>特产美食
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%B8%AD%E8%B6%8A%E8%BE%B9%E5%A2%83/">
+						<i class="fa-solid fa-hashtag"></i>中越边境
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%99%AF%E7%82%B9/">
+						<i class="fa-solid fa-hashtag"></i>景点
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%BA%91%E5%8D%97/">
+						<i class="fa-solid fa-hashtag"></i>云南
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%98%86%E6%98%8E/">
+						<i class="fa-solid fa-hashtag"></i>昆明
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%B2%B3%E5%8F%A3%E5%8E%BF/">
+						<i class="fa-solid fa-hashtag"></i>河口县
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%B8%BB%E9%A2%98%E4%B9%A6%E5%BA%97/">
+						<i class="fa-solid fa-hashtag"></i>主题书店
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%BA%94%E6%B4%B2%E4%B9%A6%E5%BA%97/">
+						<i class="fa-solid fa-hashtag"></i>五洲书店
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%BD%A9%E8%99%B9%E4%B9%A6%E5%A2%99/">
+						<i class="fa-solid fa-hashtag"></i>彩虹书墙
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%BA%94%E6%B4%B2%E5%AE%B4%E4%BC%9A/">
+						<i class="fa-solid fa-hashtag"></i>五洲宴会
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%9B%BE%E4%B9%A6%E9%A6%86/">
+						<i class="fa-solid fa-hashtag"></i>图书馆
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E9%98%85%E8%AF%BB/">
+						<i class="fa-solid fa-hashtag"></i>阅读
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E6%BB%A9%E5%AD%90%E5%8F%A3/">
+						<i class="fa-solid fa-hashtag"></i>滩子口
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E8%BF%9B%E5%8F%A3/">
+						<i class="fa-solid fa-hashtag"></i>俄罗斯进口
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="2" href="/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/">
+						<i class="fa-solid fa-hashtag"></i>四川美术学院周边
+					</a>
+				</li>
+			
+				<li>
 					<a data-weight="1" href="/tags/AR/">
 						<i class="fa-solid fa-hashtag"></i>AR
 					</a>
@@ -2228,12 +2060,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="1" href="/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/">
-						<i class="fa-solid fa-hashtag"></i>圣诞季
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/%E5%86%99%E4%BD%9C/">
 						<i class="fa-solid fa-hashtag"></i>写作
 					</a>
@@ -2254,6 +2080,12 @@
 				<li>
 					<a data-weight="1" href="/tags/%E8%8B%B1%E6%96%87%E5%9C%B0%E5%9D%80/">
 						<i class="fa-solid fa-hashtag"></i>英文地址
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/">
+						<i class="fa-solid fa-hashtag"></i>圣诞季
 					</a>
 				</li>
 			
@@ -2312,18 +2144,6 @@
 				</li>
 			
 				<li>
-					<a data-weight="1" href="/tags/%E5%BA%B7%E5%B8%88%E5%82%85%E6%A0%A1%E5%9B%AD%E6%96%B0%E5%A3%B0%E4%BB%A32/">
-						<i class="fa-solid fa-hashtag"></i>康师傅校园新声代2
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA/">
-						<i class="fa-solid fa-hashtag"></i>公益演出
-					</a>
-				</li>
-			
-				<li>
 					<a data-weight="1" href="/tags/%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81/">
 						<i class="fa-solid fa-hashtag"></i>艺术作品
 					</a>
@@ -2356,6 +2176,18 @@
 				<li>
 					<a data-weight="1" href="/tags/%E5%BD%A9%E7%BB%98/">
 						<i class="fa-solid fa-hashtag"></i>彩绘
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%BA%B7%E5%B8%88%E5%82%85%E6%A0%A1%E5%9B%AD%E6%96%B0%E5%A3%B0%E4%BB%A32/">
+						<i class="fa-solid fa-hashtag"></i>康师傅校园新声代2
+					</a>
+				</li>
+			
+				<li>
+					<a data-weight="1" href="/tags/%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA/">
+						<i class="fa-solid fa-hashtag"></i>公益演出
 					</a>
 				</li>
 			
