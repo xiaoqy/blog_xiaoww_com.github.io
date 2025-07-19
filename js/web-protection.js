@@ -22,11 +22,11 @@ document.addEventListener('contextmenu', (event) => {
 });
 
 // 禁止长按图片
-document.addEventListener('touchstart', (event) => {
-  if (event.target.tagName === 'IMG') {
-      event.preventDefault(); // 阻止长按默认行为
-  }
-}, { passive: false });
+// document.addEventListener('touchstart', (event) => {
+//   if (event.target.tagName === 'IMG') {
+//       event.preventDefault(); // 阻止长按默认行为
+//   }
+// }, { passive: false });
 
 // 复制版权内容
 document.addEventListener('copy', function (event) {
@@ -46,7 +46,7 @@ document.addEventListener('copy', function (event) {
 });
 
 // 检测开发者工具
-const threshold = 200;
+const threshold = 320;
 setInterval(() => {
     if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
         document.documentElement.innerHTML = '';
