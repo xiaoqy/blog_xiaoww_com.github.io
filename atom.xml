@@ -18,8 +18,8 @@
   
   <entry>
     <title>高速骑车我差点跨市了</title>
-    <link href="https://mirror.blog.xiaoww.com/almost-crossed-city-by-highway-biking/"/>
-    <id>https://mirror.blog.xiaoww.com/almost-crossed-city-by-highway-biking/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/almost-crossed-city-by-highway-biking/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/almost-crossed-city-by-highway-biking/</id>
     <published>2025-07-18T06:18:33.083Z</published>
     <updated>2025-05-20T16:26:31.372Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>马路边的零食探店</title>
-    <link href="https://mirror.blog.xiaoww.com/roadside-snack-hunting/"/>
-    <id>https://mirror.blog.xiaoww.com/roadside-snack-hunting/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/roadside-snack-hunting/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/roadside-snack-hunting/</id>
     <published>2025-07-18T06:18:33.073Z</published>
     <updated>2025-03-23T01:44:17.932Z</updated>
     
@@ -90,8 +90,8 @@
   
   <entry>
     <title>随处可见的爆米花小吃</title>
-    <link href="https://mirror.blog.xiaoww.com/popcorn-snacks-everywhere/"/>
-    <id>https://mirror.blog.xiaoww.com/popcorn-snacks-everywhere/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/popcorn-snacks-everywhere/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/popcorn-snacks-everywhere/</id>
     <published>2025-07-18T06:18:33.050Z</published>
     <updated>2025-03-23T01:43:08.197Z</updated>
     
@@ -146,8 +146,8 @@
   
   <entry>
     <title>重庆熙街音乐盛宴</title>
-    <link href="https://mirror.blog.xiaoww.com/xijie-music-feast-chongqing/"/>
-    <id>https://mirror.blog.xiaoww.com/xijie-music-feast-chongqing/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/xijie-music-feast-chongqing/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/xijie-music-feast-chongqing/</id>
     <published>2025-07-18T06:18:33.017Z</published>
     <updated>2025-06-01T12:59:53.309Z</updated>
     
@@ -165,25 +165,23 @@
     <category term="旅行" scheme="https://mirror.blog.xiaoww.com/categories/%E6%97%85%E8%A1%8C/"/>
     
     
-    <category term="公演" scheme="https://mirror.blog.xiaoww.com/tags/%E5%85%AC%E6%BC%94/"/>
+    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
     
     <category term="重庆" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86/"/>
+    
+    <category term="现场表演" scheme="https://mirror.blog.xiaoww.com/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/"/>
+    
+    <category term="红色舞台" scheme="https://mirror.blog.xiaoww.com/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/"/>
+    
+    <category term="步行街" scheme="https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/"/>
+    
+    <category term="重庆熙街" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/"/>
     
     <category term="高新区" scheme="https://mirror.blog.xiaoww.com/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/"/>
     
     <category term="沙坪坝区" scheme="https://mirror.blog.xiaoww.com/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/"/>
     
     <category term="大学城" scheme="https://mirror.blog.xiaoww.com/tags/%E5%A4%A7%E5%AD%A6%E5%9F%8E/"/>
-    
-    <category term="重庆熙街" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/"/>
-    
-    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
-    
-    <category term="步行街" scheme="https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/"/>
-    
-    <category term="现场表演" scheme="https://mirror.blog.xiaoww.com/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/"/>
-    
-    <category term="红色舞台" scheme="https://mirror.blog.xiaoww.com/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/"/>
     
     <category term="音乐会" scheme="https://mirror.blog.xiaoww.com/tags/%E9%9F%B3%E4%B9%90%E4%BC%9A/"/>
     
@@ -201,18 +199,20 @@
     
     <category term="重庆师范大学周边" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E5%91%A8%E8%BE%B9/"/>
     
+    <category term="公演" scheme="https://mirror.blog.xiaoww.com/tags/%E5%85%AC%E6%BC%94/"/>
+    
+    <category term="四川美术学院周边" scheme="https://mirror.blog.xiaoww.com/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/"/>
+    
     <category term="康师傅校园新声代2" scheme="https://mirror.blog.xiaoww.com/tags/%E5%BA%B7%E5%B8%88%E5%82%85%E6%A0%A1%E5%9B%AD%E6%96%B0%E5%A3%B0%E4%BB%A32/"/>
     
     <category term="公益演出" scheme="https://mirror.blog.xiaoww.com/tags/%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA/"/>
-    
-    <category term="四川美术学院周边" scheme="https://mirror.blog.xiaoww.com/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/"/>
     
   </entry>
   
   <entry>
     <title>重大书画艺术展活动</title>
-    <link href="https://mirror.blog.xiaoww.com/cqu-calligraphy-painting-exhibition/"/>
-    <id>https://mirror.blog.xiaoww.com/cqu-calligraphy-painting-exhibition/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/cqu-calligraphy-painting-exhibition/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/cqu-calligraphy-painting-exhibition/</id>
     <published>2025-07-18T06:18:32.995Z</published>
     <updated>2025-03-23T01:42:18.334Z</updated>
     
@@ -265,8 +265,8 @@
   
   <entry>
     <title>路边发现很酷的加油站：Gulf海湾石油的西海岸风情</title>
-    <link href="https://mirror.blog.xiaoww.com/cool-roadside-gulf-gas-station/"/>
-    <id>https://mirror.blog.xiaoww.com/cool-roadside-gulf-gas-station/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/cool-roadside-gulf-gas-station/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/cool-roadside-gulf-gas-station/</id>
     <published>2025-07-18T06:18:32.993Z</published>
     <updated>2025-05-20T16:25:49.483Z</updated>
     
@@ -312,8 +312,8 @@
   
   <entry>
     <title>观音桥夜拍圣诞树</title>
-    <link href="https://mirror.blog.xiaoww.com/christmas-tree-night-photography-guanyinqiao/"/>
-    <id>https://mirror.blog.xiaoww.com/christmas-tree-night-photography-guanyinqiao/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/christmas-tree-night-photography-guanyinqiao/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/christmas-tree-night-photography-guanyinqiao/</id>
     <published>2025-07-18T06:18:32.972Z</published>
     <updated>2025-03-19T16:40:15.695Z</updated>
     
@@ -333,10 +333,6 @@
     <category term="旅行" scheme="https://mirror.blog.xiaoww.com/categories/%E6%97%85%E8%A1%8C/"/>
     
     
-    <category term="重庆" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86/"/>
-    
-    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
-    
     <category term="圣诞树" scheme="https://mirror.blog.xiaoww.com/tags/%E5%9C%A3%E8%AF%9E%E6%A0%91/"/>
     
     <category term="数字艺术" scheme="https://mirror.blog.xiaoww.com/tags/%E6%95%B0%E5%AD%97%E8%89%BA%E6%9C%AF/"/>
@@ -351,9 +347,13 @@
     
     <category term="网红打卡" scheme="https://mirror.blog.xiaoww.com/tags/%E7%BD%91%E7%BA%A2%E6%89%93%E5%8D%A1/"/>
     
+    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
+    
     <category term="美食街" scheme="https://mirror.blog.xiaoww.com/tags/%E7%BE%8E%E9%A3%9F%E8%A1%97/"/>
     
     <category term="商圈" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E5%9C%88/"/>
+    
+    <category term="重庆" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86/"/>
     
     <category term="江北区" scheme="https://mirror.blog.xiaoww.com/tags/%E6%B1%9F%E5%8C%97%E5%8C%BA/"/>
     
@@ -367,8 +367,8 @@
   
   <entry>
     <title>英文地址书写标准</title>
-    <link href="https://mirror.blog.xiaoww.com/standard-format-for-english-addresses/"/>
-    <id>https://mirror.blog.xiaoww.com/standard-format-for-english-addresses/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/standard-format-for-english-addresses/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/standard-format-for-english-addresses/</id>
     <published>2025-07-18T06:18:32.949Z</published>
     <updated>2025-05-20T16:24:59.135Z</updated>
     
@@ -398,8 +398,8 @@
   
   <entry>
     <title>璧山中央大街美食日记：一个人的自助火锅也能这么治愈！</title>
-    <link href="https://mirror.blog.xiaoww.com/bishan-central-food-diary-solo-hotpot/"/>
-    <id>https://mirror.blog.xiaoww.com/bishan-central-food-diary-solo-hotpot/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/bishan-central-food-diary-solo-hotpot/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/bishan-central-food-diary-solo-hotpot/</id>
     <published>2025-07-18T06:18:32.944Z</published>
     <updated>2025-05-20T16:23:25.841Z</updated>
     
@@ -439,8 +439,8 @@
   
   <entry>
     <title>现场体验索尼中高端旗舰耳机</title>
-    <link href="https://mirror.blog.xiaoww.com/hands-on-sony-flagship-headphones/"/>
-    <id>https://mirror.blog.xiaoww.com/hands-on-sony-flagship-headphones/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/hands-on-sony-flagship-headphones/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/hands-on-sony-flagship-headphones/</id>
     <published>2025-07-18T06:18:32.932Z</published>
     <updated>2025-05-20T16:21:39.546Z</updated>
     
@@ -484,8 +484,8 @@
   
   <entry>
     <title>现场体验 Vision Pro</title>
-    <link href="https://mirror.blog.xiaoww.com/hands-on-experience-vision-pro/"/>
-    <id>https://mirror.blog.xiaoww.com/hands-on-experience-vision-pro/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/hands-on-experience-vision-pro/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/hands-on-experience-vision-pro/</id>
     <published>2025-07-18T06:18:32.919Z</published>
     <updated>2025-03-23T01:40:34.381Z</updated>
     
@@ -543,8 +543,8 @@
   
   <entry>
     <title>熙街俄罗斯进口零食</title>
-    <link href="https://mirror.blog.xiaoww.com/xijie-russian-snacks/"/>
-    <id>https://mirror.blog.xiaoww.com/xijie-russian-snacks/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/xijie-russian-snacks/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/xijie-russian-snacks/</id>
     <published>2025-07-18T06:18:32.907Z</published>
     <updated>2025-05-20T16:20:51.376Z</updated>
     
@@ -564,17 +564,17 @@
     <category term="购物" scheme="https://mirror.blog.xiaoww.com/categories/%E8%B4%AD%E7%89%A9/"/>
     
     
+    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
+    
     <category term="重庆" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86/"/>
+    
+    <category term="步行街" scheme="https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/"/>
+    
+    <category term="重庆熙街" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/"/>
     
     <category term="高新区" scheme="https://mirror.blog.xiaoww.com/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/"/>
     
     <category term="沙坪坝区" scheme="https://mirror.blog.xiaoww.com/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/"/>
-    
-    <category term="重庆熙街" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/"/>
-    
-    <category term="商业街" scheme="https://mirror.blog.xiaoww.com/tags/%E5%95%86%E4%B8%9A%E8%A1%97/"/>
-    
-    <category term="步行街" scheme="https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/"/>
     
     <category term="重庆大学周边" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6%E5%91%A8%E8%BE%B9/"/>
     
@@ -584,16 +584,16 @@
     
     <category term="进口零食" scheme="https://mirror.blog.xiaoww.com/tags/%E8%BF%9B%E5%8F%A3%E9%9B%B6%E9%A3%9F/"/>
     
-    <category term="四川美术学院周边" scheme="https://mirror.blog.xiaoww.com/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/"/>
-    
     <category term="俄罗斯进口" scheme="https://mirror.blog.xiaoww.com/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E8%BF%9B%E5%8F%A3/"/>
+    
+    <category term="四川美术学院周边" scheme="https://mirror.blog.xiaoww.com/tags/%E5%9B%9B%E5%B7%9D%E7%BE%8E%E6%9C%AF%E5%AD%A6%E9%99%A2%E5%91%A8%E8%BE%B9/"/>
     
   </entry>
   
   <entry>
     <title>擦肩路过最美书店</title>
-    <link href="https://mirror.blog.xiaoww.com/passing-by-the-most-beautiful-bookstore/"/>
-    <id>https://mirror.blog.xiaoww.com/passing-by-the-most-beautiful-bookstore/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/passing-by-the-most-beautiful-bookstore/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/passing-by-the-most-beautiful-bookstore/</id>
     <published>2025-07-18T06:18:32.901Z</published>
     <updated>2025-05-20T16:20:10.591Z</updated>
     
@@ -637,8 +637,8 @@
   
   <entry>
     <title>探索神奇的无线电</title>
-    <link href="https://mirror.blog.xiaoww.com/exploring-the-magic-of-radio/"/>
-    <id>https://mirror.blog.xiaoww.com/exploring-the-magic-of-radio/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/exploring-the-magic-of-radio/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/exploring-the-magic-of-radio/</id>
     <published>2025-07-18T06:18:32.881Z</published>
     <updated>2025-03-20T16:39:16.317Z</updated>
     
@@ -733,8 +733,8 @@
   
   <entry>
     <title>我认识的第二位越南人</title>
-    <link href="https://mirror.blog.xiaoww.com/the-second-vietnamese-person-i-met/"/>
-    <id>https://mirror.blog.xiaoww.com/the-second-vietnamese-person-i-met/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/the-second-vietnamese-person-i-met/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/the-second-vietnamese-person-i-met/</id>
     <published>2025-07-18T06:18:32.869Z</published>
     <updated>2025-05-20T16:19:12.345Z</updated>
     
@@ -766,8 +766,8 @@
   
   <entry>
     <title>我成功预言世界顶级网红到来重庆</title>
-    <link href="https://mirror.blog.xiaoww.com/predicted-top-influencer-coming-to-chongqing/"/>
-    <id>https://mirror.blog.xiaoww.com/predicted-top-influencer-coming-to-chongqing/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/predicted-top-influencer-coming-to-chongqing/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/predicted-top-influencer-coming-to-chongqing/</id>
     <published>2025-07-18T06:18:32.829Z</published>
     <updated>2025-05-20T16:18:10.189Z</updated>
     
@@ -824,8 +824,8 @@
   
   <entry>
     <title>我在璧山街头看见心酸的一幕</title>
-    <link href="https://mirror.blog.xiaoww.com/a-sad-scene-on-bishan-street/"/>
-    <id>https://mirror.blog.xiaoww.com/a-sad-scene-on-bishan-street/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/a-sad-scene-on-bishan-street/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/a-sad-scene-on-bishan-street/</id>
     <published>2025-07-18T06:18:32.817Z</published>
     <updated>2025-05-20T16:17:05.649Z</updated>
     
@@ -858,8 +858,8 @@
   
   <entry>
     <title>年前探访璧山可可山谷：亲子度假新天堂</title>
-    <link href="https://mirror.blog.xiaoww.com/bishan-cocoa-valley-family-resort/"/>
-    <id>https://mirror.blog.xiaoww.com/bishan-cocoa-valley-family-resort/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/bishan-cocoa-valley-family-resort/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/bishan-cocoa-valley-family-resort/</id>
     <published>2025-07-18T06:18:32.770Z</published>
     <updated>2025-06-01T10:52:00.275Z</updated>
     
@@ -881,9 +881,9 @@
     
     <category term="重庆" scheme="https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86/"/>
     
-    <category term="璧山区" scheme="https://mirror.blog.xiaoww.com/tags/%E7%92%A7%E5%B1%B1%E5%8C%BA/"/>
-    
     <category term="活动" scheme="https://mirror.blog.xiaoww.com/tags/%E6%B4%BB%E5%8A%A8/"/>
+    
+    <category term="璧山区" scheme="https://mirror.blog.xiaoww.com/tags/%E7%92%A7%E5%B1%B1%E5%8C%BA/"/>
     
     <category term="美食" scheme="https://mirror.blog.xiaoww.com/tags/%E7%BE%8E%E9%A3%9F/"/>
     
@@ -903,8 +903,8 @@
   
   <entry>
     <title>小文带你走进重大：重庆大学虎溪校区</title>
-    <link href="https://mirror.blog.xiaoww.com/xiaowen-explores-cqu-huxi-campus/"/>
-    <id>https://mirror.blog.xiaoww.com/xiaowen-explores-cqu-huxi-campus/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/xiaowen-explores-cqu-huxi-campus/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/xiaowen-explores-cqu-huxi-campus/</id>
     <published>2025-07-18T06:18:32.738Z</published>
     <updated>2025-06-15T06:38:50.469Z</updated>
     
@@ -960,8 +960,8 @@
   
   <entry>
     <title>头脑发热买了手机卡，我真的后悔了</title>
-    <link href="https://mirror.blog.xiaoww.com/regret-buying-phone-sim-card/"/>
-    <id>https://mirror.blog.xiaoww.com/regret-buying-phone-sim-card/</id>
+    <link href="https://mirror.blog.xiaoww.com/posts/regret-buying-phone-sim-card/"/>
+    <id>https://mirror.blog.xiaoww.com/posts/regret-buying-phone-sim-card/</id>
     <published>2025-07-18T06:18:32.715Z</published>
     <updated>2025-03-19T16:40:21.170Z</updated>
     
