@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/posts/2024-xijie-music-festival-chongqing/</loc>
+    <loc>https://mirror.blog.xiaoww.com/posts/xiaowen-explores-cqu-huxi-campus/</loc>
     
-    <lastmod>2025-07-24</lastmod>
+    <lastmod>2025-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/posts/cqu-calligraphy-painting-exhibition/</loc>
+    
+    <lastmod>2025-07-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,34 +22,7 @@
   <url>
     <loc>https://mirror.blog.xiaoww.com/posts/2025-new-year-xijie-fireworks-show/</loc>
     
-    <lastmod>2025-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/posts/2025-xijie-anime-festival-chongqing/</loc>
-    
-    <lastmod>2025-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/posts/yunnan-5-day-trip/</loc>
-    
-    <lastmod>2025-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/posts/xiaowen-explores-cqu-huxi-campus/</loc>
-    
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-07-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +31,34 @@
   <url>
     <loc>https://mirror.blog.xiaoww.com/posts/xijie-music-feast-chongqing/</loc>
     
-    <lastmod>2025-06-01</lastmod>
+    <lastmod>2025-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/posts/2024-xijie-music-festival-chongqing/</loc>
+    
+    <lastmod>2025-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/posts/2025-xijie-anime-festival-chongqing/</loc>
+    
+    <lastmod>2025-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/posts/yunnan-5-day-trip/</loc>
+    
+    <lastmod>2025-07-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -281,15 +290,6 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/posts/cqu-calligraphy-painting-exhibition/</loc>
-    
-    <lastmod>2025-03-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mirror.blog.xiaoww.com/posts/hands-on-experience-vision-pro/</loc>
     
     <lastmod>2025-03-23</lastmod>
@@ -440,6 +440,55 @@
   </url>
   
   <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E5%A4%A7%E5%AD%A6%E5%9F%8E/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%86%99%E8%A1%97%E9%9F%B3%E4%B9%90%E8%8A%82/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -559,42 +608,7 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%8E%B0%E5%9C%BA%E8%A1%A8%E6%BC%94/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%B2%99%E5%9D%AA%E5%9D%9D%E5%8C%BA/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E5%A4%A7%E5%AD%A6%E5%9F%8E/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E7%86%99%E8%A1%97%E5%8D%81%E5%85%AD%E5%91%A8%E5%B9%B4/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%AD%A5%E8%A1%8C%E8%A1%97/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -623,20 +637,6 @@
   
   <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E5%91%A8%E8%BE%B9/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BA%A2%E8%89%B2%E8%88%9E%E5%8F%B0/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E9%AB%98%E6%96%B0%E5%8C%BA/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -881,13 +881,6 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E5%8F%AF%E5%8F%AF%E5%B1%B1%E8%B0%B7/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -924,6 +917,90 @@
   
   <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E9%AA%91%E9%A9%AC/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E5%9C%A3%E8%AF%9E%E5%AD%A3/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%A4%A7/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%9B%AD/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%86%85/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%8C%BA/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BE%8E%E6%9C%AF%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B9%A6%E6%B3%95/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BB%98%E7%94%BB/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E5%BD%A9%E7%BB%98/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1259,77 +1336,14 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6/</loc>
+    <loc>https://mirror.blog.xiaoww.com/tags/Mcdonalds/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E9%87%8D%E5%A4%A7/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%9B%AD/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%86%85/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%A0%A1%E5%8C%BA/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BE%8E%E6%9C%AF%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B9%A6%E6%B3%95/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%BB%98%E7%94%BB/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E5%BD%A9%E7%BB%98/</loc>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E9%BA%A6%E5%BD%93%E5%8A%B3/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1427,20 +1441,6 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/Mcdonalds/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E9%BA%A6%E5%BD%93%E5%8A%B3/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mirror.blog.xiaoww.com/tags/Sony/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -1484,6 +1484,48 @@
   
   <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E9%BE%99%E6%B9%96%E9%87%8D%E5%BA%86%E6%98%9F%E6%B1%87%E5%A4%A9%E8%A1%97/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%B1%A0%E5%A5%88/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E5%BC%8F%E6%96%99%E7%90%86/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E6%9C%AC%E7%BE%8E%E9%A3%9F/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E9%A4%90/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B8%AD%E9%A4%90/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1540,48 +1582,6 @@
   
   <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E8%8D%A3%E6%98%8C%E5%8C%BA/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%B1%A0%E5%A5%88/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E5%BC%8F%E6%96%99%E7%90%86/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E6%9C%AC%E7%BE%8E%E9%A3%9F/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E6%97%A5%E9%A4%90/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B8%AD%E9%A4%90/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2001,34 +2001,6 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B8%AD%E4%BF%84%E5%95%86%E5%93%81%E5%BA%97/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E8%BF%9B%E5%8F%A3%E9%9B%B6%E9%A3%9F/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E4%BE%BF%E5%88%A9%E5%BA%97/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E7%8B%97%E7%8B%97/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mirror.blog.xiaoww.com/tags/Vietnam/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -2058,6 +2030,34 @@
   
   <url>
     <loc>https://mirror.blog.xiaoww.com/tags/%E8%B6%8A%E5%8D%97%E8%AF%AD/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E4%B8%AD%E4%BF%84%E5%95%86%E5%93%81%E5%BA%97/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E8%BF%9B%E5%8F%A3%E9%9B%B6%E9%A3%9F/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E4%BE%BF%E5%88%A9%E5%BA%97/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E7%8B%97%E7%8B%97/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2113,14 +2113,7 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E5%BA%B7%E5%B8%88%E5%82%85%E6%A0%A1%E5%9B%AD%E6%96%B0%E5%A3%B0%E4%BB%A32/</loc>
-    <lastmod>2025-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA/</loc>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E8%BF%9B%E5%8F%A3/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2134,7 +2127,14 @@
   </url>
   
   <url>
-    <loc>https://mirror.blog.xiaoww.com/tags/%E4%BF%84%E7%BD%97%E6%96%AF%E8%BF%9B%E5%8F%A3/</loc>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E5%BA%B7%E5%B8%88%E5%82%85%E6%A0%A1%E5%9B%AD%E6%96%B0%E5%A3%B0%E4%BB%A32/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mirror.blog.xiaoww.com/tags/%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
