@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="思远文文,syww,xiaoqy,xiaoww,wenwen,Allen Shaw,文文の生活随记,生活博客,个人博客,文文博客,思远文文生活博客,Blog,personal blog,wenwen&#39;s blog,wenwen personal blog,xiaoww blog,xiaoqy blog">
+    
+    <meta name="author" content="Allen Shaw">
+    
+    <!-- Completely eliminate flash of wrong theme -->
+    <script>
+        (function() {
+            const THEME_KEY = "REDEFINE-THEME-STATUS";
+            const DARK = "dark", LIGHT = "light";
+            
+            // Get preferred theme
+            function getTheme() {
+                try {
+                    const saved = localStorage.getItem(THEME_KEY);
+                    if (saved) {
+                        const { isDark } = JSON.parse(saved);
+                        return isDark ? DARK : LIGHT;
+                    }
+                } catch (e) {}
+                
+                return matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+            }
+            
+            // Apply theme to document
+            function applyTheme(theme) {
+                const isDark = theme === DARK;
+                const root = document.documentElement;
+                
+                // Set data attribute for CSS variables
+                root.setAttribute("data-theme", theme);
+                
+                // Set classes for compatibility
+                root.classList.add(theme);
+                root.classList.remove(isDark ? LIGHT : DARK);
+                root.style.colorScheme = theme;
+            }
+            
+            // Initial application
+            const theme = getTheme();
+            applyTheme(theme);
+            
+            // Listen for system preference changes
+            matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+                // Only update if using system preference (no localStorage entry)
+                if (!localStorage.getItem(THEME_KEY)) {
+                    applyTheme(matches ? DARK : LIGHT);
+                }
+            });
+            
+            // Set body classes once DOM is ready
+            if (document.readyState !== "loading") {
+                document.body.classList.add(theme + "-mode");
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.body.classList.add(theme + "-mode");
+                    document.body.classList.remove((theme === DARK ? LIGHT : DARK) + "-mode");
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        :root[data-theme="dark"] {
+            --background-color: #202124;
+            --background-color-transparent: rgba(32, 33, 36, 0.6);
+            --second-background-color: #2d2e32;
+            --third-background-color: #34353a;
+            --third-background-color-transparent: rgba(32, 33, 36, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #ffffff;
+            --second-text-color: #eeeeee;
+            --third-text-color: #bebec6;
+            --fourth-text-color: #999999;
+            --default-text-color: #bebec6;
+            --invert-text-color: #373D3F;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(255, 255, 255, 0.08);
+            --shadow-color-2: rgba(255, 255, 255, 0.05);
+        }
+        
+        :root[data-theme="light"] {
+            --background-color: #fff;
+            --background-color-transparent: rgba(255, 255, 255, 0.6);
+            --second-background-color: #f8f8f8;
+            --third-background-color: #f2f2f2;
+            --third-background-color-transparent: rgba(241, 241, 241, 0.6);
+            --primary-color: #0066CC;
+            --first-text-color: #16171a;
+            --second-text-color: #2f3037;
+            --third-text-color: #5e5e5e;
+            --fourth-text-color: #eeeeee;
+            --default-text-color: #373D3F;
+            --invert-text-color: #bebec6;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --selection-color: #0066CC;
+            --shadow-color-1: rgba(0, 0, 0, 0.08);
+            --shadow-color-2: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+        
+        /* Apply body classes as soon as DOM is ready */
+        :root[data-theme="dark"] body {
+            background-color: var(--background-color);
+            color: var(--default-text-color);
+        }
+    </style>
+    
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://mirror.blog.xiaoww.com/posts/food-safety-issues-and-health-guidance/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+    
+        <!-- Google tag (gtag.js) -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-P0EYHXD2M4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P0EYHXD2M4');
+        </script>
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/xiaoww-blog-logo.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/xiaoww-blog-logo.png">
+    <meta name="theme-color" content="#FF1493">
+    <link rel="shortcut icon" href="/images/xiaoww-blog-logo.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            食品安全问题与健康指导 - 文文の生活随记 Mirror
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+        
+            
+    
+            
+    
+            
+                
+                    <link rel="stylesheet" type="text/css" href="/css/web-protection.min.css" />
+<script data-swup-reload-script type="text/javascript" src="/js/web-protection.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/announcement.min.css" />
+<script data-swup-reload-script type="text/javascript" src="/js/announcement.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/post-media.min.css" />
+<script type="text/javascript" src="/js/post-media.min.js"></script>
+<script data-swup-reload-script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+        <link href="css/style.styl" rel="stylesheet">
+    
+    
+    
+        <link href="css/style.styl" rel="stylesheet">
+    
+    
+        <link href="css/style.styl" rel="stylesheet">
+    
+    
+        <link href="css/style.styl" rel="stylesheet">
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"mirror.blog.xiaoww.com","root":"/","language":"zh-CN","path":"search.json"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"none","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/placeholder.gif","skip_dirs":[]}},"colors":{"primary":"#FF1493","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"LXGWWenKai","url":"css/style.styl"},"english":{"enable":true,"family":"LXGWWenKai","url":"css/style.styl"},"title":{"enable":true,"family":"LXGWWenKai","url":"css/style.styl"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":"文文の生活随记 | 记录生活，感受世界"},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":false,"image":"/images/redefine-og.webp","description":null},"google_analytics":{"enable":true,"id":"G-P0EYHXD2M4"}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallpaper-daytime.jpg","dark":"/images/wallpaper-nighttime.jpg"},"title":"文文の生活随记","subtitle":{"text":["探索世界、解决问题、表达理念，热爱记录自己的想法与技术积累。","一行代码，连接世界；一段逻辑，改变未来。","用色彩诠释灵魂，用线条讲述故事，作品之美，心灵可见。","热爱不该被埋没，它值得被看见、被听见。","有追求，这样我们才会有活下去的动力。有梦在，我们的人生才会更加精彩。没有梦想的人生，心灵是干枯的，内心是枯燥乏味的。","人要自信。一个获得成功的人，首先因为他有自信。自信，使不可能成为可能，使可能成为现实。不自信，使可能变成不可能，使不可能变成毫无希望。一分自信，一分成功;十分自信，十分成功。","不断寻求挑战激励自己。提防自己，不要躺倒在舒适区。舒适区只是避风港，不是安乐窝。它只是你心中准备迎接下次挑战之前刻意放松自己和恢复元气的地方。","想，都是问题，做，才是答案，考虑一千次，不如去做一次。因为想而不做的思考叫自己骗自己，犹豫一万次，不如去实践一次。","几乎任何事情都是越做越简单，越想越困难，越拖着越想放弃。","经历是最好的老师，它教会我们成长，也教会我们如何更好地生活。","学习而不思考就会迷茫，思考而不学习就会危险，意为学习和思考要结合起来。","圣人没有固定的老师，意为要广泛学习，不局限于一个人。","世界是一本书，不旅行的人只读了其中的一页。","学习一种语言就是进入一个世界，一种文化。","幸福并不是追求完美，而是学会接纳不完美的自己与他人。","成功的背后往往有着无数次的失败，它们是我们前进的脚印，也是成功的铺垫。","自私让人只看到自己，贪婪让人失去底线，懒惰让人原地踏步，骄傲让人跌倒在前进的路上。","远离穷人，多接触成功人士，才能改变自己的命运。","突然之间心空了，没有了方向，剩下的只是迷茫，没有了生活的意义，感觉没什么规划，没有目标，没有生活动力了，人，活着到底是为了什么。","人生就像愤怒的小鸟，每次你失败的时候，总有几只猪在笑。","每个人都有自己的空间，彼此尊重是必要的。","过度关心只会给对方带来负担，反而适得其反。","给自己一些时间，去放松和充电，才能更好地去面对生活。","人生只有一次，何必为了别人的目光活得委屈，倒不如取悦自己。","生活总是难免坎坷，但爱笑的人运气都不会太差。一个人要想改变自己的命运，先从学会微笑开始"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":80,"backing_speed":30,"starting_delay":500,"backing_delay":5000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":true,"family":"LXGWWenKai","url":"css/style.styl"},"social_links":{"enable":true,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":"ixiaoqy@gmail.com","fa-regular fa-house":"https://www.xiaoww.com","bilibili":"https://space.bilibili.com/23232348"},"qrs":{"weixin":"images/xiaoww-wechat.jpeg","alipay":"images/xiaoww-alipay.jpeg","qq":"images/xiaoww-qq.jpeg"}}},"plugins":{"feed":{"enable":true,"type":["atom","rss2"],"path":["atom.xml","rss2.xml"],"limit":20,"hub":null,"content":true,"content_limit":140,"content_limit_delim":" ","order_by":"-date","icon":"images/xiaoww-blog-logo.png","autodiscovery":true,"template":["./source/atom.xml","./source/rss2.xml"]},"aplayer":{"enable":"enable","type":"fixed","audios":[{"name":"C U Again","artist":"Cartoon","url":"https://oss.blog.xiaoww.com/music/1.mp3","cover":"https://oss.blog.xiaoww.com/music/1.jpg","lrc":"https://oss.blog.xiaoww.com/music/1.lrc"},{"name":"Safe & Sound","artist":"Different Heaven","url":"https://oss.blog.xiaoww.com/music/2.mp3","cover":"https://oss.blog.xiaoww.com/music/2.jpg","lrc":"https://oss.blog.xiaoww.com/music/2.lrc"},{"name":"Feel Good","artist":"Syn Cole","url":"https://oss.blog.xiaoww.com/music/3.mp3","cover":"https://oss.blog.xiaoww.com/music/3.jpg","lrc":"https://oss.blog.xiaoww.com/music/3.lrc"},{"name":"On & On","artist":"Cartoon","url":"https://oss.blog.xiaoww.com/music/4.mp3","cover":"https://oss.blog.xiaoww.com/music/4.jpg","lrc":"https://oss.blog.xiaoww.com/music/4.lrc"},{"name":"Why We Lose","artist":"Cartoon","url":"https://oss.blog.xiaoww.com/music/5.mp3","cover":"https://oss.blog.xiaoww.com/music/5.jpg","lrc":"https://oss.blog.xiaoww.com/music/5.lrc"},{"name":"Nekozilla","artist":"Different Heaven","url":"https://oss.blog.xiaoww.com/music/6.mp3","cover":"https://oss.blog.xiaoww.com/music/6.jpg","lrc":"https://oss.blog.xiaoww.com/music/6.lrc"},{"name":"My Heart","artist":"Different Heaven","url":"https://oss.blog.xiaoww.com/music/7.mp3","cover":"https://oss.blog.xiaoww.com/music/7.jpg","lrc":"https://oss.blog.xiaoww.com/music/7.lrc"},{"name":"Frontier","artist":"Doctor Vox","url":"https://oss.blog.xiaoww.com/music/8.mp3","cover":"https://oss.blog.xiaoww.com/music/8.jpg","lrc":"https://oss.blog.xiaoww.com/music/8.lrc"},{"name":"Symbolism","artist":"Electrolight","url":"https://oss.blog.xiaoww.com/music/9.mp3","cover":"https://oss.blog.xiaoww.com/music/9.jpg","lrc":"https://oss.blog.xiaoww.com/music/9.lrc"},{"name":"Cetus","artist":"Lensko","url":"https://oss.blog.xiaoww.com/music/10.mp3","cover":"https://oss.blog.xiaoww.com/music/10.jpg","lrc":"https://oss.blog.xiaoww.com/music/10.lrc"},{"name":"Oblivion","artist":"TheFatRat、Lola Blanc","url":"https://oss.blog.xiaoww.com/music/11.mp3","cover":"https://oss.blog.xiaoww.com/music/11.jpg","lrc":"https://oss.blog.xiaoww.com/music/11.lrc"},{"name":"Candyland","artist":"Tobu","url":"https://oss.blog.xiaoww.com/music/12.mp3","cover":"https://oss.blog.xiaoww.com/music/12.jpg","lrc":"https://oss.blog.xiaoww.com/music/12.lrc"},{"name":"Frame of Mind","artist":"Tristam","url":"https://oss.blog.xiaoww.com/music/13.mp3","cover":"https://oss.blog.xiaoww.com/music/13.jpg","lrc":"https://oss.blog.xiaoww.com/music/13.lrc"},{"name":"Nevada","artist":"Vicetone","url":"https://oss.blog.xiaoww.com/music/14.mp3","cover":"https://oss.blog.xiaoww.com/music/14.jpg","lrc":"https://oss.blog.xiaoww.com/music/14.lrc"},{"name":"Solstice","artist":"K-391","url":"https://oss.blog.xiaoww.com/music/15.mp3","cover":"https://oss.blog.xiaoww.com/music/15.jpg","lrc":"https://oss.blog.xiaoww.com/music/15.lrc"},{"name":"Summertime","artist":"K-391","url":"https://oss.blog.xiaoww.com/music/16.mp3","cover":"https://oss.blog.xiaoww.com/music/16.jpg","lrc":"https://oss.blog.xiaoww.com/music/16.lrc"},{"name":"Dancin (Krono Remix)","artist":"Aaron Smith","url":"https://oss.blog.xiaoww.com/music/17.mp3","cover":"https://oss.blog.xiaoww.com/music/17.jpg","lrc":"https://oss.blog.xiaoww.com/music/17.lrc"},{"name":"Alone","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/18.mp3","cover":"https://oss.blog.xiaoww.com/music/18.jpg","lrc":"https://oss.blog.xiaoww.com/music/18.lrc"},{"name":"The Spectre","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/19.mp3","cover":"https://oss.blog.xiaoww.com/music/19.jpg","lrc":"https://oss.blog.xiaoww.com/music/19.lrc"},{"name":"Legends Never Die (Alan Walker Remix)","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/20.mp3","cover":"https://oss.blog.xiaoww.com/music/20.jpg","lrc":"https://oss.blog.xiaoww.com/music/20.lrc"},{"name":"Darkside","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/21.mp3","cover":"https://oss.blog.xiaoww.com/music/21.jpg","lrc":"https://oss.blog.xiaoww.com/music/21.lrc"},{"name":"Tired","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/22.mp3","cover":"https://oss.blog.xiaoww.com/music/22.jpg","lrc":"https://oss.blog.xiaoww.com/music/22.lrc"},{"name":"Faded","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/23.mp3","cover":"https://oss.blog.xiaoww.com/music/23.jpg","lrc":"https://oss.blog.xiaoww.com/music/23.lrc"},{"name":"Sing Me to Sleep","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/24.mp3","cover":"https://oss.blog.xiaoww.com/music/24.jpg","lrc":"https://oss.blog.xiaoww.com/music/24.lrc"},{"name":"Lily","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/25.mp3","cover":"https://oss.blog.xiaoww.com/music/25.jpg","lrc":"https://oss.blog.xiaoww.com/music/25.lrc"},{"name":"Different World","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/26.mp3","cover":"https://oss.blog.xiaoww.com/music/26.jpg","lrc":"https://oss.blog.xiaoww.com/music/26.lrc"},{"name":"All Falls Down","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/27.mp3","cover":"https://oss.blog.xiaoww.com/music/27.jpg","lrc":"https://oss.blog.xiaoww.com/music/27.lrc"},{"name":"Lost Control","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/28.mp3","cover":"https://oss.blog.xiaoww.com/music/28.jpg","lrc":"https://oss.blog.xiaoww.com/music/28.lrc"},{"name":"End of Time","artist":"K-391","url":"https://oss.blog.xiaoww.com/music/29.mp3","cover":"https://oss.blog.xiaoww.com/music/29.jpg","lrc":"https://oss.blog.xiaoww.com/music/29.lrc"},{"name":"Ignite","artist":"K-391","url":"https://oss.blog.xiaoww.com/music/30.mp3","cover":"https://oss.blog.xiaoww.com/music/30.jpg","lrc":"https://oss.blog.xiaoww.com/music/30.lrc"},{"name":"The Calling","artist":"TheFatRat","url":"https://oss.blog.xiaoww.com/music/31.mp3","cover":"https://oss.blog.xiaoww.com/music/31.jpg","lrc":"https://oss.blog.xiaoww.com/music/31.lrc"},{"name":"Rise Up","artist":"TheFatRat","url":"https://oss.blog.xiaoww.com/music/32.mp3","cover":"https://oss.blog.xiaoww.com/music/32.jpg","lrc":"https://oss.blog.xiaoww.com/music/32.lrc"},{"name":"MAYDAY","artist":"TheFatRat","url":"https://oss.blog.xiaoww.com/music/33.mp3","cover":"https://oss.blog.xiaoww.com/music/33.jpg","lrc":"https://oss.blog.xiaoww.com/music/33.lrc"},{"name":"Electrified","artist":"TheFatRat","url":"https://oss.blog.xiaoww.com/music/34.mp3","cover":"https://oss.blog.xiaoww.com/music/34.jpg","lrc":"https://oss.blog.xiaoww.com/music/34.lrc"},{"name":"Xenogenesis","artist":"TheFatRat","url":"https://oss.blog.xiaoww.com/music/35.mp3","cover":"https://oss.blog.xiaoww.com/music/35.jpg","lrc":"https://oss.blog.xiaoww.com/music/35.lrc"},{"name":"Roots","artist":"Tobu","url":"https://oss.blog.xiaoww.com/music/36.mp3","cover":"https://oss.blog.xiaoww.com/music/36.jpg","lrc":"https://oss.blog.xiaoww.com/music/36.lrc"},{"name":"Seven","artist":"Tobu","url":"https://oss.blog.xiaoww.com/music/37.mp3","cover":"https://oss.blog.xiaoww.com/music/37.jpg","lrc":"https://oss.blog.xiaoww.com/music/37.lrc"},{"name":"Sunburst","artist":"Tobu","url":"https://oss.blog.xiaoww.com/music/38.mp3","cover":"https://oss.blog.xiaoww.com/music/38.jpg","lrc":"https://oss.blog.xiaoww.com/music/38.lrc"},{"name":"Move Your Body","artist":"Sia","url":"https://oss.blog.xiaoww.com/music/39.mp3","cover":"https://oss.blog.xiaoww.com/music/39.jpg","lrc":"https://oss.blog.xiaoww.com/music/39.lrc"},{"name":"Beautiful Now","artist":"Zedd","url":"https://oss.blog.xiaoww.com/music/40.mp3","cover":"https://oss.blog.xiaoww.com/music/40.jpg","lrc":"https://oss.blog.xiaoww.com/music/40.lrc"},{"name":"#Lov3 #Ngẫu Hứng","artist":"Hoaprox","url":"https://oss.blog.xiaoww.com/music/41.mp3","cover":"https://oss.blog.xiaoww.com/music/41.jpg","lrc":"https://oss.blog.xiaoww.com/music/41.lrc"},{"name":"Animals (Radio Edit)","artist":"Martin Garrix","url":"https://oss.blog.xiaoww.com/music/42.mp3","cover":"https://oss.blog.xiaoww.com/music/42.jpg","lrc":"https://oss.blog.xiaoww.com/music/42.lrc"},{"name":"Visions","artist":"Acreix","url":"https://oss.blog.xiaoww.com/music/43.mp3","cover":"https://oss.blog.xiaoww.com/music/43.jpg","lrc":"https://oss.blog.xiaoww.com/music/43.lrc"},{"name":"Whataya Want from Me","artist":"Adam Lambert","url":"https://oss.blog.xiaoww.com/music/44.mp3","cover":"https://oss.blog.xiaoww.com/music/44.jpg","lrc":"https://oss.blog.xiaoww.com/music/44.lrc"},{"name":"On My Way","artist":"Alan Walker","url":"https://oss.blog.xiaoww.com/music/45.mp3","cover":"https://oss.blog.xiaoww.com/music/45.jpg","lrc":"https://oss.blog.xiaoww.com/music/45.lrc"},{"name":"You","artist":"Approaching Nirvana","url":"https://oss.blog.xiaoww.com/music/46.mp3","cover":"https://oss.blog.xiaoww.com/music/46.jpg","lrc":"https://oss.blog.xiaoww.com/music/46.lrc"},{"name":"Meant To Be","artist":"Arc North","url":"https://oss.blog.xiaoww.com/music/47.mp3","cover":"https://oss.blog.xiaoww.com/music/47.jpg","lrc":"https://oss.blog.xiaoww.com/music/47.lrc"},{"name":"Waiting For Love","artist":"Avicii","url":"https://oss.blog.xiaoww.com/music/48.mp3","cover":"https://oss.blog.xiaoww.com/music/48.jpg","lrc":"https://oss.blog.xiaoww.com/music/48.lrc"},{"name":"Trip","artist":"Axero","url":"https://oss.blog.xiaoww.com/music/49.mp3","cover":"https://oss.blog.xiaoww.com/music/49.jpg","lrc":"https://oss.blog.xiaoww.com/music/49.lrc"},{"name":"Shooting Stars","artist":"Bag Raiders","url":"https://oss.blog.xiaoww.com/music/50.mp3","cover":"https://oss.blog.xiaoww.com/music/50.jpg","lrc":"https://oss.blog.xiaoww.com/music/50.lrc"},{"name":"Count The Hours","artist":"BEAUZ","url":"https://oss.blog.xiaoww.com/music/51.mp3","cover":"https://oss.blog.xiaoww.com/music/51.jpg","lrc":"https://oss.blog.xiaoww.com/music/51.lrc"},{"name":"bad guy","artist":"Billie Eilish","url":"https://oss.blog.xiaoww.com/music/52.mp3","cover":"https://oss.blog.xiaoww.com/music/52.jpg","lrc":"https://oss.blog.xiaoww.com/music/52.lrc"},{"name":"Boomerang","artist":"Brooks","url":"https://oss.blog.xiaoww.com/music/53.mp3","cover":"https://oss.blog.xiaoww.com/music/53.jpg","lrc":"https://oss.blog.xiaoww.com/music/53.lrc"},{"name":"Tuesday","artist":"Burak Yeter","url":"https://oss.blog.xiaoww.com/music/54.mp3","cover":"https://oss.blog.xiaoww.com/music/54.jpg","lrc":"https://oss.blog.xiaoww.com/music/54.lrc"},{"name":"This Is What You Came For","artist":"Calvin Harris","url":"https://oss.blog.xiaoww.com/music/55.mp3","cover":"https://oss.blog.xiaoww.com/music/55.jpg","lrc":"https://oss.blog.xiaoww.com/music/55.lrc"},{"name":"Touch The Sky","artist":"Cedric Gervais","url":"https://oss.blog.xiaoww.com/music/56.mp3","cover":"https://oss.blog.xiaoww.com/music/56.jpg","lrc":"https://oss.blog.xiaoww.com/music/56.lrc"},{"name":"Future Funk","artist":"Varien","url":"https://oss.blog.xiaoww.com/music/57.mp3","cover":"https://oss.blog.xiaoww.com/music/57.jpg","lrc":"https://oss.blog.xiaoww.com/music/57.lrc"},{"name":"I Feel Human (feat. BullySongs)","artist":"Vicetone","url":"https://oss.blog.xiaoww.com/music/58.mp3","cover":"https://oss.blog.xiaoww.com/music/58.jpg","lrc":"https://oss.blog.xiaoww.com/music/58.lrc"},{"name":"Way Back (feat. Cozi Zuehlsdorff)","artist":"Vicetone","url":"https://oss.blog.xiaoww.com/music/59.mp3","cover":"https://oss.blog.xiaoww.com/music/59.jpg","lrc":"https://oss.blog.xiaoww.com/music/59.lrc"},{"name":"Waiting","artist":"Vicetone","url":"https://oss.blog.xiaoww.com/music/60.mp3","cover":"https://oss.blog.xiaoww.com/music/60.jpg","lrc":"https://oss.blog.xiaoww.com/music/60.lrc"},{"name":"Walk Thru Fire","artist":"Vicetone","url":"https://oss.blog.xiaoww.com/music/61.mp3","cover":"https://oss.blog.xiaoww.com/music/61.jpg","lrc":"https://oss.blog.xiaoww.com/music/61.lrc"},{"name":"Energy Drink","artist":"Virtual Riot","url":"https://oss.blog.xiaoww.com/music/62.mp3","cover":"https://oss.blog.xiaoww.com/music/62.jpg","lrc":"https://oss.blog.xiaoww.com/music/62.lrc"},{"name":"Way Back Home","artist":"SHAUN (숀)","url":"https://oss.blog.xiaoww.com/music/63.mp3","cover":"https://oss.blog.xiaoww.com/music/63.jpg","lrc":"https://oss.blog.xiaoww.com/music/63.lrc"},{"name":"Señorita","artist":"Shawn Mendes","url":"https://oss.blog.xiaoww.com/music/64.mp3","cover":"https://oss.blog.xiaoww.com/music/64.jpg","lrc":"https://oss.blog.xiaoww.com/music/64.lrc"},{"name":"Cheap Thrills (Remix)","artist":"Sia","url":"https://oss.blog.xiaoww.com/music/65.mp3","cover":"https://oss.blog.xiaoww.com/music/65.jpg","lrc":"https://oss.blog.xiaoww.com/music/65.lrc"},{"name":"Sky (Radio Edit)","artist":"Steerner","url":"https://oss.blog.xiaoww.com/music/66.mp3","cover":"https://oss.blog.xiaoww.com/music/66.jpg","lrc":"https://oss.blog.xiaoww.com/music/66.lrc"},{"name":"Cradles","artist":"Sub Urban","url":"https://oss.blog.xiaoww.com/music/67.mp3","cover":"https://oss.blog.xiaoww.com/music/67.jpg","lrc":"https://oss.blog.xiaoww.com/music/67.lrc"},{"name":"Turn All the Lights On","artist":"T-Pain","url":"https://oss.blog.xiaoww.com/music/68.mp3","cover":"https://oss.blog.xiaoww.com/music/68.jpg","lrc":"https://oss.blog.xiaoww.com/music/68.lrc"},{"name":"Да да да (Jarico Remix)","artist":"Tanir","url":"https://oss.blog.xiaoww.com/music/69.mp3","cover":"https://oss.blog.xiaoww.com/music/69.jpg","lrc":"https://oss.blog.xiaoww.com/music/69.lrc"},{"name":"I Knew You Were Trouble.","artist":"Taylor Swift","url":"https://oss.blog.xiaoww.com/music/70.mp3","cover":"https://oss.blog.xiaoww.com/music/70.jpg","lrc":"https://oss.blog.xiaoww.com/music/70.lrc"},{"name":"Something Just Like This","artist":"The Chainsmokers","url":"https://oss.blog.xiaoww.com/music/71.mp3","cover":"https://oss.blog.xiaoww.com/music/71.jpg","lrc":"https://oss.blog.xiaoww.com/music/71.lrc"},{"name":"Don't Let Me Down","artist":"The Chainsmokers","url":"https://oss.blog.xiaoww.com/music/72.mp3","cover":"https://oss.blog.xiaoww.com/music/72.jpg","lrc":"https://oss.blog.xiaoww.com/music/72.lrc"},{"name":"Closer","artist":"The Chainsmokers","url":"https://oss.blog.xiaoww.com/music/73.mp3","cover":"https://oss.blog.xiaoww.com/music/73.jpg","lrc":"https://oss.blog.xiaoww.com/music/73.lrc"},{"name":"Intro","artist":"The xx","url":"https://oss.blog.xiaoww.com/music/74.mp3","cover":"https://oss.blog.xiaoww.com/music/74.jpg","lrc":"https://oss.blog.xiaoww.com/music/74.lrc"},{"name":"Home (Blaze U Remix)","artist":"ThimLife","url":"https://oss.blog.xiaoww.com/music/75.mp3","cover":"https://oss.blog.xiaoww.com/music/75.jpg","lrc":"https://oss.blog.xiaoww.com/music/75.lrc"},{"name":"Fearless","artist":"Tule","url":"https://oss.blog.xiaoww.com/music/76.mp3","cover":"https://oss.blog.xiaoww.com/music/76.jpg","lrc":"https://oss.blog.xiaoww.com/music/76.lrc"},{"name":"Everybody Hates Me","artist":"The Chainsmokers","url":"https://oss.blog.xiaoww.com/music/77.mp3","cover":"https://oss.blog.xiaoww.com/music/77.jpg","lrc":"https://oss.blog.xiaoww.com/music/77.lrc"},{"name":"Samsara","artist":"Tungevaag & Raaban","url":"https://oss.blog.xiaoww.com/music/78.mp3","cover":"https://oss.blog.xiaoww.com/music/78.jpg","lrc":"https://oss.blog.xiaoww.com/music/78.lrc"},{"name":"Daydreamer (Original Mix)","artist":"KarlK","url":"https://oss.blog.xiaoww.com/music/79.mp3","cover":"https://oss.blog.xiaoww.com/music/79.jpg","lrc":"https://oss.blog.xiaoww.com/music/79.lrc"},{"name":"Take It Off","artist":"Kesha","url":"https://oss.blog.xiaoww.com/music/80.mp3","cover":"https://oss.blog.xiaoww.com/music/80.jpg","lrc":"https://oss.blog.xiaoww.com/music/80.lrc"},{"name":"TiK ToK","artist":"Kesha","url":"https://oss.blog.xiaoww.com/music/81.mp3","cover":"https://oss.blog.xiaoww.com/music/81.jpg","lrc":"https://oss.blog.xiaoww.com/music/81.lrc"},{"name":"This Girl","artist":"Kungs","url":"https://oss.blog.xiaoww.com/music/82.mp3","cover":"https://oss.blog.xiaoww.com/music/82.jpg","lrc":"https://oss.blog.xiaoww.com/music/82.lrc"},{"name":"Senbonzakura","artist":"Lindsey Stirling","url":"https://oss.blog.xiaoww.com/music/83.mp3","cover":"https://oss.blog.xiaoww.com/music/83.jpg","lrc":"https://oss.blog.xiaoww.com/music/83.lrc"},{"name":"Reality","artist":"Lost Frequencies","url":"https://oss.blog.xiaoww.com/music/84.mp3","cover":"https://oss.blog.xiaoww.com/music/84.jpg","lrc":"https://oss.blog.xiaoww.com/music/84.lrc"},{"name":"Lean On","artist":"Major Lazer","url":"https://oss.blog.xiaoww.com/music/85.mp3","cover":"https://oss.blog.xiaoww.com/music/85.jpg","lrc":"https://oss.blog.xiaoww.com/music/85.lrc"},{"name":"High On Life","artist":"Martin Garrix","url":"https://oss.blog.xiaoww.com/music/86.mp3","cover":"https://oss.blog.xiaoww.com/music/86.jpg","lrc":"https://oss.blog.xiaoww.com/music/86.lrc"},{"name":"There For You","artist":"Martin Garrix","url":"https://oss.blog.xiaoww.com/music/87.mp3","cover":"https://oss.blog.xiaoww.com/music/87.jpg","lrc":"https://oss.blog.xiaoww.com/music/87.lrc"},{"name":"Solo Dance","artist":"Martin Jensen","url":"https://oss.blog.xiaoww.com/music/88.mp3","cover":"https://oss.blog.xiaoww.com/music/88.jpg","lrc":"https://oss.blog.xiaoww.com/music/88.lrc"},{"name":"One Day","artist":"MatisYahu","url":"https://oss.blog.xiaoww.com/music/89.mp3","cover":"https://oss.blog.xiaoww.com/music/89.jpg","lrc":"https://oss.blog.xiaoww.com/music/89.lrc"},{"name":"Panama","artist":"Matteo","url":"https://oss.blog.xiaoww.com/music/90.mp3","cover":"https://oss.blog.xiaoww.com/music/90.jpg","lrc":"https://oss.blog.xiaoww.com/music/90.lrc"},{"name":"Lose Control","artist":"Meduza","url":"https://oss.blog.xiaoww.com/music/91.mp3","cover":"https://oss.blog.xiaoww.com/music/91.jpg","lrc":"https://oss.blog.xiaoww.com/music/91.lrc"},{"name":"Piece Of Your Heart","artist":"Meduza","url":"https://oss.blog.xiaoww.com/music/92.mp3","cover":"https://oss.blog.xiaoww.com/music/92.jpg","lrc":"https://oss.blog.xiaoww.com/music/92.lrc"},{"name":"Skyland","artist":"Mich","url":"https://oss.blog.xiaoww.com/music/93.mp3","cover":"https://oss.blog.xiaoww.com/music/93.jpg","lrc":"https://oss.blog.xiaoww.com/music/93.lrc"},{"name":"The Ocean (Radio Edit)","artist":"Mike Perry","url":"https://oss.blog.xiaoww.com/music/94.mp3","cover":"https://oss.blog.xiaoww.com/music/94.jpg","lrc":"https://oss.blog.xiaoww.com/music/94.lrc"},{"name":"Endeavors (Original Mix)","artist":"MitiS","url":"https://oss.blog.xiaoww.com/music/95.mp3","cover":"https://oss.blog.xiaoww.com/music/95.jpg","lrc":"https://oss.blog.xiaoww.com/music/95.lrc"},{"name":"Pure Sunlight","artist":"Mr FijiWiji","url":"https://oss.blog.xiaoww.com/music/96.mp3","cover":"https://oss.blog.xiaoww.com/music/96.jpg","lrc":"https://oss.blog.xiaoww.com/music/96.lrc"},{"name":"i don't wanna see u anymore 2019","artist":"NINEONE #","url":"https://oss.blog.xiaoww.com/music/97.mp3","cover":"https://oss.blog.xiaoww.com/music/97.jpg","lrc":"https://oss.blog.xiaoww.com/music/97.lrc"},{"name":"Counting Stars","artist":"OneRepublic","url":"https://oss.blog.xiaoww.com/music/98.mp3","cover":"https://oss.blog.xiaoww.com/music/98.jpg","lrc":"https://oss.blog.xiaoww.com/music/98.lrc"},{"name":"Disconnected","artist":"Pegboard Nerds","url":"https://oss.blog.xiaoww.com/music/99.mp3","cover":"https://oss.blog.xiaoww.com/music/99.jpg","lrc":"https://oss.blog.xiaoww.com/music/99.lrc"},{"name":"Es Rappelt Im Karton","artist":"Pixie Paris","url":"https://oss.blog.xiaoww.com/music/100.mp3","cover":"https://oss.blog.xiaoww.com/music/100.jpg","lrc":"https://oss.blog.xiaoww.com/music/100.lrc"},{"name":"Moshi Moshi","artist":"Poppy","url":"https://oss.blog.xiaoww.com/music/101.mp3","cover":"https://oss.blog.xiaoww.com/music/101.jpg","lrc":"https://oss.blog.xiaoww.com/music/101.lrc"},{"name":"Lullaby","artist":"R3HAB","url":"https://oss.blog.xiaoww.com/music/102.mp3","cover":"https://oss.blog.xiaoww.com/music/102.jpg","lrc":"https://oss.blog.xiaoww.com/music/102.lrc"},{"name":"911","artist":"R3HAB","url":"https://oss.blog.xiaoww.com/music/103.mp3","cover":"https://oss.blog.xiaoww.com/music/103.jpg","lrc":"https://oss.blog.xiaoww.com/music/103.lrc"},{"name":"Shivers","artist":"Rachel Platten","url":"https://oss.blog.xiaoww.com/music/104.mp3","cover":"https://oss.blog.xiaoww.com/music/104.jpg","lrc":"https://oss.blog.xiaoww.com/music/104.lrc"},{"name":"Seasons","artist":"Rival & Cadmium","url":"https://oss.blog.xiaoww.com/music/105.mp3","cover":"https://oss.blog.xiaoww.com/music/105.jpg","lrc":"https://oss.blog.xiaoww.com/music/105.lrc"},{"name":"Psycho (Pt. 2) (Explicit)","artist":"Russ","url":"https://oss.blog.xiaoww.com/music/106.mp3","cover":"https://oss.blog.xiaoww.com/music/106.jpg","lrc":"https://oss.blog.xiaoww.com/music/106.lrc"},{"name":"Dancing With Your Ghost","artist":"Sasha Sloan","url":"https://oss.blog.xiaoww.com/music/107.mp3","cover":"https://oss.blog.xiaoww.com/music/107.jpg","lrc":"https://oss.blog.xiaoww.com/music/107.lrc"},{"name":"Tony Igy - Astronomia (Jiaye Bootleg)","artist":"Jiaye","url":"https://oss.blog.xiaoww.com/music/108.mp3","cover":"https://oss.blog.xiaoww.com/music/108.jpg","lrc":"https://oss.blog.xiaoww.com/music/108.lrc"},{"name":"We Can't Stop","artist":"Miley Cyrus","url":"https://oss.blog.xiaoww.com/music/109.mp3","cover":"https://oss.blog.xiaoww.com/music/109.jpg","lrc":"https://oss.blog.xiaoww.com/music/109.lrc"},{"name":"Sugar","artist":"Maroon 5","url":"https://oss.blog.xiaoww.com/music/110.mp3","cover":"https://oss.blog.xiaoww.com/music/110.jpg","lrc":"https://oss.blog.xiaoww.com/music/110.lrc"},{"name":"Me And My Broken Heart","artist":"push baby","url":"https://oss.blog.xiaoww.com/music/111.mp3","cover":"https://oss.blog.xiaoww.com/music/111.jpg","lrc":"https://oss.blog.xiaoww.com/music/111.lrc"},{"name":"Skin","artist":"Rag'N'Bone Man","url":"https://oss.blog.xiaoww.com/music/112.mp3","cover":"https://oss.blog.xiaoww.com/music/112.jpg","lrc":"https://oss.blog.xiaoww.com/music/112.lrc"},{"name":"Neon Rainbow","artist":"Rameses B","url":"https://oss.blog.xiaoww.com/music/113.mp3","cover":"https://oss.blog.xiaoww.com/music/113.jpg","lrc":"https://oss.blog.xiaoww.com/music/113.lrc"},{"name":"Girls","artist":"Marcus & Martinus","url":"https://oss.blog.xiaoww.com/music/114.mp3","cover":"https://oss.blog.xiaoww.com/music/114.jpg","lrc":"https://oss.blog.xiaoww.com/music/114.lrc"},{"name":"かわいいひと","artist":"CHAI (チャイ)","url":"https://oss.blog.xiaoww.com/music/115.mp3","cover":"https://oss.blog.xiaoww.com/music/115.jpg","lrc":"https://oss.blog.xiaoww.com/music/115.lrc"},{"name":"Take Me to Infinity","artist":"Consoul Trainin","url":"https://oss.blog.xiaoww.com/music/116.mp3","cover":"https://oss.blog.xiaoww.com/music/116.jpg","lrc":"https://oss.blog.xiaoww.com/music/116.lrc"},{"name":"Coming Home","artist":"Dash Berlin","url":"https://oss.blog.xiaoww.com/music/117.mp3","cover":"https://oss.blog.xiaoww.com/music/117.jpg","lrc":"https://oss.blog.xiaoww.com/music/117.lrc"},{"name":"Run Free (Radio Edit)","artist":"Deep Chills","url":"https://oss.blog.xiaoww.com/music/118.mp3","cover":"https://oss.blog.xiaoww.com/music/118.jpg","lrc":"https://oss.blog.xiaoww.com/music/118.lrc"},{"name":"Dependent","artist":"Deepcentral","url":"https://oss.blog.xiaoww.com/music/119.mp3","cover":"https://oss.blog.xiaoww.com/music/119.jpg","lrc":"https://oss.blog.xiaoww.com/music/119.lrc"},{"name":"Five Hours","artist":"Deorro","url":"https://oss.blog.xiaoww.com/music/120.mp3","cover":"https://oss.blog.xiaoww.com/music/120.jpg","lrc":"https://oss.blog.xiaoww.com/music/120.lrc"},{"name":"Geisha","artist":"Dino Sor","url":"https://oss.blog.xiaoww.com/music/121.mp3","cover":"https://oss.blog.xiaoww.com/music/121.jpg","lrc":"https://oss.blog.xiaoww.com/music/121.lrc"},{"name":"Flowers","artist":"Dirty Palm","url":"https://oss.blog.xiaoww.com/music/122.mp3","cover":"https://oss.blog.xiaoww.com/music/122.jpg","lrc":"https://oss.blog.xiaoww.com/music/122.lrc"},{"name":"You Know I'll Go Get","artist":"DJ Haning","url":"https://oss.blog.xiaoww.com/music/123.mp3","cover":"https://oss.blog.xiaoww.com/music/123.jpg","lrc":"https://oss.blog.xiaoww.com/music/123.lrc"},{"name":"Vinai & Scndl - Frontier (Firejaxx Edit) (Original Mix)","artist":"DJHar孙宁","url":"https://oss.blog.xiaoww.com/music/124.mp3","cover":"https://oss.blog.xiaoww.com/music/124.jpg","lrc":"https://oss.blog.xiaoww.com/music/124.lrc"},{"name":"Heaven (Radio Edit)","artist":"Dogena","url":"https://oss.blog.xiaoww.com/music/125.mp3","cover":"https://oss.blog.xiaoww.com/music/125.jpg","lrc":"https://oss.blog.xiaoww.com/music/125.lrc"},{"name":"Ghost","artist":"Au/Ra","url":"https://oss.blog.xiaoww.com/music/126.mp3","cover":"https://oss.blog.xiaoww.com/music/126.jpg","lrc":"https://oss.blog.xiaoww.com/music/126.lrc"},{"name":"Send It","artist":"Austin Mahone","url":"https://oss.blog.xiaoww.com/music/127.mp3","cover":"https://oss.blog.xiaoww.com/music/127.jpg","lrc":"https://oss.blog.xiaoww.com/music/127.lrc"},{"name":"Wrap Me In Plastic","artist":"CHROMANCE","url":"https://oss.blog.xiaoww.com/music/128.mp3","cover":"https://oss.blog.xiaoww.com/music/128.jpg","lrc":"https://oss.blog.xiaoww.com/music/128.lrc"},{"name":"That Girl","artist":"Olly Murs","url":"https://oss.blog.xiaoww.com/music/129.mp3","cover":"https://oss.blog.xiaoww.com/music/129.jpg","lrc":"https://oss.blog.xiaoww.com/music/129.lrc"},{"name":"CALL ME BABY","artist":"EXO (엑소)","url":"https://oss.blog.xiaoww.com/music/130.mp3","cover":"https://oss.blog.xiaoww.com/music/130.jpg","lrc":"https://oss.blog.xiaoww.com/music/130.lrc"},{"name":"Love Shot","artist":"EXO","url":"https://oss.blog.xiaoww.com/music/131.mp3","cover":"https://oss.blog.xiaoww.com/music/131.jpg","lrc":"https://oss.blog.xiaoww.com/music/131.lrc"},{"name":"咆哮 (Growl)","artist":"EXO","url":"https://oss.blog.xiaoww.com/music/132.mp3","cover":"https://oss.blog.xiaoww.com/music/132.jpg","lrc":"https://oss.blog.xiaoww.com/music/132.lrc"},{"name":"Obsession","artist":"EXO","url":"https://oss.blog.xiaoww.com/music/133.mp3","cover":"https://oss.blog.xiaoww.com/music/133.jpg","lrc":"https://oss.blog.xiaoww.com/music/133.lrc"},{"name":"LOSER","artist":"BIGBANG (빅뱅)","url":"https://oss.blog.xiaoww.com/music/134.mp3","cover":"https://oss.blog.xiaoww.com/music/134.jpg","lrc":"https://oss.blog.xiaoww.com/music/134.lrc"},{"name":"IF YOU","artist":"BIGBANG","url":"https://oss.blog.xiaoww.com/music/135.mp3","cover":"https://oss.blog.xiaoww.com/music/135.jpg","lrc":"https://oss.blog.xiaoww.com/music/135.lrc"},{"name":"BANG BANG BANG (뱅뱅뱅)","artist":"BIGBANG (빅뱅)","url":"https://oss.blog.xiaoww.com/music/136.mp3","cover":"https://oss.blog.xiaoww.com/music/136.jpg","lrc":"https://oss.blog.xiaoww.com/music/136.lrc"},{"name":"Haru Haru (一天一天) (Japanese Ver.|BONUS TRACK)","artist":"BIGBANG (빅뱅)","url":"https://oss.blog.xiaoww.com/music/137.mp3","cover":"https://oss.blog.xiaoww.com/music/137.jpg","lrc":"https://oss.blog.xiaoww.com/music/137.lrc"},{"name":"Lies (谎言) (Korea Version)","artist":"BIGBANG (빅뱅)","url":"https://oss.blog.xiaoww.com/music/138.mp3","cover":"https://oss.blog.xiaoww.com/music/138.jpg","lrc":"https://oss.blog.xiaoww.com/music/138.lrc"},{"name":"Fantastic Baby","artist":"BIGBANG (빅뱅)","url":"https://oss.blog.xiaoww.com/music/139.mp3","cover":"https://oss.blog.xiaoww.com/music/139.jpg","lrc":"https://oss.blog.xiaoww.com/music/139.lrc"},{"name":"봄의 나라 이야기","artist":"April","url":"https://oss.blog.xiaoww.com/music/140.mp3","cover":"https://oss.blog.xiaoww.com/music/140.jpg","lrc":"https://oss.blog.xiaoww.com/music/140.lrc"},{"name":"눈을 뜨면","artist":"日韩群星","url":"https://oss.blog.xiaoww.com/music/141.mp3","cover":"https://oss.blog.xiaoww.com/music/141.jpg","lrc":"https://oss.blog.xiaoww.com/music/141.lrc"},{"name":"Зая","artist":"Бамбинтон","url":"https://oss.blog.xiaoww.com/music/142.mp3","cover":"https://oss.blog.xiaoww.com/music/142.jpg","lrc":"https://oss.blog.xiaoww.com/music/142.lrc"},{"name":"Reset","artist":"Tiger JK、JINSIL","url":"https://oss.blog.xiaoww.com/music/143.mp3","cover":"https://oss.blog.xiaoww.com/music/143.jpg","lrc":"https://oss.blog.xiaoww.com/music/143.lrc"},{"name":"Hold On (Radio Edit)","artist":"Moguai","url":"https://oss.blog.xiaoww.com/music/144.mp3","cover":"https://oss.blog.xiaoww.com/music/144.jpg","lrc":"https://oss.blog.xiaoww.com/music/144.lrc"},{"name":"Trap(Korean Ver.)","artist":"圭贤、泰民[SHINee]、刘宪华","url":"https://oss.blog.xiaoww.com/music/145.mp3","cover":"https://oss.blog.xiaoww.com/music/145.jpg","lrc":"https://oss.blog.xiaoww.com/music/145.lrc"},{"name":"꿈사탕","artist":"April","url":"https://oss.blog.xiaoww.com/music/146.mp3","cover":"https://oss.blog.xiaoww.com/music/146.jpg","lrc":"https://oss.blog.xiaoww.com/music/146.lrc"},{"name":"Superstar","artist":"Beatrich","url":"https://oss.blog.xiaoww.com/music/147.mp3","cover":"https://oss.blog.xiaoww.com/music/147.jpg","lrc":"https://oss.blog.xiaoww.com/music/147.lrc"},{"name":"After the Afterparty(16 bit version)","artist":"Charli XCX、Lil Yachty","url":"https://oss.blog.xiaoww.com/music/148.mp3","cover":"https://oss.blog.xiaoww.com/music/148.jpg","lrc":"https://oss.blog.xiaoww.com/music/148.lrc"},{"name":"Shape of You","artist":"Ed Sheeran","url":"https://oss.blog.xiaoww.com/music/149.mp3","cover":"https://oss.blog.xiaoww.com/music/149.jpg","lrc":"https://oss.blog.xiaoww.com/music/149.lrc"},{"name":"We Don't Talk Anymore","artist":"Charlie Puth、Selena Gomez","url":"https://oss.blog.xiaoww.com/music/150.mp3","cover":"https://oss.blog.xiaoww.com/music/150.jpg","lrc":"https://oss.blog.xiaoww.com/music/150.lrc"},{"name":"Stay With Me","artist":"朴灿烈、Punch[韩]","url":"https://oss.blog.xiaoww.com/music/151.mp3","cover":"https://oss.blog.xiaoww.com/music/151.jpg","lrc":"https://oss.blog.xiaoww.com/music/151.lrc"},{"name":"LIKEY","artist":"TWICE (트와이스)","url":"https://oss.blog.xiaoww.com/music/152.mp3","cover":"https://oss.blog.xiaoww.com/music/152.jpg","lrc":"https://oss.blog.xiaoww.com/music/152.lrc"},{"name":"Salt(Syn Cole Remix)","artist":"Ava Max","url":"https://oss.blog.xiaoww.com/music/153.mp3","cover":"https://oss.blog.xiaoww.com/music/153.jpg","lrc":"https://oss.blog.xiaoww.com/music/153.lrc"},{"name":"寄明月","artist":"SING女团","url":"https://oss.blog.xiaoww.com/music/154.mp3","cover":"https://oss.blog.xiaoww.com/music/154.jpg","lrc":"https://oss.blog.xiaoww.com/music/154.lrc"},{"name":"嚣张","artist":"en","url":"https://oss.blog.xiaoww.com/music/155.mp3","cover":"https://oss.blog.xiaoww.com/music/155.jpg","lrc":"https://oss.blog.xiaoww.com/music/155.lrc"},{"name":"Leevis","artist":"Fri","url":"https://oss.blog.xiaoww.com/music/156.mp3","cover":"https://oss.blog.xiaoww.com/music/156.jpg","lrc":"https://oss.blog.xiaoww.com/music/156.lrc"},{"name":"Choir (Remix)","artist":"Guy Sebastian","url":"https://oss.blog.xiaoww.com/music/157.mp3","cover":"https://oss.blog.xiaoww.com/music/157.jpg","lrc":"https://oss.blog.xiaoww.com/music/157.lrc"},{"name":"Sold Out","artist":"Hawk Nelson","url":"https://oss.blog.xiaoww.com/music/158.mp3","cover":"https://oss.blog.xiaoww.com/music/158.jpg","lrc":"https://oss.blog.xiaoww.com/music/158.lrc"},{"name":"心如止水","artist":"Ice Paper","url":"https://oss.blog.xiaoww.com/music/159.mp3","cover":"https://oss.blog.xiaoww.com/music/159.jpg","lrc":"https://oss.blog.xiaoww.com/music/159.lrc"},{"name":"Fractures","artist":"ILLENIUM","url":"https://oss.blog.xiaoww.com/music/160.mp3","cover":"https://oss.blog.xiaoww.com/music/160.jpg","lrc":"https://oss.blog.xiaoww.com/music/160.lrc"},{"name":"Panda","artist":"Itro","url":"https://oss.blog.xiaoww.com/music/161.mp3","cover":"https://oss.blog.xiaoww.com/music/161.jpg","lrc":"https://oss.blog.xiaoww.com/music/161.lrc"},{"name":"Where Is Your Love","artist":"J Lisk","url":"https://oss.blog.xiaoww.com/music/162.mp3","cover":"https://oss.blog.xiaoww.com/music/162.jpg","lrc":"https://oss.blog.xiaoww.com/music/162.lrc"},{"name":"Horizon","artist":"Janji","url":"https://oss.blog.xiaoww.com/music/163.mp3","cover":"https://oss.blog.xiaoww.com/music/163.jpg","lrc":"https://oss.blog.xiaoww.com/music/163.lrc"},{"name":"星球坠落","artist":"JelloRio李佳隆","url":"https://oss.blog.xiaoww.com/music/164.mp3","cover":"https://oss.blog.xiaoww.com/music/164.jpg","lrc":"https://oss.blog.xiaoww.com/music/164.lrc"},{"name":"Please Don't Go","artist":"Joel Adams","url":"https://oss.blog.xiaoww.com/music/165.mp3","cover":"https://oss.blog.xiaoww.com/music/165.jpg","lrc":"https://oss.blog.xiaoww.com/music/165.lrc"},{"name":"By Your Side","artist":"Jonas Blue","url":"https://oss.blog.xiaoww.com/music/166.mp3","cover":"https://oss.blog.xiaoww.com/music/166.jpg","lrc":"https://oss.blog.xiaoww.com/music/166.lrc"},{"name":"Come & Go (Explicit)","artist":"Juice WRLD","url":"https://oss.blog.xiaoww.com/music/167.mp3","cover":"https://oss.blog.xiaoww.com/music/167.jpg","lrc":"https://oss.blog.xiaoww.com/music/167.lrc"},{"name":"清新的小女孩（For Ma）","artist":"July Tun","url":"https://oss.blog.xiaoww.com/music/168.mp3","cover":"https://oss.blog.xiaoww.com/music/168.jpg","lrc":"https://oss.blog.xiaoww.com/music/168.lrc"},{"name":"aLIEz","artist":"SawanoHiroyuki[nZk] (泽野弘之)","url":"https://oss.blog.xiaoww.com/music/169.mp3","cover":"https://oss.blog.xiaoww.com/music/169.jpg","lrc":"https://oss.blog.xiaoww.com/music/169.lrc"},{"name":"PDD洪荒之力","artist":"青稚m","url":"https://oss.blog.xiaoww.com/music/170.mp3","cover":"https://oss.blog.xiaoww.com/music/170.jpg","lrc":"https://oss.blog.xiaoww.com/music/170.lrc"},{"name":"Limitless（无限）","artist":"SeVen.13","url":"https://oss.blog.xiaoww.com/music/171.mp3","cover":"https://oss.blog.xiaoww.com/music/171.jpg","lrc":"https://oss.blog.xiaoww.com/music/171.lrc"},{"name":"What is Love?","artist":"TWICE (트와이스)","url":"https://oss.blog.xiaoww.com/music/172.mp3","cover":"https://oss.blog.xiaoww.com/music/172.jpg","lrc":"https://oss.blog.xiaoww.com/music/172.lrc"},{"name":"For The Win (Dance Remix)","artist":"Two Steps From Hell","url":"https://oss.blog.xiaoww.com/music/173.mp3","cover":"https://oss.blog.xiaoww.com/music/173.jpg","lrc":"https://oss.blog.xiaoww.com/music/173.lrc"},{"name":"给我一个理由忘记","artist":"A-Lin","url":"https://oss.blog.xiaoww.com/music/174.mp3","cover":"https://oss.blog.xiaoww.com/music/174.jpg","lrc":"https://oss.blog.xiaoww.com/music/174.lrc"},{"name":"文爱","artist":"CG","url":"https://oss.blog.xiaoww.com/music/175.mp3","cover":"https://oss.blog.xiaoww.com/music/175.jpg","lrc":"https://oss.blog.xiaoww.com/music/175.lrc"},{"name":"光年之外","artist":"G.E.M. 邓紫棋","url":"https://oss.blog.xiaoww.com/music/176.mp3","cover":"https://oss.blog.xiaoww.com/music/176.jpg","lrc":"https://oss.blog.xiaoww.com/music/176.lrc"},{"name":"句号","artist":"G.E.M. 邓紫棋","url":"https://oss.blog.xiaoww.com/music/177.mp3","cover":"https://oss.blog.xiaoww.com/music/177.jpg","lrc":"https://oss.blog.xiaoww.com/music/177.lrc"},{"name":"来自天堂的魔鬼","artist":"G.E.M. 邓紫棋","url":"https://oss.blog.xiaoww.com/music/178.mp3","cover":"https://oss.blog.xiaoww.com/music/178.jpg","lrc":"https://oss.blog.xiaoww.com/music/178.lrc"},{"name":"泡沫","artist":"G.E.M. 邓紫棋","url":"https://oss.blog.xiaoww.com/music/179.mp3","cover":"https://oss.blog.xiaoww.com/music/179.jpg","lrc":"https://oss.blog.xiaoww.com/music/179.lrc"},{"name":"短发","artist":"Lamp猴子","url":"https://oss.blog.xiaoww.com/music/180.mp3","cover":"https://oss.blog.xiaoww.com/music/180.jpg","lrc":"https://oss.blog.xiaoww.com/music/180.lrc"},{"name":"傻傻","artist":"Uu","url":"https://oss.blog.xiaoww.com/music/181.mp3","cover":"https://oss.blog.xiaoww.com/music/181.jpg","lrc":"https://oss.blog.xiaoww.com/music/181.lrc"},{"name":"夏天的风","artist":"Uu","url":"https://oss.blog.xiaoww.com/music/182.mp3","cover":"https://oss.blog.xiaoww.com/music/182.jpg","lrc":"https://oss.blog.xiaoww.com/music/182.lrc"},{"name":"East of Eden","artist":"Zella Day","url":"https://oss.blog.xiaoww.com/music/183.mp3","cover":"https://oss.blog.xiaoww.com/music/183.jpg","lrc":"https://oss.blog.xiaoww.com/music/183.lrc"},{"name":"China-X","artist":"徐梦圆","url":"https://oss.blog.xiaoww.com/music/184.mp3","cover":"https://oss.blog.xiaoww.com/music/184.jpg","lrc":"https://oss.blog.xiaoww.com/music/184.lrc"},{"name":"不爱我就拉倒","artist":"周杰伦","url":"https://oss.blog.xiaoww.com/music/185.mp3","cover":"https://oss.blog.xiaoww.com/music/185.jpg","lrc":"https://oss.blog.xiaoww.com/music/185.lrc"},{"name":"说好的幸福呢","artist":"周杰伦","url":"https://oss.blog.xiaoww.com/music/186.mp3","cover":"https://oss.blog.xiaoww.com/music/186.jpg","lrc":"https://oss.blog.xiaoww.com/music/186.lrc"},{"name":"小苹果","artist":"筷子兄弟","url":"https://oss.blog.xiaoww.com/music/187.mp3","cover":"https://oss.blog.xiaoww.com/music/187.jpg","lrc":"https://oss.blog.xiaoww.com/music/187.lrc"},{"name":"说散就散","artist":"袁娅维","url":"https://oss.blog.xiaoww.com/music/188.mp3","cover":"https://oss.blog.xiaoww.com/music/188.jpg","lrc":"https://oss.blog.xiaoww.com/music/188.lrc"},{"name":"少年","artist":"梦然","url":"https://oss.blog.xiaoww.com/music/189.mp3","cover":"https://oss.blog.xiaoww.com/music/189.jpg","lrc":"https://oss.blog.xiaoww.com/music/189.lrc"},{"name":"白山茶","artist":"阿泱","url":"https://oss.blog.xiaoww.com/music/190.mp3","cover":"https://oss.blog.xiaoww.com/music/190.jpg","lrc":"https://oss.blog.xiaoww.com/music/190.lrc"},{"name":"缺氧","artist":"安苏羽","url":"https://oss.blog.xiaoww.com/music/191.mp3","cover":"https://oss.blog.xiaoww.com/music/191.jpg","lrc":"https://oss.blog.xiaoww.com/music/191.lrc"},{"name":"最美情侣","artist":"白小白","url":"https://oss.blog.xiaoww.com/music/192.mp3","cover":"https://oss.blog.xiaoww.com/music/192.jpg","lrc":"https://oss.blog.xiaoww.com/music/192.lrc"},{"name":"战放","artist":"本兮","url":"https://oss.blog.xiaoww.com/music/193.mp3","cover":"https://oss.blog.xiaoww.com/music/193.jpg","lrc":"https://oss.blog.xiaoww.com/music/193.lrc"},{"name":"翻篇","artist":"本兮","url":"https://oss.blog.xiaoww.com/music/194.mp3","cover":"https://oss.blog.xiaoww.com/music/194.jpg","lrc":"https://oss.blog.xiaoww.com/music/194.lrc"},{"name":"你在看孤独的风景","artist":"本兮","url":"https://oss.blog.xiaoww.com/music/195.mp3","cover":"https://oss.blog.xiaoww.com/music/195.jpg","lrc":"https://oss.blog.xiaoww.com/music/195.lrc"},{"name":"追光者","artist":"岑宁儿","url":"https://oss.blog.xiaoww.com/music/196.mp3","cover":"https://oss.blog.xiaoww.com/music/196.jpg","lrc":"https://oss.blog.xiaoww.com/music/196.lrc"},{"name":"生僻字","artist":"陈柯宇","url":"https://oss.blog.xiaoww.com/music/197.mp3","cover":"https://oss.blog.xiaoww.com/music/197.jpg","lrc":"https://oss.blog.xiaoww.com/music/197.lrc"},{"name":"青梅竹马","artist":"陈秋含","url":"https://oss.blog.xiaoww.com/music/198.mp3","cover":"https://oss.blog.xiaoww.com/music/198.jpg","lrc":"https://oss.blog.xiaoww.com/music/198.lrc"},{"name":"你的酒馆对我打了烊","artist":"陈雪凝","url":"https://oss.blog.xiaoww.com/music/199.mp3","cover":"https://oss.blog.xiaoww.com/music/199.jpg","lrc":"https://oss.blog.xiaoww.com/music/199.lrc"},{"name":"绿色","artist":"陈雪凝","url":"https://oss.blog.xiaoww.com/music/200.mp3","cover":"https://oss.blog.xiaoww.com/music/200.jpg","lrc":"https://oss.blog.xiaoww.com/music/200.lrc"},{"name":"ねこみみスイッチ (猫耳开关)","artist":"初音未来 (初音ミク)","url":"https://oss.blog.xiaoww.com/music/201.mp3","cover":"https://oss.blog.xiaoww.com/music/201.jpg","lrc":"https://oss.blog.xiaoww.com/music/201.lrc"},{"name":"ワールドイズマイン (World is Mine)","artist":"初音未来 (初音ミク)","url":"https://oss.blog.xiaoww.com/music/202.mp3","cover":"https://oss.blog.xiaoww.com/music/202.jpg","lrc":"https://oss.blog.xiaoww.com/music/202.lrc"},{"name":"千本桜 (千本樱)","artist":"初音未来 (初音ミク)","url":"https://oss.blog.xiaoww.com/music/203.mp3","cover":"https://oss.blog.xiaoww.com/music/203.jpg","lrc":"https://oss.blog.xiaoww.com/music/203.lrc"},{"name":"哈鹿哈鹿哈鹿","artist":"大张伟","url":"https://oss.blog.xiaoww.com/music/204.mp3","cover":"https://oss.blog.xiaoww.com/music/204.jpg","lrc":"https://oss.blog.xiaoww.com/music/204.lrc"},{"name":"佛系少女","artist":"冯提莫","url":"https://oss.blog.xiaoww.com/music/205.mp3","cover":"https://oss.blog.xiaoww.com/music/205.jpg","lrc":"https://oss.blog.xiaoww.com/music/205.lrc"},{"name":"明明说好不哭","artist":"何曼婷","url":"https://oss.blog.xiaoww.com/music/206.mp3","cover":"https://oss.blog.xiaoww.com/music/206.jpg","lrc":"https://oss.blog.xiaoww.com/music/206.lrc"},{"name":"浪人琵琶","artist":"胡66","url":"https://oss.blog.xiaoww.com/music/207.mp3","cover":"https://oss.blog.xiaoww.com/music/207.jpg","lrc":"https://oss.blog.xiaoww.com/music/207.lrc"},{"name":"空空如也","artist":"胡66","url":"https://oss.blog.xiaoww.com/music/208.mp3","cover":"https://oss.blog.xiaoww.com/music/208.jpg","lrc":"https://oss.blog.xiaoww.com/music/208.lrc"},{"name":"卡路里","artist":"火箭少女101","url":"https://oss.blog.xiaoww.com/music/209.mp3","cover":"https://oss.blog.xiaoww.com/music/209.jpg","lrc":"https://oss.blog.xiaoww.com/music/209.lrc"},{"name":"残雪","artist":"蒋蒋","url":"https://oss.blog.xiaoww.com/music/210.mp3","cover":"https://oss.blog.xiaoww.com/music/210.jpg","lrc":"https://oss.blog.xiaoww.com/music/210.lrc"},{"name":"春娇与志明","artist":"街道办GDC","url":"https://oss.blog.xiaoww.com/music/211.mp3","cover":"https://oss.blog.xiaoww.com/music/211.jpg","lrc":"https://oss.blog.xiaoww.com/music/211.lrc"},{"name":"超级喜欢你","artist":"金南玲","url":"https://oss.blog.xiaoww.com/music/212.mp3","cover":"https://oss.blog.xiaoww.com/music/212.jpg","lrc":"https://oss.blog.xiaoww.com/music/212.lrc"},{"name":"BINGBIAN病变 (女声版)","artist":"鞠文娴","url":"https://oss.blog.xiaoww.com/music/213.mp3","cover":"https://oss.blog.xiaoww.com/music/213.jpg","lrc":"https://oss.blog.xiaoww.com/music/213.lrc"},{"name":"不将就","artist":"李荣浩","url":"https://oss.blog.xiaoww.com/music/214.mp3","cover":"https://oss.blog.xiaoww.com/music/214.jpg","lrc":"https://oss.blog.xiaoww.com/music/214.lrc"},{"name":"分手快乐","artist":"梁静茹","url":"https://oss.blog.xiaoww.com/music/215.mp3","cover":"https://oss.blog.xiaoww.com/music/215.jpg","lrc":"https://oss.blog.xiaoww.com/music/215.lrc"},{"name":"交织together","artist":"泠鸢yousa","url":"https://oss.blog.xiaoww.com/music/216.mp3","cover":"https://oss.blog.xiaoww.com/music/216.jpg","lrc":"https://oss.blog.xiaoww.com/music/216.lrc"},{"name":"勾指起誓","artist":"泠鸢yousa","url":"https://oss.blog.xiaoww.com/music/217.mp3","cover":"https://oss.blog.xiaoww.com/music/217.jpg","lrc":"https://oss.blog.xiaoww.com/music/217.lrc"},{"name":"9420","artist":"麦小兜","url":"https://oss.blog.xiaoww.com/music/218.mp3","cover":"https://oss.blog.xiaoww.com/music/218.jpg","lrc":"https://oss.blog.xiaoww.com/music/218.lrc"},{"name":"咖喱咖喱","artist":"牛奶咖啡","url":"https://oss.blog.xiaoww.com/music/219.mp3","cover":"https://oss.blog.xiaoww.com/music/219.jpg","lrc":"https://oss.blog.xiaoww.com/music/219.lrc"},{"name":"明天，你好","artist":"牛奶咖啡","url":"https://oss.blog.xiaoww.com/music/220.mp3","cover":"https://oss.blog.xiaoww.com/music/220.jpg","lrc":"https://oss.blog.xiaoww.com/music/220.lrc"},{"name":"星星","artist":"牛奶咖啡","url":"https://oss.blog.xiaoww.com/music/221.mp3","cover":"https://oss.blog.xiaoww.com/music/221.jpg","lrc":"https://oss.blog.xiaoww.com/music/221.lrc"},{"name":"越长大越孤单","artist":"牛奶咖啡","url":"https://oss.blog.xiaoww.com/music/222.mp3","cover":"https://oss.blog.xiaoww.com/music/222.jpg","lrc":"https://oss.blog.xiaoww.com/music/222.lrc"},{"name":"触摸天空","artist":"漆柚","url":"https://oss.blog.xiaoww.com/music/223.mp3","cover":"https://oss.blog.xiaoww.com/music/223.jpg","lrc":"https://oss.blog.xiaoww.com/music/223.lrc"},{"name":"唐人","artist":"孙子涵","url":"https://oss.blog.xiaoww.com/music/224.mp3","cover":"https://oss.blog.xiaoww.com/music/224.jpg","lrc":"https://oss.blog.xiaoww.com/music/224.lrc"},{"name":"全世界宣布爱你","artist":"孙子涵","url":"https://oss.blog.xiaoww.com/music/225.mp3","cover":"https://oss.blog.xiaoww.com/music/225.jpg","lrc":"https://oss.blog.xiaoww.com/music/225.lrc"},{"name":"不仅仅是喜欢","artist":"孙语赛","url":"https://oss.blog.xiaoww.com/music/226.mp3","cover":"https://oss.blog.xiaoww.com/music/226.jpg","lrc":"https://oss.blog.xiaoww.com/music/226.lrc"},{"name":"你就不要想起我","artist":"田馥甄","url":"https://oss.blog.xiaoww.com/music/227.mp3","cover":"https://oss.blog.xiaoww.com/music/227.jpg","lrc":"https://oss.blog.xiaoww.com/music/227.lrc"},{"name":"一个人也能好好过","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/228.mp3","cover":"https://oss.blog.xiaoww.com/music/228.jpg","lrc":"https://oss.blog.xiaoww.com/music/228.lrc"},{"name":"别让我放不下","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/229.mp3","cover":"https://oss.blog.xiaoww.com/music/229.jpg","lrc":"https://oss.blog.xiaoww.com/music/229.lrc"},{"name":"吃货进行曲","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/230.mp3","cover":"https://oss.blog.xiaoww.com/music/230.jpg","lrc":"https://oss.blog.xiaoww.com/music/230.lrc"},{"name":"多莉宝贝","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/231.mp3","cover":"https://oss.blog.xiaoww.com/music/231.jpg","lrc":"https://oss.blog.xiaoww.com/music/231.lrc"},{"name":"少女心","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/232.mp3","cover":"https://oss.blog.xiaoww.com/music/232.jpg","lrc":"https://oss.blog.xiaoww.com/music/232.lrc"},{"name":"怪我咯","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/233.mp3","cover":"https://oss.blog.xiaoww.com/music/233.jpg","lrc":"https://oss.blog.xiaoww.com/music/233.lrc"},{"name":"泣灵","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/234.mp3","cover":"https://oss.blog.xiaoww.com/music/234.jpg","lrc":"https://oss.blog.xiaoww.com/music/234.lrc"},{"name":"萌二代","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/235.mp3","cover":"https://oss.blog.xiaoww.com/music/235.jpg","lrc":"https://oss.blog.xiaoww.com/music/235.lrc"},{"name":"萌萌哒","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/236.mp3","cover":"https://oss.blog.xiaoww.com/music/236.jpg","lrc":"https://oss.blog.xiaoww.com/music/236.lrc"},{"name":"薛定谔的猫","artist":"童可可","url":"https://oss.blog.xiaoww.com/music/237.mp3","cover":"https://oss.blog.xiaoww.com/music/237.jpg","lrc":"https://oss.blog.xiaoww.com/music/237.lrc"},{"name":"怒放的生命","artist":"汪峰","url":"https://oss.blog.xiaoww.com/music/238.mp3","cover":"https://oss.blog.xiaoww.com/music/238.jpg","lrc":"https://oss.blog.xiaoww.com/music/238.lrc"},{"name":"123我爱你","artist":"新乐尘符","url":"https://oss.blog.xiaoww.com/music/239.mp3","cover":"https://oss.blog.xiaoww.com/music/239.jpg","lrc":"https://oss.blog.xiaoww.com/music/239.lrc"},{"name":"你要的全拿走","artist":"胡彦斌","url":"https://oss.blog.xiaoww.com/music/240.mp3","cover":"https://oss.blog.xiaoww.com/music/240.jpg","lrc":"https://oss.blog.xiaoww.com/music/240.lrc"},{"name":"丑八怪","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/241.mp3","cover":"https://oss.blog.xiaoww.com/music/241.jpg","lrc":"https://oss.blog.xiaoww.com/music/241.lrc"},{"name":"你还要我怎样","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/242.mp3","cover":"https://oss.blog.xiaoww.com/music/242.jpg","lrc":"https://oss.blog.xiaoww.com/music/242.lrc"},{"name":"像风一样","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/243.mp3","cover":"https://oss.blog.xiaoww.com/music/243.jpg","lrc":"https://oss.blog.xiaoww.com/music/243.lrc"},{"name":"小孩","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/244.mp3","cover":"https://oss.blog.xiaoww.com/music/244.jpg","lrc":"https://oss.blog.xiaoww.com/music/244.lrc"},{"name":"方圆几里","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/245.mp3","cover":"https://oss.blog.xiaoww.com/music/245.jpg","lrc":"https://oss.blog.xiaoww.com/music/245.lrc"},{"name":"演员","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/246.mp3","cover":"https://oss.blog.xiaoww.com/music/246.jpg","lrc":"https://oss.blog.xiaoww.com/music/246.lrc"},{"name":"绅士","artist":"薛之谦","url":"https://oss.blog.xiaoww.com/music/247.mp3","cover":"https://oss.blog.xiaoww.com/music/247.jpg","lrc":"https://oss.blog.xiaoww.com/music/247.lrc"},{"name":"红昭愿","artist":"音阙诗听","url":"https://oss.blog.xiaoww.com/music/248.mp3","cover":"https://oss.blog.xiaoww.com/music/248.jpg","lrc":"https://oss.blog.xiaoww.com/music/248.lrc"},{"name":"芒种","artist":"音阙诗听","url":"https://oss.blog.xiaoww.com/music/249.mp3","cover":"https://oss.blog.xiaoww.com/music/249.jpg","lrc":"https://oss.blog.xiaoww.com/music/249.lrc"},{"name":"侧脸","artist":"于果","url":"https://oss.blog.xiaoww.com/music/250.mp3","cover":"https://oss.blog.xiaoww.com/music/250.jpg","lrc":"https://oss.blog.xiaoww.com/music/250.lrc"},{"name":"尽头","artist":"赵方婧","url":"https://oss.blog.xiaoww.com/music/251.mp3","cover":"https://oss.blog.xiaoww.com/music/251.jpg","lrc":"https://oss.blog.xiaoww.com/music/251.lrc"},{"name":"最美的期待","artist":"周笔畅","url":"https://oss.blog.xiaoww.com/music/252.mp3","cover":"https://oss.blog.xiaoww.com/music/252.jpg","lrc":"https://oss.blog.xiaoww.com/music/252.lrc"},{"name":"莫名奇妙爱上你","artist":"朱主爱","url":"https://oss.blog.xiaoww.com/music/253.mp3","cover":"https://oss.blog.xiaoww.com/music/253.jpg","lrc":"https://oss.blog.xiaoww.com/music/253.lrc"},{"name":"再见只是陌生人","artist":"庄心妍","url":"https://oss.blog.xiaoww.com/music/254.mp3","cover":"https://oss.blog.xiaoww.com/music/254.jpg","lrc":"https://oss.blog.xiaoww.com/music/254.lrc"},{"name":"爱的就是你","artist":"刘佳","url":"https://oss.blog.xiaoww.com/music/255.mp3","cover":"https://oss.blog.xiaoww.com/music/255.jpg","lrc":"https://oss.blog.xiaoww.com/music/255.lrc"},{"name":"体面","artist":"于文文","url":"https://oss.blog.xiaoww.com/music/256.mp3","cover":"https://oss.blog.xiaoww.com/music/256.jpg","lrc":"https://oss.blog.xiaoww.com/music/256.lrc"},{"name":"我爱他","artist":"群星","url":"https://oss.blog.xiaoww.com/music/257.mp3","cover":"https://oss.blog.xiaoww.com/music/257.jpg","lrc":"https://oss.blog.xiaoww.com/music/257.lrc"},{"name":"カサネテク (千层套路)","artist":"中村千尋 (なかむらちひろ)","url":"https://oss.blog.xiaoww.com/music/258.mp3","cover":"https://oss.blog.xiaoww.com/music/258.jpg","lrc":"https://oss.blog.xiaoww.com/music/258.lrc"},{"name":"无人之岛","artist":"任然","url":"https://oss.blog.xiaoww.com/music/259.mp3","cover":"https://oss.blog.xiaoww.com/music/259.jpg","lrc":"https://oss.blog.xiaoww.com/music/259.lrc"},{"name":"童话","artist":"光良","url":"https://oss.blog.xiaoww.com/music/260.mp3","cover":"https://oss.blog.xiaoww.com/music/260.jpg","lrc":"https://oss.blog.xiaoww.com/music/260.lrc"},{"name":"YES！OK！","artist":"青春有你2","url":"https://oss.blog.xiaoww.com/music/261.mp3","cover":"https://oss.blog.xiaoww.com/music/261.jpg","lrc":"https://oss.blog.xiaoww.com/music/261.lrc"},{"name":"我很快乐","artist":"刘惜君","url":"https://oss.blog.xiaoww.com/music/262.mp3","cover":"https://oss.blog.xiaoww.com/music/262.jpg","lrc":"https://oss.blog.xiaoww.com/music/262.lrc"},{"name":"无价之姐","artist":"李宇春","url":"https://oss.blog.xiaoww.com/music/263.mp3","cover":"https://oss.blog.xiaoww.com/music/263.jpg","lrc":"https://oss.blog.xiaoww.com/music/263.lrc"},{"name":"dududu","artist":"咬人猫","url":"https://oss.blog.xiaoww.com/music/264.mp3","cover":"https://oss.blog.xiaoww.com/music/264.jpg","lrc":"https://oss.blog.xiaoww.com/music/264.lrc"},{"name":"一个人","artist":"夏婉安","url":"https://oss.blog.xiaoww.com/music/265.mp3","cover":"https://oss.blog.xiaoww.com/music/265.jpg","lrc":"https://oss.blog.xiaoww.com/music/265.lrc"},{"name":"芊芊","artist":"封茗囧菌","url":"https://oss.blog.xiaoww.com/music/266.mp3","cover":"https://oss.blog.xiaoww.com/music/266.jpg","lrc":"https://oss.blog.xiaoww.com/music/266.lrc"},{"name":"旧梦一场","artist":"阿悠悠","url":"https://oss.blog.xiaoww.com/music/267.mp3","cover":"https://oss.blog.xiaoww.com/music/267.jpg","lrc":"https://oss.blog.xiaoww.com/music/267.lrc"},{"name":"爱你","artist":"陈芳语","url":"https://oss.blog.xiaoww.com/music/268.mp3","cover":"https://oss.blog.xiaoww.com/music/268.jpg","lrc":"https://oss.blog.xiaoww.com/music/268.lrc"},{"name":"学猫叫","artist":"小潘潘（潘柚彤）","url":"https://oss.blog.xiaoww.com/music/269.mp3","cover":"https://oss.blog.xiaoww.com/music/269.jpg","lrc":"https://oss.blog.xiaoww.com/music/269.lrc"},{"name":"苏苏喂苏苏 (抖音版)","artist":"小阿诺","url":"https://oss.blog.xiaoww.com/music/270.mp3","cover":"https://oss.blog.xiaoww.com/music/270.jpg","lrc":"https://oss.blog.xiaoww.com/music/270.lrc"},{"name":"破茧","artist":"张韶涵","url":"https://oss.blog.xiaoww.com/music/271.mp3","cover":"https://oss.blog.xiaoww.com/music/271.jpg","lrc":"https://oss.blog.xiaoww.com/music/271.lrc"},{"name":"小小鹿","artist":"新月冰冰","url":"https://oss.blog.xiaoww.com/music/272.mp3","cover":"https://oss.blog.xiaoww.com/music/272.jpg","lrc":"https://oss.blog.xiaoww.com/music/272.lrc"},{"name":"天亮以前说再见","artist":"曲肖冰","url":"https://oss.blog.xiaoww.com/music/273.mp3","cover":"https://oss.blog.xiaoww.com/music/273.jpg","lrc":"https://oss.blog.xiaoww.com/music/273.lrc"},{"name":"私奔","artist":"曾轶可","url":"https://oss.blog.xiaoww.com/music/274.mp3","cover":"https://oss.blog.xiaoww.com/music/274.jpg","lrc":"https://oss.blog.xiaoww.com/music/274.lrc"},{"name":"过客","artist":"李圣杰","url":"https://oss.blog.xiaoww.com/music/275.mp3","cover":"https://oss.blog.xiaoww.com/music/275.jpg","lrc":"https://oss.blog.xiaoww.com/music/275.lrc"},{"name":"江南 (单曲)","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/276.mp3","cover":"https://oss.blog.xiaoww.com/music/276.jpg","lrc":"https://oss.blog.xiaoww.com/music/276.lrc"},{"name":"勇敢爱","artist":"Mi2","url":"https://oss.blog.xiaoww.com/music/277.mp3","cover":"https://oss.blog.xiaoww.com/music/277.jpg","lrc":"https://oss.blog.xiaoww.com/music/277.lrc"},{"name":"Let Me Love You (Live)","artist":"段奥娟","url":"https://oss.blog.xiaoww.com/music/278.mp3","cover":"https://oss.blog.xiaoww.com/music/278.jpg","lrc":"https://oss.blog.xiaoww.com/music/278.lrc"},{"name":"9277","artist":"深七","url":"https://oss.blog.xiaoww.com/music/279.mp3","cover":"https://oss.blog.xiaoww.com/music/279.jpg","lrc":"https://oss.blog.xiaoww.com/music/279.lrc"},{"name":"那些年","artist":"胡夏","url":"https://oss.blog.xiaoww.com/music/280.mp3","cover":"https://oss.blog.xiaoww.com/music/280.jpg","lrc":"https://oss.blog.xiaoww.com/music/280.lrc"},{"name":"恋愛サーキュレーション (恋爱循环)","artist":"花澤香菜 (はなざわ かな)","url":"https://oss.blog.xiaoww.com/music/281.mp3","cover":"https://oss.blog.xiaoww.com/music/281.jpg","lrc":"https://oss.blog.xiaoww.com/music/281.lrc"},{"name":"小幸运 (Live)","artist":"田馥甄","url":"https://oss.blog.xiaoww.com/music/282.mp3","cover":"https://oss.blog.xiaoww.com/music/282.jpg","lrc":"https://oss.blog.xiaoww.com/music/282.lrc"},{"name":"情人","artist":"蔡徐坤","url":"https://oss.blog.xiaoww.com/music/283.mp3","cover":"https://oss.blog.xiaoww.com/music/283.jpg","lrc":"https://oss.blog.xiaoww.com/music/283.lrc"},{"name":"非酋","artist":"薛明媛","url":"https://oss.blog.xiaoww.com/music/284.mp3","cover":"https://oss.blog.xiaoww.com/music/284.jpg","lrc":"https://oss.blog.xiaoww.com/music/284.lrc"},{"name":"我是我的情人","artist":"阿悄","url":"https://oss.blog.xiaoww.com/music/285.mp3","cover":"https://oss.blog.xiaoww.com/music/285.jpg","lrc":"https://oss.blog.xiaoww.com/music/285.lrc"},{"name":"童话镇","artist":"许娜","url":"https://oss.blog.xiaoww.com/music/286.mp3","cover":"https://oss.blog.xiaoww.com/music/286.jpg","lrc":"https://oss.blog.xiaoww.com/music/286.lrc"},{"name":"有何不可","artist":"许嵩","url":"https://oss.blog.xiaoww.com/music/287.mp3","cover":"https://oss.blog.xiaoww.com/music/287.jpg","lrc":"https://oss.blog.xiaoww.com/music/287.lrc"},{"name":"素颜","artist":"许嵩","url":"https://oss.blog.xiaoww.com/music/288.mp3","cover":"https://oss.blog.xiaoww.com/music/288.jpg","lrc":"https://oss.blog.xiaoww.com/music/288.lrc"},{"name":"爱的魔法","artist":"金沙","url":"https://oss.blog.xiaoww.com/music/289.mp3","cover":"https://oss.blog.xiaoww.com/music/289.jpg","lrc":"https://oss.blog.xiaoww.com/music/289.lrc"},{"name":"Geisha","artist":"Dino Sor","url":"https://oss.blog.xiaoww.com/music/290.mp3","cover":"https://oss.blog.xiaoww.com/music/290.jpg","lrc":"https://oss.blog.xiaoww.com/music/290.lrc"},{"name":"Wolves","artist":"Selena Gomez、marshmello","url":"https://oss.blog.xiaoww.com/music/291.mp3","cover":"https://oss.blog.xiaoww.com/music/291.jpg","lrc":"https://oss.blog.xiaoww.com/music/291.lrc"},{"name":"ヒトリゴト","artist":"ClariS (クラリス)","url":"https://oss.blog.xiaoww.com/music/292.mp3","cover":"https://oss.blog.xiaoww.com/music/292.jpg","lrc":"https://oss.blog.xiaoww.com/music/292.lrc"},{"name":"情话","artist":"徐良","url":"https://oss.blog.xiaoww.com/music/293.mp3","cover":"https://oss.blog.xiaoww.com/music/293.jpg","lrc":"https://oss.blog.xiaoww.com/music/293.lrc"},{"name":"刚好遇见你","artist":"李玉刚","url":"https://oss.blog.xiaoww.com/music/294.mp3","cover":"https://oss.blog.xiaoww.com/music/294.jpg","lrc":"https://oss.blog.xiaoww.com/music/294.lrc"},{"name":"A.I.N.Y.","artist":"G.E.M.邓紫棋","url":"https://oss.blog.xiaoww.com/music/295.mp3","cover":"https://oss.blog.xiaoww.com/music/295.jpg","lrc":"https://oss.blog.xiaoww.com/music/295.lrc"},{"name":"손을 잡아줘","artist":"April","url":"https://oss.blog.xiaoww.com/music/296.mp3","cover":"https://oss.blog.xiaoww.com/music/296.jpg","lrc":"https://oss.blog.xiaoww.com/music/296.lrc"},{"name":"팅커벨","artist":"April","url":"https://oss.blog.xiaoww.com/music/297.mp3","cover":"https://oss.blog.xiaoww.com/music/297.jpg","lrc":"https://oss.blog.xiaoww.com/music/297.lrc"},{"name":"曹操","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/298.mp3","cover":"https://oss.blog.xiaoww.com/music/298.jpg","lrc":"https://oss.blog.xiaoww.com/music/298.lrc"},{"name":"可惜没如果","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/299.mp3","cover":"https://oss.blog.xiaoww.com/music/299.jpg","lrc":"https://oss.blog.xiaoww.com/music/299.lrc"},{"name":"期待爱","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/300.mp3","cover":"https://oss.blog.xiaoww.com/music/300.jpg","lrc":"https://oss.blog.xiaoww.com/music/300.lrc"},{"name":"小酒窝","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/301.mp3","cover":"https://oss.blog.xiaoww.com/music/301.jpg","lrc":"https://oss.blog.xiaoww.com/music/301.lrc"},{"name":"一千年以后","artist":"林俊杰","url":"https://oss.blog.xiaoww.com/music/302.mp3","cover":"https://oss.blog.xiaoww.com/music/302.jpg","lrc":"https://oss.blog.xiaoww.com/music/302.lrc"},{"name":"欧若拉","artist":"张韶涵","url":"https://oss.blog.xiaoww.com/music/303.mp3","cover":"https://oss.blog.xiaoww.com/music/303.jpg","lrc":"https://oss.blog.xiaoww.com/music/303.lrc"},{"name":"亲爱的，那不是爱情","artist":"张韶涵","url":"https://oss.blog.xiaoww.com/music/304.mp3","cover":"https://oss.blog.xiaoww.com/music/304.jpg","lrc":"https://oss.blog.xiaoww.com/music/304.lrc"},{"name":"牛奶面包","artist":"杨紫","url":"https://oss.blog.xiaoww.com/music/305.mp3","cover":"https://oss.blog.xiaoww.com/music/305.jpg","lrc":"https://oss.blog.xiaoww.com/music/305.lrc"},{"name":"1起挺你 (天猫双11主题曲)","artist":"易烊千玺","url":"https://oss.blog.xiaoww.com/music/306.mp3","cover":"https://oss.blog.xiaoww.com/music/306.jpg","lrc":"https://oss.blog.xiaoww.com/music/306.lrc"},{"name":"My Boo","artist":"易烊千玺","url":"https://oss.blog.xiaoww.com/music/307.mp3","cover":"https://oss.blog.xiaoww.com/music/307.jpg","lrc":"https://oss.blog.xiaoww.com/music/307.lrc"},{"name":"女孩与王冠","artist":"赖美云","url":"https://oss.blog.xiaoww.com/music/308.mp3","cover":"https://oss.blog.xiaoww.com/music/308.jpg","lrc":"https://oss.blog.xiaoww.com/music/308.lrc"},{"name":"小小","artist":"赖美云","url":"https://oss.blog.xiaoww.com/music/309.mp3","cover":"https://oss.blog.xiaoww.com/music/309.jpg","lrc":"https://oss.blog.xiaoww.com/music/309.lrc"},{"name":"福气拱拱来","artist":"孟美岐","url":"https://oss.blog.xiaoww.com/music/310.mp3","cover":"https://oss.blog.xiaoww.com/music/310.jpg","lrc":"https://oss.blog.xiaoww.com/music/310.lrc"},{"name":"101个愿望","artist":"杨超越","url":"https://oss.blog.xiaoww.com/music/311.mp3","cover":"https://oss.blog.xiaoww.com/music/311.jpg","lrc":"https://oss.blog.xiaoww.com/music/311.lrc"},{"name":"了不起","artist":"火箭少女101赖美云","url":"https://oss.blog.xiaoww.com/music/312.mp3","cover":"https://oss.blog.xiaoww.com/music/312.jpg","lrc":"https://oss.blog.xiaoww.com/music/312.lrc"}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":true,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"服务":{"icon":"fa-regular fa-book","submenus":{"思远文文的直播":"https://live.xiaoqy.com/","思远文文的音乐":"https://music.xiaoww.com/","文文IT工具":"https://tools.xiaoww.com/","文文AI聊天":"https://aichat.xiaoww.com/","文文画板":"https://draw.xiaoww.com/","文文思维导图":"https://mindmap.xiaoww.com/","文文计算器":"https://calc.xiaoww.com/","文文单词打字机":"https://qwerty.xiaoww.com/","文文随机祝福语":"https://www.xiaoww.com/2025_blessings.html"}},"关于":{"icon":"fa-regular fa-user","submenus":{"我":"/about","小红书":"https://www.xiaohongshu.com/user/profile/61ca59770000000021029d37","BiliBili":"https://space.bilibili.com/23232348"}},"状态":{"path":"https://status.xiaoww.com/","icon":"fa-regular fa-chart-bar"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"说说":{"path":"/shuoshuo/","icon":"fa-regular fa-message"},"相册":{"path":"/masonry/","icon":"fa-regular fa-image"},"追剧（尽情期待）":{"path":"/tv/","icon":"fa-regular fa-tv"},"书籍（尽情期待）":{"path":"/book/","icon":"fa-regular fa-book"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":5},"tags":{"enable":true,"limit":5}},"footerStart":"2025/5/20 0:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="文文の生活随记 Mirror" type="application/atom+xml">
+</head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        文文の生活随记 | 记录生活，感受世界
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                文文の生活随记 Mirror
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-book fa-fw"></i>
+                                    服务
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://live.xiaoqy.com/">
+                                                    思远文文的直播
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://music.xiaoww.com/">
+                                                    思远文文的音乐
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://tools.xiaoww.com/">
+                                                    文文IT工具
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://aichat.xiaoww.com/">
+                                                    文文AI聊天
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://draw.xiaoww.com/">
+                                                    文文画板
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://mindmap.xiaoww.com/">
+                                                    文文思维导图
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://calc.xiaoww.com/">
+                                                    文文计算器
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://qwerty.xiaoww.com/">
+                                                    文文单词打字机
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.xiaoww.com/2025_blessings.html">
+                                                    文文随机祝福语
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    我
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/61ca59770000000021029d37">
+                                                    小红书
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://space.bilibili.com/23232348">
+                                                    BILIBILI
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://status.xiaoww.com/"
+                                        >
+                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    状态
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-服务"
+                        >
+                            <span>
+                                服务
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-服务">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://live.xiaoqy.com/">思远文文的直播</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://music.xiaoww.com/">思远文文的音乐</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://tools.xiaoww.com/">文文IT工具</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://aichat.xiaoww.com/">文文AI聊天</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://draw.xiaoww.com/">文文画板</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://mindmap.xiaoww.com/">文文思维导图</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://calc.xiaoww.com/">文文计算器</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://qwerty.xiaoww.com/">文文单词打字机</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.xiaoww.com/2025_blessings.html">文文随机祝福语</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-关于"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-关于">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">我</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/61ca59770000000021029d37">小红书</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://space.bilibili.com/23232348">BILIBILI</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://status.xiaoww.com/"
+                        >
+                            <span>
+                                状态
+                            </span>
+                            
+                                <i class="fa-regular fa-chart-bar fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/shuoshuo/"
+                        >
+                            <span>说说</span>
+                            <i class="fa-regular fa-message fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/masonry/"
+                        >
+                            <span>相册</span>
+                            <i class="fa-regular fa-image fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tv/"
+                        >
+                            <span>追剧（尽情期待）</span>
+                            <i class="fa-regular fa-tv fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/book/"
+                        >
+                            <span>书籍（尽情期待）</span>
+                            <i class="fa-regular fa-book fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">260</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">38</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+		<div id="announcement-insert"></div>
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">食品安全问题与健康指导</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/xiaoww-blog-logo.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Allen Shaw</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-08-07 11:04:37</span>
+        <span class="mobile">2025-08-07 11:04:37</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-08-08 02:01:34</span>
+            <span class="mobile">2025-08-08 02:01:34</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%81%A5%E5%BA%B7/">健康</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8/">食品安全</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			
+  <div class="note-large yellow">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>未完成的文章</p>
+
+    </div>
+    <div class="notel-content markdown-body">
+      <p>文章内容随时会有更新变化<br>请关注顶部或底部更新日期</p>
+
+    </div>
+  </div>
+
+<h2 id="购买建议"><a href="#购买建议" class="headerlink" title="购买建议"></a>购买建议</h2><h2 id="逐条解析食品安全的各个方面"><a href="#逐条解析食品安全的各个方面" class="headerlink" title="逐条解析食品安全的各个方面"></a>逐条解析食品安全的各个方面</h2><p>涵盖食品种类、生产加工、潜在风险及应对措施，旨在提高消费者对食品安全的认知和警惕性。</p>
+<h3 id="1-方便面"><a href="#1-方便面" class="headerlink" title="1. 方便面"></a>1. 方便面</h3><p>方便面作为快捷食品，广泛受到消费者喜爱</p>
+<p>高盐高油：方便面调料包通常含高钠和 <code>添加剂</code> ，长期食用可能增加 <code>心血管疾病</code> 风险。<br>油脂氧化：油炸方便面可能因储存不当导致油脂氧化，产生 <code>有害物质</code> 。<br> <code>防腐剂</code> 与 <code>添加剂</code> ：部分方便面使用食品 <code>添加剂</code> 如 <code>防腐剂</code> 、 <code>增味剂</code> ，需符合国家标准，过量可能对健康不利。<br>建议：选择非油炸方便面，控制食用频率，搭配新鲜蔬菜以平衡营养。</p>
+<h3 id="2-油条"><a href="#2-油条" class="headerlink" title="2. 油条"></a>2. 油条</h3><p>油条是传统早餐食品</p>
+<p>反复使用油：部分商家为降低成本，使用反复加热的食用油，可能产生 <code>致癌物</code> 如苯并芘。<br> <code>明矾</code> 超标：传统油条制作常使用 <code>明矾</code> （含铝）作为 <code>膨松剂</code> ，过量摄入可能影响神经系统。<br>建议：选择正规商家购买，关注油条是否现炸，避免食用颜色过深或口感异常的油条。</p>
+<h3 id="3-豆浆"><a href="#3-豆浆" class="headerlink" title="3. 豆浆"></a>3. 豆浆</h3><p>豆浆营养丰富</p>
+<p>生豆浆毒性：未煮熟的豆浆含有皂素、胰蛋白酶 <code>抑制剂</code> 等，易引发恶心、腹泻。<br>卫生条件：小型作坊制作豆浆可能存在设备清洁不彻底、热不彻底，细菌污染风险。加含有皂素和胰蛋白酶 <code>抑制剂</code> 等有毒物质，导致中毒风险。同时，市售甜豆浆中糖分过高。<br>建议：购买正规品牌的瓶装或袋装豆浆，确保煮沸后再饮用。</p>
+<h3 id="4-面包"><a href="#4-面包" class="headerlink" title="4. 面包"></a>4. 面包</h3><p>面包作为日常主食</p>
+<p> <code>防腐剂</code> 超标：部分面包为延长保质期，添加过量 <code>防腐剂</code> 和 <code>甜味剂</code> ，长期食用可能影响健康。<br> <code>反式脂肪酸</code> ：某些低价面包使用人造奶油，含 <code>反式脂肪酸</code> ，可能增加 <code>心血管疾病</code> 风险。<br>建议：选择全麦或无 <code>添加剂</code> 面包，查看配料表，避免含 <code>氢化油脂</code> 的产品。</p>
+<h3 id="5-包子"><a href="#5-包子" class="headerlink" title="5. 包子"></a>5. 包子</h3><p>包子是传统中式点心</p>
+<p>肉馅质量：部分包子可能使用劣质肉或混合肉，可能使用 <code>滑石粉</code> 掺杂面粉以降低成本，存在卫生隐患。<br> <code>添加剂</code> ：为增加口感，部分商家可能添加过量味精或 <code>色素</code> 。<br>建议：选择信誉良好的商家，优先购买现做现蒸的包子。</p>
+<h3 id="6-水质"><a href="#6-水质" class="headerlink" title="6. 水质"></a>6. 水质</h3><p> <code>重金属</code> 污染：日常饮用水来源中，个别地区仍存在 <code>重金属</code> 超标（如砷、镉）、自来水消毒副产物（如 <code>三氯甲烷</code> ）超标的现象。农村地区或小型水厂水质安全监管更是薄弱。<br>细菌污染：未经处理的水可能含 <code>大肠杆菌</code> 等 <code>病菌</code> ，导致食品污染。<br>建议：使用符合饮用水标准的净化水或瓶装水进行食品加工。</p>
+<h3 id="7-食用油类"><a href="#7-食用油类" class="headerlink" title="7. 食用油类"></a>7. 食用油类</h3><h4 id="地沟油"><a href="#地沟油" class="headerlink" title="地沟油"></a>地沟油</h4><p>定义：地沟油是从餐饮废油或下水道油脂回收后非法加工的食用油。回收餐饮废油、泔水油，经非法加工后再次流入市场。<br>危害：含 <code>黄曲霉毒素</code> 、氧化产物等 <code>致癌物</code> 质，长期食用可能导致肝损伤。含有苯并芘、杂环胺、致癌芳香烃等高 <code>致癌物</code> ，长期摄入与 <code>肝癌</code> 风险相关。</p>
+<h4 id="玉米油"><a href="#玉米油" class="headerlink" title="玉米油"></a>玉米油</h4><p>市面上部分“玉米油”实为勾兑品，掺杂豆油、棉籽油、甚至工业用油。包装标签虚假宣传，未标明转基因来源。</p>
+<p>优点：玉米油富含不饱和 <code>脂肪酸</code> ，适合健康烹饪。<br>问题：部分低价玉米油可能掺杂其他廉价油，影响品质。<br>建议：选择知名品牌，查看营养成分表和生产日期。</p>
+<h3 id="8-奶粉类"><a href="#8-奶粉类" class="headerlink" title="8. 奶粉类"></a>8. 奶粉类</h3><p>奶粉是婴幼儿和成人常用食品</p>
+<h4 id="三聚氰胺奶粉"><a href="#三聚氰胺奶粉" class="headerlink" title="三聚氰胺奶粉"></a>三聚氰胺奶粉</h4><p> <code>三聚氰胺</code> 毒奶粉：2008年 “ <code>三聚氰胺</code> 奶粉” 事件震惊全国，毒化学品被用于增加蛋白质检测值，导致婴幼儿 <code>肾结石</code> 甚至死亡。个别小作坊仍存在原料掺假、伪造检验报告等行为。<br>建议：选择国际或国内知名品牌，查看生产批次和检测报告。</p>
+<h4 id="明胶酸奶"><a href="#明胶酸奶" class="headerlink" title="明胶酸奶"></a>明胶酸奶</h4><p>部分“浓稠型酸奶”通过加入工业 <code>明胶</code> 改善口感，而非自然发酵；这种 <code>明胶</code> 可能来源不明，有卫生风险。</p>
+<h3 id="9-饼干类"><a href="#9-饼干类" class="headerlink" title="9. 饼干类"></a>9. 饼干类</h3><p>饼干作为零食，是所有零食当中最没有营养价值的。</p>
+<p>糖分和油脂过高：高糖高脂饼干长期摄入诱发肥胖、代谢紊乱，甚至 <code>心血管疾病</code> 。<br> <code>添加剂</code> ：部分饼干含 <code>香精</code> 油、合成糖精、氧化油脂以及人工 <code>香精</code> 、 <code>色素</code> ，需控制摄入量。<br>建议：选择低糖、低脂或全麦饼干，适量食用。</p>
+<h3 id="10-食用盐类"><a href="#10-食用盐类" class="headerlink" title="10. 食用盐类"></a>10. 食用盐类</h3><p>食用盐是日常调味必需品</p>
+<p>假盐：部分假冒食用盐可能使用工业盐冒充，含 <code>亚硝酸盐</code> 等 <code>有害物质</code> ；碘盐过量或不足都会影响甲状腺健康。<br>碘含量：碘盐需符合国家标准，过量或不足均可能影响甲状腺功能。<br>建议：购买正规渠道的加碘盐，注意储存防潮。</p>
+<h3 id="11-调料类"><a href="#11-调料类" class="headerlink" title="11. 调料类"></a>11. 调料类</h3><h4 id="酱油类"><a href="#酱油类" class="headerlink" title="酱油类"></a>酱油类</h4><p>问题：低端酱油中可能使用水解蛋白液+ <code>色素</code> + <code>香精</code> 勾兑模拟自然酿造，称为“化学酱油”；海天、老干妈等品牌曾被质疑使用转基因大豆、 <code>添加剂</code> 争议。<br>建议：选择酿造酱油，查看配料表，避免含过多 <code>添加剂</code> 的产品。</p>
+<h4 id="老干妈、老干爹"><a href="#老干妈、老干爹" class="headerlink" title="老干妈、老干爹"></a>老干妈、老干爹</h4><p>优点：这些品牌以优质原料和传统工艺著称，安全性较高。<br>问题：部分假冒产品可能使用劣质原料，需警惕。<br>建议：通过正规渠道购买，检查包装和防伪标识。</p>
+<h3 id="12-老坛酸菜"><a href="#12-老坛酸菜" class="headerlink" title="12. 老坛酸菜"></a>12. 老坛酸菜</h3><p>问题：部分酸菜可能在不卫生环境中发酵，含 <code>病菌</code> 或 <code>有害物质</code> 。央视曾曝光某品牌“老坛酸菜”由脚踩腌制、露天暴晒、含虫发霉，却包装成“非遗工艺”，流入各大连锁餐厅。<br>建议：购买正规品牌，检查包装完整性。</p>
+<h3 id="13-黄焖鸡、鸡公煲"><a href="#13-黄焖鸡、鸡公煲" class="headerlink" title="13. 黄焖鸡、鸡公煲"></a>13. 黄焖鸡、鸡公煲</h3><p>多数连锁门店使用“科技菜”或“预制菜”，肉源不明、 <code>添加剂</code> 超标。鸡块多为速冻合成肉 + <code>香精</code> 还原风味，卫生条件无法保障。</p>
+<h3 id="14-猪肉、鸡肉"><a href="#14-猪肉、鸡肉" class="headerlink" title="14. 猪肉、鸡肉"></a>14. 猪肉、鸡肉</h3><p>廉价猪肉、鸡肉来源复杂，部分为走私肉、病死肉、僵尸肉，经染色、漂白等方式处理再售卖。可能存在 <code>抗生素</code> 残留或 <code>病菌</code> 污染。</p>
+<h3 id="15-蔬菜类"><a href="#15-蔬菜类" class="headerlink" title="15. 蔬菜类"></a>15. 蔬菜类</h3><h4 id="茄子、绿叶菜等"><a href="#茄子、绿叶菜等" class="headerlink" title="茄子、绿叶菜等"></a>茄子、绿叶菜等</h4><p> <code>农药</code> 残留超标情况严重，部分菜农使用违禁 <code>农药</code> 如甲胺磷、乐果等。茄子属高吸收农残蔬菜之一，清洗不净可能致慢性中毒。</p>
+<h4 id="毒生姜"><a href="#毒生姜" class="headerlink" title="毒生姜"></a>毒生姜</h4><p>生姜泡在增产剂+ <code>重金属</code> 溶液中，表皮油亮诱人，实则毒性大。</p>
+<h4 id="毒蘑菇"><a href="#毒蘑菇" class="headerlink" title="毒蘑菇"></a>毒蘑菇</h4><p>野生蘑菇中易误采剧毒品种，即使经过烹饪仍能致死。</p>
+<h3 id="16-火腿肠"><a href="#16-火腿肠" class="headerlink" title="16. 火腿肠"></a>16. 火腿肠</h3><p>低端火腿肠掺杂淀粉、鸡皮、骨泥、 <code>亚硝酸盐</code> 、淀粉填充物或劣质肉、食品 <code>添加剂</code> 。 <code>色素</code> 如苏丹红或 <code>亚硝酸盐</code> 超标可能导致癌变。</p>
+<h3 id="17-苏丹红"><a href="#17-苏丹红" class="headerlink" title="17. 苏丹红"></a>17. 苏丹红</h3><p>定义：非法添加的化学染料，可能用于鸭蛋、鸡蛋等食品，致癌风险高。<br>建议：购买正规品牌的蛋类产品，注意颜色异常。</p>
+<h3 id="18-滑石粉面粉"><a href="#18-滑石粉面粉" class="headerlink" title="18. 滑石粉面粉"></a>18. 滑石粉面粉</h3><p>问题：非法添加 <code>滑石粉</code> 以增白面粉，可能导致消化系统损伤。<br>建议：购买知名品牌面粉，查看检测报告。</p>
+<h3 id="19-镉大米"><a href="#19-镉大米" class="headerlink" title="19. 镉大米"></a>19. 镉大米</h3><p> <code>重金属</code> 镉污染严重，长期食用会造成肾功能衰竭、骨质疏松。曾有“湖南镉米”事件震惊全国。</p>
+<p>问题：土壤污染导致大米含 <code>重金属</code> 镉，长期食用可能损伤肾脏。<br>建议：选择产地明确、检测合格的大米。</p>
+<h3 id="20-科技菜"><a href="#20-科技菜" class="headerlink" title="20. 科技菜"></a>20. 科技菜</h3><p>定义：通过化学或生物技术加工的食品，可能含未知风险。<br>建议：谨慎食用，优先选择天然食材。</p>
+<h3 id="21-预制菜"><a href="#21-预制菜" class="headerlink" title="21. 预制菜"></a>21. 预制菜</h3><p>所谓“科技与狠活”，大量使用食品 <code>添加剂</code> 、保水剂、嫩肉粉、增香剂。预制菜中营养密度低、 <code>添加剂</code> 高、保质期依赖 <code>防腐剂</code> ，对儿童、老人尤为不利。</p>
+<h3 id="22-肉类及熟食类"><a href="#22-肉类及熟食类" class="headerlink" title="22. 肉类及熟食类"></a>22. 肉类及熟食类</h3><p>淋巴肉：动物病变器官部位，含大量 <code>病菌</code> 和 <code>毒素</code> ，甚至被冒充猪肝<br>合成肉：残次边角料+胶粘合，制成“肉块”，口感与真肉无异<br>僵尸肉：冷冻多年后非法解冻上市，肉质腐败、滋生 <code>毒素</code><br>激素肉：为促生长使用大量激素，扰乱人体内分泌<br>混合肉：猪牛鸡碎肉+淀粉胶水勾兑冒充纯肉<br>臭肉：加 <code>香精</code> 、 <code>色素</code> 、双氧水处理，掩盖腐败气味</p>
+<h3 id="23-人工造假食品"><a href="#23-人工造假食品" class="headerlink" title="23. 人工造假食品"></a>23. 人工造假食品</h3><p>人造蜂蜜：糖浆勾兑+ <code>香精</code> + <code>色素</code> ，营养为零，且可能使用工业糖精<br>人造肉：通过植物蛋白或其他原料模拟肉类，可能含 <code>添加剂</code> 。实为大豆蛋白+胶粘合物质，添加大量 <code>香精</code>  <code>色素</code><br>人造红枣：染色+增甜+膨大剂处理，泡水即褪色<br>假鸭血： <code>明胶</code> +工业染料调制，危害肝肾功能<br>假茶叶：用老茶叶、树叶染色混充高档茶<br>假山药：通常为普通白薯加 <code>香精</code> 漂白冒充铁棍山药</p>
+<h3 id="24-奶茶"><a href="#24-奶茶" class="headerlink" title="24. 奶茶"></a>24. 奶茶</h3><p>奶茶起源于英国，最初的奶茶就是奶加茶，是很健康的饮料。<br>到了现代，尤其是现在的各种网红奶茶，为了追求极致的美味，也就往往伴随着高热量、高脂肪、甚至还有较高的反式脂肪。奶茶，也就成为了“不健康饮料”的代表。<br>用复合 <code>甜味剂</code> 可以获得高仿的甜味，用脱脂奶粉和膳食纤维可以模拟奶味和口感，但是，脂肪带来的口感，是无法高仿的。</p>
+<p>路边奶茶店里售卖的奶茶几乎全是 <code>香精</code> 、 <code>色素</code> 、 <code>奶精</code> 和糖“勾兑”的饮品。弹性十足的珍珠主要成分是木薯淀粉，无营养有隐患。另外，如果装热奶茶的杯子和塑料吸管不合格，对健康也非常不利。</p>
+<p>　　最近一段时间大家都在炮轰碳酸饮料，其实如果要让我推荐垃圾饮品，我也会毫不吝啬地投给市售奶茶。这种由 <code>奶精</code> 、茶精调合而成的饮品，你真的应该少喝点了。</p>
+<p>　　除了瓶装的液体奶茶，街头奶茶店里卖的现制奶茶都是粉末冲制而成的。这种奶茶主要是由水、植脂末、糖、速溶茶粉、奶粉、食品 <code>添加剂</code> 和 <code>香精</code> 组配而成的，其中茶和奶的含量少得可怜，甚至连1%都没有。</p>
+<p>　　大家要记住：奶茶里并没有真正的奶，而是 <code>奶精</code> 。在其配料中，植脂末(也叫 <code>奶精</code> 或咖啡伴侣)绝对名列前茅。它可以让奶茶甜味更浓、质地醇厚，并减少脂肪的合并，而且能让奶茶中的“油”隐藏起来，让我们误以为喝的是奶。</p>
+<p>　　此外，无论是500毫升的瓶装奶茶，还是80克一杯的固体奶茶，看看食品标签你就会发现：这些奶茶的热量、油脂和糖含量都是传统奶茶的数倍，而我们希望能通过喝奶茶多少补充点的蛋白质，则少之又少!</p>
+<p>　　乳白色的奶茶添加了大量植脂末，而且其中的脂肪以饱和脂肪为主(我们熟悉的猪油、牛油就属于此类)，经常饮用，可增加肥胖、高血脂的风险;若是使用 <code>氢化植物油</code> ，则又引来另一个恐怖分子—— <code>反式脂肪酸</code> (TFA)。</p>
+<p>　　好在随着生产技术的改进，奶茶、咖啡伴侣中的TFA含量很低或基本没有，对健康的威胁远比不上饱和脂肪。再加上 <code>香精</code> 等额外的 <code>添加剂</code> ，市售奶茶可以“光荣的”加入垃圾饮品的队伍了。</p>
+<p>　　如果你想改掉爱喝奶茶的坏习惯，不妨从训练味蕾开始，尝试自制传统的正宗奶茶。原料当然就只有水、奶和茶叶了。</p>
+<p>　　在奶锅里加水烧开，放入1汤匙茶叶(茶叶量根据自己喜好调整)，浸泡2~5分钟，滤掉茶叶留茶汤，倒入3&#x2F;4杯纯牛奶，重新加热煮沸(避免牛奶焦糊)，可以加入少量糖调味，这样传统奶茶就大功告成了。自己做出来的奶茶，既有浓浓的奶香，又有淡淡的茶香。虽然蛋白质和钙含量与牛奶相比减少了一半，但只要不添加大量的糖，还算是一种健康的饮品。</p>
+<h3 id="黑作坊与三无外卖"><a href="#黑作坊与三无外卖" class="headerlink" title="黑作坊与三无外卖"></a>黑作坊与三无外卖</h3><p>环境脏乱差、无照经营。</p>
+<p>食材过期、来源不明。</p>
+<p>回锅菜、隔夜肉循环使用。</p>
+<p>无法溯源、拒绝监管，外卖平台仍不断爆出隐患。</p>
+<h3 id="结语：食品安全，不能只靠“运气”"><a href="#结语：食品安全，不能只靠“运气”" class="headerlink" title="结语：食品安全，不能只靠“运气”"></a>结语：食品安全，不能只靠“运气”</h3><p>你吃进嘴里的，或许不是食物，而是：</p>
+<p>一堆看不见的化学 <code>添加剂</code></p>
+<p>一撮黑心商家的利润算计</p>
+<p>一串可以避开监管的伎俩</p>
+<h3 id="我们呼吁："><a href="#我们呼吁：" class="headerlink" title="我们呼吁："></a>我们呼吁：</h3><p>消费者增强辨识力与安全意识；</p>
+<p>平台与政府加大监管和执法力度；</p>
+<p>商家重拾良心与责任，不做昧心钱！</p>
+<h2 id="蔬菜抗氧化"><a href="#蔬菜抗氧化" class="headerlink" title="蔬菜抗氧化"></a>蔬菜抗氧化</h2><p>蔬菜在储存、烹饪或暴露于空气中时，由于酶的作用或其他因素引起的氧化反应，导致颜色、质地和营养成分发生改变的现象。这种反应通常会导致蔬菜褐变，维生素营养素流失，并可能影响口感和风味。</p>
+<p>蔬菜中的抗氧化反应主要涉及其含有的抗氧化物质（如维生素C、维生素E、类胡萝卜素、多酚类化合物等）与氧化剂（如自由基、活性氧）之间的化学反应。这些反应能够保护蔬菜细胞免受氧化损伤，延缓衰老，保持新鲜度，同时对人体健康有益。</p>
+<ol>
+<li>抗氧化物质的来源</li>
+</ol>
+<p>蔬菜中常见的抗氧化物质包括</p>
+<p>维生素C（抗坏血酸）：存在于绿叶蔬菜（如菠菜）、西兰花、辣椒等中，能直接中和自由基，保护细胞膜。<br>维生素E（生育酚）：常见于深绿色蔬菜，能保护脂质免受氧化。<br>类胡萝卜素：如β-胡萝卜素、番茄红素，存在于胡萝卜、西红柿等，清除单线态氧和自由基。<br>多酚类化合物：如黄酮类、酚酸，广泛存在于紫甘蓝、洋葱等，具有强抗氧化能力。<br>硫代化合物：如异硫氰酸酯，常见于十字花科蔬菜（如花椰菜），可诱导抗氧化酶的生成。</p>
+<ol start="2">
+<li>抗氧化反应机理</li>
+</ol>
+<p>抗氧化反应主要通过以下方式发生</p>
+<p>中和自由基：抗氧化物质通过提供电子或氢原子，稳定自由基（如羟自由基·OH、超氧阴离子O₂⁻），阻止其引发链式氧化反应。</p>
+<p>例如：维生素C + ·OH → 抗坏血酸自由基 + H₂O</p>
+<p>螯合金属离子：多酚类化合物可与铁、铜等金属离子结合，防止其催化氧化反应（如Fenton反应）。<br>激活抗氧化酶：某些化合物（如硫代化合物）通过信号通路诱导体内抗氧化酶（如超氧化物歧化酶SOD、过氧化物酶CAT）的表达。<br>清除活性氧（ROS）：类胡萝卜素等通过物理或化学方式猝灭单线态氧，降低氧化应激。</p>
+<ol start="3">
+<li>蔬菜抗氧化的影响因素</li>
+</ol>
+<p>储存条件：低温、低氧环境可减缓氧化反应，延长蔬菜保鲜期。<br>加工方式：切碎、加热可能破坏抗氧化物质（如维生素C对热敏感），但某些处理（如轻微加热）可提高类胡萝卜素的生物利用度。<br>蔬菜种类：不同蔬菜的抗氧化能力差异较大，如紫色蔬菜（紫甘蓝）因花青素含量高，抗氧化能力较强。</p>
+<ol start="4">
+<li>实际应用</li>
+</ol>
+<p>食品保鲜：利用抗氧化剂（如天然提取的维生素C）喷涂蔬菜表面，减少氧化褐变。<br>健康益处：食用富含抗氧化物质的蔬菜可降低慢性疾病（如心血管病、癌症）的风险，增强免疫力。<br>烹饪建议：选择蒸煮而非长时间高温烹饪，以保留抗氧化成分。</p>
+<ol start="5">
+<li>具体例子</li>
+</ol>
+<p>西红柿：番茄红素通过清除自由基保护细胞，加热后生物利用度提高。<br>菠菜：富含维生素C和类黄酮，冷藏储存可减少氧化损失。<br>花椰菜：含硫代化合物，微波轻蒸可增强抗氧化活性。</p>
+<h3 id="蔬菜抗氧化反应的原因"><a href="#蔬菜抗氧化反应的原因" class="headerlink" title="蔬菜抗氧化反应的原因"></a>蔬菜抗氧化反应的原因</h3><ol>
+<li>多酚氧化酶（PPO）</li>
+</ol>
+<p>这是导致蔬菜褐变的主要酶。当蔬菜被切割或损坏时，细胞内的多酚类物质与氧气接触，在PPO的作用下，会迅速氧化生成褐色的醌类物质，导致褐变。</p>
+<ol start="2">
+<li>其他氧化酶</li>
+</ol>
+<p>除了PPO，还有其他一些酶，如过氧化物酶 (POD)和脂氧合酶 (LOX)，也参与到蔬菜的氧化反应中。</p>
+<ol start="3">
+<li>氧气</li>
+</ol>
+<p>氧气是氧化反应的必要条件，暴露在空气中的蔬菜容易发生氧化反应。</p>
+<ol start="4">
+<li>温度</li>
+</ol>
+<p>温度升高会加速酶的活性，从而加速氧化反应。低温可以减缓氧化反应的速度。</p>
+<ol start="5">
+<li>光照</li>
+</ol>
+<p>光照，特别是紫外线，会促进某些氧化反应的发生。</p>
+<h3 id="如何减少蔬菜的氧化反应"><a href="#如何减少蔬菜的氧化反应" class="headerlink" title="如何减少蔬菜的氧化反应"></a>如何减少蔬菜的氧化反应</h3><ul>
+<li><p>避免切割：尽量减少对蔬菜的切割，减少氧化反应发生的面积。</p>
+</li>
+<li><p>低温保存：将蔬菜储存在低温环境中，可以有效减缓氧化反应。</p>
+</li>
+<li><p>隔绝氧气：使用保鲜膜、保鲜盒等密封容器，可以减少蔬菜与氧气的接触。</p>
+</li>
+<li><p>使用抗氧化剂：在切好的蔬菜表面涂抹柠檬汁、醋等，利用其中的酸性物质和抗氧化成分，可以延缓褐变。</p>
+</li>
+<li><p>焯水：焯水可以钝化酶的活性，从而减少氧化反应。但焯水时间不宜过长，以免影响口感和营养。</p>
+</li>
+<li><p>选择合适的烹饪方式：避免长时间高温烹饪，可以选择蒸、煮等方式，减少氧化反应的发生。</p>
+</li>
+</ul>
+<h3 id="一些常见的抗氧化方法"><a href="#一些常见的抗氧化方法" class="headerlink" title="一些常见的抗氧化方法"></a>一些常见的抗氧化方法</h3><ol>
+<li>苹果变色</li>
+</ol>
+<p>苹果切开后容易褐变，可以将切面用保鲜膜包裹，或放入水中浸泡，也可以在切面上涂抹柠檬汁。</p>
+<ol start="2">
+<li>菠菜变色</li>
+</ol>
+<p>菠菜焯水后容易变黄，可以减少焯水时间，或者在焯水后立即用冷水冲洗，以快速降低温度，减少氧化反应。</p>
+<h3 id="需要注意的是，有些蔬菜的氧化反应会产生一些有益的物质"><a href="#需要注意的是，有些蔬菜的氧化反应会产生一些有益的物质" class="headerlink" title="需要注意的是，有些蔬菜的氧化反应会产生一些有益的物质"></a>需要注意的是，有些蔬菜的氧化反应会产生一些有益的物质</h3><ol>
+<li>叶绿素降解</li>
+</ol>
+<p>蔬菜在储存过程中，叶绿素会逐渐降解，产生一些具有抗氧化作用的物质，如叶绿素分解代谢物（PBL）。</p>
+<ol start="2">
+<li>花青素</li>
+</ol>
+<p>一些蔬菜，如紫甘蓝，在氧化过程中会产生花青素，具有抗氧化和抑菌作用。</p>
+<h2 id="食品添加剂"><a href="#食品添加剂" class="headerlink" title="食品添加剂"></a>食品添加剂</h2><ol>
+<li>防腐剂</li>
+</ol>
+<p>作用：抑制微生物（如细菌、霉菌、酵母菌）的生长，防止食品腐败，延长保质期。</p>
+<p>常见防腐剂：<br>苯甲酸及其盐类（如苯甲酸钠）：用于酸性食品（如饮料、果酱），抑制酵母和霉菌。<br>山梨酸及其盐类（如山梨酸钾）：广谱抗菌，适用于奶酪、面包、饮料等。<br>丙酸及其盐类（如丙酸钙）：主要用于面包和烘焙食品，防止霉菌和细菌生长。<br>亚硝酸盐（如亚硝酸钠）：用于肉制品，抑制肉毒杆菌，同时赋予肉类红色。<br>乳酸链球菌素：天然防腐剂，广泛用于乳制品和肉制品，抑制革兰氏阳性菌。<br>双乙酸钠：用于面包、糕点，抑制霉菌和细菌。<br>对羟基苯甲酸酯类（如尼泊金酯）：用于果酱、蜜饯，抑制酵母和霉菌。</p>
+<ol start="2">
+<li>抗氧化剂</li>
+</ol>
+<p>作用：防止食品氧化，延长保质期，保持色泽和风味。</p>
+<p>常见抗氧化剂：<br>维生素C（抗坏血酸）：用于果汁、饮料，防止氧化褐变。<br>维生素E（生育酚）：用于油脂食品，防止油脂氧化。<br>BHA（丁基羟基茴香醚）：用于油脂、肉制品，抗氧化效果强。<br>BHT（二丁基羟基甲苯）：用于油炸食品、坚果，防止氧化变质。<br>TBHQ（特丁基对苯二酚）：用于植物油，抗氧化性能优异。</p>
+<ol start="3">
+<li>着色剂</li>
+</ol>
+<p>作用：改善或赋予食品颜色，增强视觉吸引力。</p>
+<ul>
+<li><p>常见着色剂：</p>
+<ul>
+<li><p>天然着色剂：<br>  胭脂红：从胭脂虫提取，用于糖果、饮料。<br>  β-胡萝卜素：用于奶油、饮料，呈橙黄色。<br>  叶绿素：用于绿色食品，如糖果、冰淇淋。</p>
+</li>
+<li><p>合成着色剂：<br> 胭脂红：用于糖果、饮料，呈红色。<br> 柠檬黄：用于糕点、饮料，呈黄色。<br> 靛蓝：用于糖果、冷饮，呈蓝色。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>甜味剂</li>
+</ol>
+<p>作用：提供甜味，替代糖分，降低热量或适合糖尿病患者。</p>
+<p>常见甜味剂：<br>阿斯巴甜：甜度为蔗糖的200倍，用于饮料、糖果。<br>糖精钠：甜度高，成本低，用于饮料、腌制品。<br>甜菊糖苷：天然甜味剂，甜度高，热量低，用于饮料、保健食品。<br>安赛蜜：用于饮料、甜点，耐高温。</p>
+<ol start="5">
+<li>增稠剂与稳定剂</li>
+</ol>
+<p>作用：改善食品质构，增加黏度，防止成分分离。</p>
+<p>常见增稠剂与稳定剂：<br>果胶：用于果酱、果冻，增加胶凝性。<br>明胶：用于软糖、酸奶，增加弹性。<br>黄原胶：用于酱料、饮料，增加黏稠度和稳定性。<br>卡拉胶：用于乳饮料、果冻，防止沉淀。</p>
+<ol start="6">
+<li>酸度调节剂</li>
+</ol>
+<p>作用：调节食品酸碱度，改善风味，延长保质期。</p>
+<p>常见酸度调节剂：<br>柠檬酸：用于饮料、糖果，增加酸味。<br>乳酸：用于酸奶、腌制食品，调节酸度。<br>苹果酸：用于果汁、糖果，赋予清爽酸味。</p>
+<ol start="7">
+<li>乳化剂</li>
+</ol>
+<p>作用：促进油水混合，改善食品质构和稳定性。</p>
+<p>常见乳化剂：<br>卵磷脂：用于巧克力、奶油，防止油脂分离。<br>单甘酯：用于面包、蛋黄酱，改善质构。<br>蔗糖脂肪酸酯：用于乳饮料、冰淇淋，增强稳定性。</p>
+<ol start="8">
+<li>增味</li>
+</ol>
+<p>作用：增强食品风味，提升口感。</p>
+<p>常见增味剂：<br>谷氨酸钠（味精）：用于调味品、汤料，增强鲜味。<br>5’-肌苷酸二钠：用于调味品，与味精协同增鲜。<br>甘草酸：用于糖果、饮料，赋予特殊甜味。</p>
+<ol start="9">
+<li>其他添加剂</li>
+</ol>
+<p>漂白剂：如二氧化硫，用于干果、蜜饯，保持色泽。<br>发酵剂：如碳酸氢钠，用于面包、糕点，促发酵。<br>抗结剂：如硅酸钙，用于粉状食品，防止结块。</p>
+<h2 id="食品保鲜方法"><a href="#食品保鲜方法" class="headerlink" title="食品保鲜方法"></a>食品保鲜方法</h2><ol>
+<li>绿叶蔬菜（菠菜、生菜、油菜、羽衣甘蓝）</li>
+</ol>
+<p>特性：富含维生素C和叶绿素，易失水、氧化和萎蔫。</p>
+<p>保鲜方法：<br>清洗与干燥：用清水轻洗，去除泥土，吸干表面水分（可用沙拉甩干器）。<br>湿纸巾包裹：用微湿纸巾包裹叶片，放入透气保鲜袋，保持85-95%湿度。<br>冷藏：存放于冰箱蔬果层（0-4°C），避免挤压。<br>保存时间：7-10天。</p>
+<p>注意：避免与苹果、香蕉同存，乙烯会加速黄化。切勿密封过严，防止腐烂。</p>
+<ol start="2">
+<li>根茎类蔬菜（胡萝卜、土豆、红薯、萝卜）</li>
+</ol>
+<p>特性：含淀粉和β-胡萝卜素，耐储存但易发芽或失水。</p>
+<p>保鲜方法：<br>去除顶部：切除绿色叶片（如胡萝卜顶部），减少水分流失。<br>通风储存：放入纸袋或网袋，存于阴凉通风处（10-15°C），避免阳光直射。<br>冷藏（可选）：胡萝卜可放入保鲜袋，冷藏（0-4°C），保持高湿度。<br>保存时间：胡萝卜1-2个月，土豆2-3个月。</p>
+<p>注意：土豆避免低温冷藏（&lt;7°C），防止淀粉转糖影响口感。检查发芽，及时移除。</p>
+<ol start="3">
+<li>果实类蔬菜（西红柿、黄瓜、辣椒、茄子）</li>
+</ol>
+<p>特性：含番茄红素、维生素C，易受低温损伤或氧化褐变。</p>
+<p>保鲜方法：<br>常温储存：西红柿、茄子存放于15-20°C阴凉处，避免冷藏以保持风味。<br>冷藏（部分适用）：黄瓜、辣椒可用保鲜膜包裹，放入冰箱（7-10°C）。<br>切口处理：切开的蔬菜喷洒稀释柠檬汁，放入密封容器冷藏，防止氧化。<br>保存时间：西红柿5-7天，黄瓜10-14天，辣椒2-3周。</p>
+<p>注意：避免与乙烯高释放水果（如苹果）同存，加速成熟。</p>
+<ol start="4">
+<li>十字花科蔬菜（西兰花、花椰菜、卷心菜）</li>
+</ol>
+<p>特性：富含硫代化合物和维生素C，易褐变和失水。</p>
+<p>保鲜方法：<br>湿冷储存 comparto：用湿纸巾包裹根部，放入透气保鲜袋，冷藏（0-4°C）。<br>焯水速冻：长期保存可切小块，沸水焯烫30秒，迅速冷却后冷冻（-18°C）。<br>保存时间：冷藏1-2周，冷冻6-12个月。</p>
+<p>注意：避免切开后长时间暴露，立即用保鲜膜包裹切口。</p>
+<ol start="5">
+<li>葱蒜类蔬菜（洋葱、大蒜、韭菜）</li>
+</ol>
+<p>特性：含硫化合物，耐储存但易发芽或霉变。</p>
+<p>保鲜方法：</p>
+<p>洋葱、大蒜：存于干燥通风处（10-15°C），用网袋或篮子，避免潮湿。<br>韭菜：洗净晾干，用纸巾包裹，放入保鲜袋冷藏（0-4°C）。<br>保存时间：洋葱、大蒜1-3个月，韭菜7-10天。</p>
+<p>注意：洋葱与土豆分开存放，防止水分传递导致发芽。</p>
+<ol start="6">
+<li>豆类蔬菜（豌豆、四季豆）</li>
+</ol>
+<p>特性：含蛋白质和维生素C，易变色和质地软化。</p>
+<p>保鲜方法：</p>
+<p>冷藏：放入透气保鲜袋，冷藏（0-4°C），保持高湿度。<br>速冻：焯烫1-2分钟，冷却后冷冻（-18°C），保留色泽和营养。<br>保存时间：冷藏5-7天，冷冻6-12个月。</p>
+<p>注意：避免长时间常温存放，易氧化变黄。</p>
+<ol start="7">
+<li>菌类蔬菜（蘑菇、香菇）</li>
+</ol>
+<p>特性：含多酚，易褐变和失水。</p>
+<p>保鲜方法：</p>
+<p>纸袋储存：放入纸袋（非塑料袋），冷藏（0-4°C），保持干燥。<br>避免清洗：食用前再清洗，防止吸水变质。<br>保存时间：5-10天。</p>
+<p>注意：切勿密封，防止湿气积聚导致腐烂。</p>
+<ol start="8">
+<li>通用保鲜技巧</li>
+</ol>
+<p>减少氧气接触：使用真空袋或脱氧剂包装，减缓氧化反应。<br>天然抗氧化剂：切开蔬菜（如土豆、茄子）可浸泡1%醋水或柠檬汁，防止褐变。<br>分类存放：避免乙烯敏感蔬菜（如生菜）与高乙烯蔬菜（如西红柿）混存。<br>定期检查：及时移除腐烂部分，防止氧化和细菌扩散。</p>
+<ol start="9">
+<li>特殊工具与技术</li>
+</ol>
+<p>保鲜盒：使用带湿度调节的保鲜盒，适合绿叶蔬菜和果实类蔬菜。<br>气调包装：家用小型气调袋（如含脱氧剂）延长保鲜期。<br>冷冻设备：家用冰箱冷冻室适合长期储存，优先焯水处理。</p>
+<h2 id="内脏脂肪超标"><a href="#内脏脂肪超标" class="headerlink" title="内脏脂肪超标"></a>内脏脂肪超标</h2><p>内脏脂肪的形成是长期不健康生活习惯的结果。随着时间的推移，不良生活习惯将导致身体脂肪的增加，特别是内脏脂肪：</p>
+<ol>
+<li>过度食用油炸食品</li>
+</ol>
+<p>油炸食品如鸡排、爆米花、油条、薯片、香芋派和汉堡等，虽然美味可口，但热量含量极高。频繁食用不仅会导致体重增加，还会增加 <code>心血管疾病</code> 的风险。为了健康着想，建议将油炸食品的食用频率控制在每周不超过两次。</p>
+<ol start="2">
+<li>久坐不动的生活方式</li>
+</ol>
+<p>长期久坐办公或学习，会导致下肢血液循环不畅，代谢活动减缓。这种状态下，脂肪容易在腰部和臀部堆积，形成”水桶腰”。随着年龄增长，肌肉流失加快，新陈代谢进一步放缓，更容易造成体型走样。</p>
+<ol start="3">
+<li>缺乏运动</li>
+</ol>
+<p>饭后立即坐着或躺着休息的习惯，会降低身体的消化效率和热量消耗。长期缺乏运动不仅会导致体重增加，还会降低基础代谢率，形成恶性循环。</p>
+<ol start="4">
+<li>夜宵饮食</li>
+</ol>
+<p>晚上6点后的进食，特别是高热量的夜宵（如烧烤、火锅、麻辣烫、方便面等），极易导致脂肪在腰腹部堆积。建议调整作息，避免夜间进食，如确实无法避免，应选择低热量、易消化的食物。</p>
+<ol start="5">
+<li>过量摄入甜食</li>
+</ol>
+<p>频繁食用甜食会导致血糖快速升高，刺激胰岛素分泌，加速脂肪合成。过度摄入不仅会导致体重增加，还会增加患 <code>糖尿病</code> 的风险。</p>
+<ol start="6">
+<li>高热量饮品的诱惑</li>
+</ol>
+<p>冷饮、咖啡（添加糖浆的调味咖啡）和奶茶等饮品，往往含有大量糖分和脂肪。这些”液体热量”容易被忽视，却会显著增加每日总热量摄入，导致腹部脂肪堆积，增加 <code>心血管疾病</code> 风险。</p>
+<p>要保持健康的体态，关键在于培养良好的生活习惯。应该控制饮食量、选择健康的食材、保持规律的运动习惯&amp;确保充足的睡眠。</p>
+<p>记住，健康的生活方式不仅能帮助保持理想体重，更是预防各种慢性疾病的重要基础，这才是真正的“一劳永逸”。</p>
+<h2 id="糖类"><a href="#糖类" class="headerlink" title="糖类"></a>糖类</h2><p>糖类并非只有一种，其在营养上有差别，对健康的影响也不一样。</p>
+<h3 id="第一、添加糖"><a href="#第一、添加糖" class="headerlink" title="第一、添加糖"></a>第一、添加糖</h3><p>尽量少吃！添加糖指人为在食品中添加的糖，比如白砂糖、冰糖、红糖、黑糖、蔗糖等。它是纯能量食物，营养价值低，易消化吸收并导致血糖快速上升。</p>
+<p>摄入太多添加糖会增加龋齿、超重肥胖以及2型 <code>糖尿病</code> 等疾病的发生风险，并且可能与早衰、痛风、不育等有关。</p>
+<p>世界卫生组织WHO建议，成人每天添加糖的摄入量不要超过50克，最好控制在25克（约6茶匙）以下。</p>
+<h3 id="第二、糖醇"><a href="#第二、糖醇" class="headerlink" title="第二、糖醇"></a>第二、糖醇</h3><p>可以适量吃,糖醇是一种 <code>甜味剂</code> ，常见的有木糖醇、麦芽糖醇、赤藓糖醇、山梨糖醇等。</p>
+<p>糖醇甜度是蔗糖的60%~90%，在人体内的代谢不需要胰岛素，不会引起血糖剧烈波动。它的热量远低于蔗糖，适合患有 <code>糖尿病</code> 、肥胖的人。另外，糖醇不能被口腔中的微生物利用，不会导致龋齿。</p>
+<p>糖醇吃多了容易引起腹泻。成人每天摄入量应控制在20克以下，儿童最好在10克以下。</p>
+<h3 id="第三、低聚糖"><a href="#第三、低聚糖" class="headerlink" title="第三、低聚糖"></a>第三、低聚糖</h3><p>可以放心吃,低聚糖由多个单糖构成，主要包括功能性低聚糖和非淀粉多糖。它甜度低、能量低，难以被胃肠消化吸收，并且可以调节肠道功能。</p>
+<p>功能性低聚糖包括低聚果糖、低聚半乳糖等。低聚果糖是一种水溶性膳食纤维，在人的胃和小肠内几乎不能被消化吸收，不会升高血糖，可以促进排便、改善肠道菌群。</p>
+<p>非淀粉多糖包括纤维素、果胶等。多糖无甜味，可以提供饱腹感，并且缓慢释放能量，减少胰岛负担和脂肪储存。</p>
+<h3 id="这三类糖分别从哪里来？"><a href="#这三类糖分别从哪里来？" class="headerlink" title="这三类糖分别从哪里来？"></a>这三类糖分别从哪里来？</h3><p>生活中糖无处不在，有些吃起来不甜的食物，其实也含有大量的糖分。</p>
+<p>添加糖，能直接吃的糖和糖浆都属于添加糖。糖果、饼干、冰淇淋、蛋糕、含糖饮料等食物中添加糖的含量较高。</p>
+<p>糖醇，很多“无糖”、“低卡”饮料和代餐食品里，糖醇被作为食品 <code>添加剂</code> 而广泛使用。西梅、梨等水果中，含有天然的山梨糖醇。</p>
+<p>低聚糖，低聚果糖存在于天然食物中，主要食物来源包括大葱、小麦胚芽、大蒜、黑麦、洋葱等。</p>
+<h3 id="那么，科学控糖怎样做？"><a href="#那么，科学控糖怎样做？" class="headerlink" title="那么，科学控糖怎样做？"></a>那么，科学控糖怎样做？</h3><p>甜味能够满足我们的味觉需求。生活中想吃甜味食品，又怕热量太高的时候，可以试试这4种方法。</p>
+<ol>
+<li>看清食品含糖量</li>
+</ol>
+<p>我国法规要求，所有食品包装上都标注营养成分表，公示能量、蛋白质、脂肪、碳水化合物以及钠的含量，以及这些营养素占每日参考量的百分比。</p>
+<p>一般营养成分表都以100克或者100毫升为单位，可以根据食用的总量轻松计算摄入的能量和含糖量，来控制摄入量。</p>
+<ol start="2">
+<li>可用 <code>甜味剂</code> 代糖</li>
+</ol>
+<p>目前市面上有诸多零卡糖、低糖食物，主要是用糖醇类代糖，既可以赋予食物和糖一样的甜味，又能控制热量，是 <code>糖尿病</code> 患者、减肥人士等人群的好选择。</p>
+<ol start="3">
+<li>选择低糖小包装</li>
+</ol>
+<p>现在很多商家不仅推出低糖食品，还推出了小包装的产品，这是嘴馋时过瘾的好选择。</p>
+<p>要警惕“零卡”带来的错觉，一些消费者可能因零糖、低卡食品或饮料的热量相对较低，便忽视控制摄入量，最后反而吃得更多，额外增加能量摄入。</p>
+<ol start="4">
+<li>警惕“藏糖大户”</li>
+</ol>
+<p>有很多尝起来不太甜、名字也听不出“甜味”的食物，可能是意想不到的藏糖大户。比如浓缩果汁、速冲糊粉、三合一咖啡、能量棒、山楂零食等。</p>
+<p>如果配料表中白糖、砂糖、蔗糖、果糖、葡萄糖、糊精、麦芽糊精、淀粉糖浆、果葡糖浆、结晶果糖、麦芽糖、玉米糖浆等字眼的位置很靠前，说明是隐形的含糖大户，尽量少买。</p>
+<h2 id="农残较少的蔬菜"><a href="#农残较少的蔬菜" class="headerlink" title="农残较少的蔬菜"></a>农残较少的蔬菜</h2><ol>
+<li>生菜</li>
+</ol>
+<p>生菜自带苦味，而且生长速度极快，也没啥病害，打完药反而会影响生长速度！</p>
+<ol start="2">
+<li>南瓜</li>
+</ol>
+<p>南瓜的抗病性极强，既没有虫害也没有病害，而且耐储存，运输的过程中也不需要加什么科技！</p>
+<ol start="3">
+<li>冬瓜</li>
+</ol>
+<p>冬瓜具有一些自身的特点，使其可以相对较抗病虫害，加上冬瓜皮又厚又硬一般的虫子咬不动！</p>
+<ol start="4">
+<li>丝瓜</li>
+</ol>
+<p>丝瓜的味道独特，会散发出一股特殊的气味，虫子们闻到了都会避而远之。</p>
+<ol start="5">
+<li>筒蒿</li>
+</ol>
+<p>筒蒿和丝瓜一样，会散发出特殊的气味，相当于天然的驱虫剂！</p>
+<ol start="6">
+<li>竹笋</li>
+</ol>
+<p>竹笋的外型和颜色不易变化，加上生长时层层外壳的保护，所以很少受到虫害的侵袭！</p>
+<ol start="7">
+<li>红薯叶</li>
+</ol>
+<p>红薯叶具有一种特殊的“马尔福糖”这种物质对害虫有杀害的作用</p>
+<ol start="8">
+<li>莲藕</li>
+</ol>
+<p>莲藕生长在水池的淤泥里，自带盔甲没有用农的必要，要注意的是不要买到泡过水的！</p>
+<ol start="9">
+<li>芋头</li>
+</ol>
+<p>可食用部分为地下球茎，外层有土壤隔绝，病虫害相对较少，受虫害侵袭风险低</p>
+<ol start="10">
+<li>苦瓜</li>
+</ol>
+<p>含有苦瓜苷等苦味物质，对部分害虫有天然驱避作用</p>
+<ol start="11">
+<li>洋葱</li>
+</ol>
+<p>具有辛辣的味道和独特的香气，虫害不易靠近， <code>农药</code> 使用量少</p>
+<ol start="12">
+<li>胡萝卜</li>
+</ol>
+<p>农残留不多，释放的α—烯的气味有一定驱虫作用</p>
+<h2 id="食品安全事件"><a href="#食品安全事件" class="headerlink" title="食品安全事件"></a>食品安全事件</h2><p>以下是一些涉及中国食品安全的知名事件或关键词汇总，涵盖多个领域</p>
+<h3 id="乳制品行业"><a href="#乳制品行业" class="headerlink" title="乳制品行业"></a>乳制品行业</h3><ol>
+<li><code>三聚氰胺</code> 事件：2008年，婴幼儿奶粉中添加 <code>三聚氰胺</code> 导致婴儿 <code>肾结石</code> 等健康问题。</li>
+<li>掺假牛奶事件：乳制品中添加劣质奶粉、掺水或非乳成分。</li>
+<li>问题乳品超标：乳制品中发现 <code>黄曲霉毒素</code> M1、 <code>抗生素</code> 残留等超标问题。</li>
+</ol>
+<h3 id="食品添加剂-1"><a href="#食品添加剂-1" class="headerlink" title="食品添加剂"></a>食品添加剂</h3><ol start="4">
+<li>苏丹红事件：部分食品（如辣椒酱、咸蛋）中添加 <code>致癌物</code> 苏丹红染料。</li>
+<li>瘦肉精事件：养殖过程中使用瘦肉精（如克伦特罗）提高瘦肉比例。</li>
+<li>工业 <code>明胶</code> 问题：工业 <code>明胶</code> 被用于生产食品胶囊、软糖等食品。</li>
+<li>甲醛水浸泡食品：用于保鲜水产品、豆制品，但严重危害健康。</li>
+</ol>
+<h3 id="粮油及调味品"><a href="#粮油及调味品" class="headerlink" title="粮油及调味品"></a>粮油及调味品</h3><ol start="8">
+<li>地沟油事件：餐饮业废弃油脂回收加工后作为食用油再销售。</li>
+<li>假冒食用盐：劣质工业盐或非食用盐冒充食用盐。</li>
+<li>酱油勾兑事件：以氨基酸液勾兑酱油冒充传统酿造酱油。</li>
+</ol>
+<h3 id="肉制品行业"><a href="#肉制品行业" class="headerlink" title="肉制品行业"></a>肉制品行业</h3><ol start="11">
+<li>注水肉问题：牲畜屠宰后注水以增加重量。</li>
+<li>病死猪肉流入市场：病死或非法屠宰的动物肉制品销售。</li>
+<li>猪肉瘦肉精事件：畜牧养殖过程中非法使用瘦肉精。</li>
+</ol>
+<h3 id="水产品行业"><a href="#水产品行业" class="headerlink" title="水产品行业"></a>水产品行业</h3><ol start="14">
+<li>孔雀石绿超标：水产养殖中非法使用孔雀石绿作为抗菌药物。</li>
+<li><code>重金属</code> 污染鱼类：部分水产品中镉、铅、汞等 <code>重金属</code> 含量超标。</li>
+</ol>
+<h3 id="粮食与蔬果"><a href="#粮食与蔬果" class="headerlink" title="粮食与蔬果"></a>粮食与蔬果</h3><ol start="16">
+<li><code>农药</code> 残留超标：蔬菜、水果中检出 <code>农药</code> 残留超标。</li>
+<li>膨大剂滥用：水果、蔬菜中滥用膨大剂导致健康隐患。</li>
+<li><code>重金属</code> 污染大米：如镉超标大米事件。</li>
+</ol>
+<h3 id="饮料行业"><a href="#饮料行业" class="headerlink" title="饮料行业"></a>饮料行业</h3><ol start="19">
+<li>毒奶茶事件：奶茶中添加过量 <code>香精</code> 、 <code>甜味剂</code> 或工业用化学品。</li>
+<li>假冒饮料：无资质小作坊生产的假冒品牌饮料。</li>
+</ol>
+<h3 id="烘焙及零食行业"><a href="#烘焙及零食行业" class="headerlink" title="烘焙及零食行业"></a>烘焙及零食行业</h3><ol start="21">
+<li>铝超标馒头：馒头中发现过量 <code>明矾</code> 等铝化合物。</li>
+<li>含 <code>致癌物</code> 质月饼：部分月饼中检测出过量 <code>防腐剂</code> 或 <code>有害物质</code> 。</li>
+<li>染色馒头事件：将劣质馒头染色冒充新鲜或高品质产品。</li>
+</ol>
+<h3 id="其他相关事件"><a href="#其他相关事件" class="headerlink" title="其他相关事件"></a>其他相关事件</h3><ol start="24">
+<li>塑化剂事件：在酒类和饮料中检测出塑化剂。</li>
+<li>假冒保健食品：非法添加药物成分的保健食品。</li>
+<li>煤制油事件：工业油品与实用油品车辆混合使用。</li>
+<li>假鸡蛋事件：通过化学合成制造假鸡蛋。</li>
+<li>假冒品牌食品：无资质工厂生产的假冒名牌！</li>
+</ol>
+<h2 id="药品安全事件"><a href="#药品安全事件" class="headerlink" title="药品安全事件"></a>药品安全事件</h2><p>以下是中国药品安全领域的一些知名事件和关键词，涉及药品生产、流通、销售和使用的各个环节</p>
+<h3 id="生产和质量问题"><a href="#生产和质量问题" class="headerlink" title="生产和质量问题"></a>生产和质量问题</h3><ol>
+<li>长春长生疫苗事件：2018年，长春长生生物科技公司生产的狂犬疫苗和百白破疫苗存在质量问题，引发全国关注。</li>
+<li>问题甲流疫苗：某些甲型H1N1流感疫苗被检出效价不足。</li>
+<li>假冒伪劣药品：市场上流通的部分药品未通过正规渠道生产，甚至含有 <code>有害物质</code> 。</li>
+<li>毒胶囊事件：2012年，胶囊药壳被发现使用 <code>重金属</code> 铬超标的工业 <code>明胶</code> 。</li>
+</ol>
+<h3 id="药品成分与添加剂问题"><a href="#药品成分与添加剂问题" class="headerlink" title="药品成分与添加剂问题"></a>药品成分与添加剂问题</h3><ol start="5">
+<li>“齐二药”假药事件：2006年，齐齐哈尔第二制药厂生产的药品含有剧毒二甘醇，导致多人死亡。</li>
+<li>假冒抗癌药事件：部分抗癌药物被非法添加非标准化成分。</li>
+<li>假血浆事件：使用未经合规采集和处理的血浆产品。</li>
+</ol>
+<h3 id="药品流通与销售问题"><a href="#药品流通与销售问题" class="headerlink" title="药品流通与销售问题"></a>药品流通与销售问题</h3><ol start="8">
+<li>非法疫苗案：2016年，山东非法疫苗案涉及过期或未经冷链储存的疫苗流入市场。</li>
+<li>伪造处方药销售：部分药店和线上平台违规销售需要处方的药品。</li>
+<li>网络假药：通过网络平台销售假药，消费者缺乏辨别能力。</li>
+</ol>
+<h3 id="药物不良反应与药害事件"><a href="#药物不良反应与药害事件" class="headerlink" title="药物不良反应与药害事件"></a>药物不良反应与药害事件</h3><ol start="11">
+<li>欣弗事件：2006年，安徽华源生产的 <code>抗生素</code> “欣弗”注射液因严重不良反应致多例患者死亡。</li>
+<li>问题输液事件：静脉注射液被检出微生物污染或其他不合规成分。</li>
+<li>中药注射液过敏事件：某些中药注射剂引发严重过敏或不良反应。</li>
+</ol>
+<h3 id="医疗器械问题"><a href="#医疗器械问题" class="headerlink" title="医疗器械问题"></a>医疗器械问题</h3><ol start="14">
+<li>问题心脏支架：部分医疗器械如心脏支架被检出质量不过关。</li>
+<li>假冒血糖仪：假冒血糖仪或试纸导致检测结果不准，影响治疗。</li>
+<li>问题注射器：生产不合规的注射器或医疗用针头。</li>
+</ol>
+<h3 id="监管与法律问题"><a href="#监管与法律问题" class="headerlink" title="监管与法律问题"></a>监管与法律问题</h3><ol start="17">
+<li>药监系统腐败：2007年，原国家药监局局长郑筱萸因滥用职权批准假劣药品而被判处死刑。</li>
+<li>新药审批造假：部分新药研发资料造假却通过审批。</li>
+<li>医保诈骗：药品与医疗设备串通虚报医保，骗取国家医保基金。</li>
+</ol>
+<h3 id="中药相关问题"><a href="#中药相关问题" class="headerlink" title="中药相关问题"></a>中药相关问题</h3><ol start="20">
+<li>中药材 <code>重金属</code> 超标：部分中药材因土壤污染或加工不当，导致 <code>重金属</code> 残留超标。</li>
+<li>中药假药事件：劣质中药材冒充正品销售，甚至掺杂 <code>有害物质</code> 。</li>
+<li>伪造中药保健品：添加化学药物成分的中药保健品流入市场。</li>
+</ol>
+<h3 id="其他相关问题"><a href="#其他相关问题" class="headerlink" title="其他相关问题"></a>其他相关问题</h3><ol start="23">
+<li>疫苗过期问题：部分疫苗未及时使用或存储不当导致过期。</li>
+<li>劣质药品流入乡村市场：农村及偏远地区常见劣质药品销售。</li>
+<li>儿童药品安全隐患：部分儿童药品剂量标注不准确或不符合儿童使用标准。</li>
+</ol>
+<p>药品安全、食品安全、物价上涨、水污染、空气污染</p>
+<h2 id="致癌物质"><a href="#致癌物质" class="headerlink" title="致癌物质"></a>致癌物质</h2><h3 id="第1类致癌物（对人类明确致癌）"><a href="#第1类致癌物（对人类明确致癌）" class="headerlink" title="第1类致癌物（对人类明确致癌）"></a>第1类致癌物（对人类明确致癌）</h3><p>这些物质被确认确实会导致人类癌症，有充分的流行病学和动物实验数据支持。</p>
+<h4 id="食品相关部分（重点）"><a href="#食品相关部分（重点）" class="headerlink" title="食品相关部分（重点）"></a>食品相关部分（重点）</h4><table>
+    <tr>
+        <td>致癌物</td>
+        <td>来源或说明</td>
+    </tr>
+    <tr>
+        <td>加工肉类（如香肠、火腿、腊肉）</td>
+        <td>包括腌制、熏制、发酵、风干或其他方式处理的肉制品</td>
+    </tr>
+    <tr>
+        <td>酒精饮料（乙醇）</td>
+        <td>包括啤酒、白酒、红酒等，饮酒量越多致癌风险越高</td>
+    </tr>
+    <tr>
+        <td>黄曲霉毒素（Aflatoxins）</td>
+        <td>霉变的花生、玉米、谷物中常见</td>
+    </tr>
+    <tr>
+        <td>亚硝胺类（Nitrosamines）</td>
+        <td>腌制品、烧烤、煎炸食品中，特别是含亚硝酸盐的食物</td>
+    </tr>
+    <tr>
+        <td>中式咸鱼（尤其是粤式）</td>
+        <td>特殊发酵方式易产生亚硝胺</td>
+    </tr>
+    <tr>
+        <td>木炭烟（来自烹饪）</td>
+        <td>烧烤、炭火熏制过程中吸入的烟雾</td>
+    </tr>
+    <tr>
+        <td>石棉</td>
+        <td>虽不直接摄入，但曾用于食品加工器具、环境污染</td>
+    </tr>
+    <tr>
+        <td>烟草及烟草制品</td>
+        <td>主动或被动吸烟都与多种癌症高度相关</td>
+    </tr>
+</table>
+
+<h3 id="第2A类致癌物（可能对人类致癌）"><a href="#第2A类致癌物（可能对人类致癌）" class="headerlink" title="第2A类致癌物（可能对人类致癌）"></a>第2A类致癌物（可能对人类致癌）</h3><p>有“有限人类证据”但“充分动物证据”，属于可能致癌。</p>
+<h4 id="食品相关部分（重点）-1"><a href="#食品相关部分（重点）-1" class="headerlink" title="食品相关部分（重点）"></a>食品相关部分（重点）</h4><table>
+    <tr>
+        <td>致癌物</td>
+        <td>来源或说明</td>
+    </tr>
+    <tr>
+        <td>红肉（牛、羊、猪肉等）</td>
+        <td>与结直肠癌等有关，尤其高温烹饪（如煎、烤）时更危险</td>
+    </tr>
+    <tr>
+        <td>高温煎炸产生的杂环胺（Heterocyclic amines）</td>
+        <td>烧烤肉类中的产物</td>
+    </tr>
+    <tr>
+        <td>亚硝酸盐（常用防腐剂）</td>
+        <td>香肠、腌肉、午餐肉等食品中</td>
+    </tr>
+    <tr>
+        <td>吸入高温油烟</td>
+        <td>炒菜油冒烟时产生的致癌颗粒物</td>
+    </tr>
+    <tr>
+        <td>呋喃（Furan）</td>
+        <td>高温加工罐头、婴儿食品、咖啡中可见</td>
+    </tr>
+    <tr>
+        <td>植物性黄曲霉毒素 M1</td>
+        <td>来自奶制品，若奶牛进食霉变饲料则乳中带毒</td>
+    </tr>
+</table>
+
+<h3 id="第2B类致癌物（对人类可能致癌）"><a href="#第2B类致癌物（对人类可能致癌）" class="headerlink" title="第2B类致癌物（对人类可能致癌）"></a>第2B类致癌物（对人类可能致癌）</h3><p>人类证据不充分，但部分动物实验表明有致癌可能。</p>
+<h4 id="食品相关部分（重点）-2"><a href="#食品相关部分（重点）-2" class="headerlink" title="食品相关部分（重点）"></a>食品相关部分（重点）</h4><table>
+    <tr>
+        <td>致癌物</td>
+        <td>来源或说明</td>
+    </tr>
+    <tr>
+        <td>高温反复使用的食用油</td>
+        <td>油炸多次后的油（“老油”）会产生多环芳烃、苯并芘等</td>
+    </tr>
+    <tr>
+        <td>咖啡酸（未精炼咖啡豆）</td>
+        <td>某些来源的咖啡中可检出微量致癌物</td>
+    </tr>
+    <tr>
+        <td>铅及铅化合物</td>
+        <td>旧的餐具、污染土壤农作物</td>
+    </tr>
+    <tr>
+        <td>苯甲酸钠（可能与维生素C反应生成苯）</td>
+        <td>常见防腐剂，汽水、果汁、果酱中可能存在</td>
+    </tr>
+    <tr>
+        <td>多环芳烃（PAHs）</td>
+        <td>烧烤、烟熏食物中</td>
+    </tr>
+    <tr>
+        <td>Pickled vegetables（部分腌菜）</td>
+        <td>IARC 特别指出中式家庭腌制可能有致癌风险</td>
+    </tr>
+</table>
+
+<h3 id="第3类致癌物（对人类致癌性尚不明确）"><a href="#第3类致癌物（对人类致癌性尚不明确）" class="headerlink" title="第3类致癌物（对人类致癌性尚不明确）"></a>第3类致癌物（对人类致癌性尚不明确）</h3><p>目前无足够证据表明其致癌，但仍在监控中。</p>
+<p>常见的如：茶、咖啡（已被部分移除），植物精油、食品 <code>添加剂</code> 等。</p>
+<h4 id="需要注意的致癌物质"><a href="#需要注意的致癌物质" class="headerlink" title="需要注意的致癌物质"></a>需要注意的致癌物质</h4><p>腌制食品：腌制食品中可能含有 <code>亚硝酸盐</code> ，在胃中会转化为 <code>亚硝胺</code> ，具有 <code>致癌性</code> 。<br>烧烤食物：高温烧烤食物中可能产生苯并芘等 <code>致癌物</code> 。<br>霉变食物：霉变食物中可能含有 <code>黄曲霉毒素</code> 等 <code>致癌物</code> 。<br>其他：如 <code>农药</code> 、部分染料等。</p>
+<h4 id="如何减少致癌风险"><a href="#如何减少致癌风险" class="headerlink" title="如何减少致癌风险"></a>如何减少致癌风险</h4><p>健康饮食：均衡饮食，多吃蔬菜水果，减少红肉和加工肉类的摄入。<br>避免烟酒：戒烟限酒，减少烟酒对身体的损害。<br>注意食品安全：不食用霉变食物，尽量减少腌制食品和烧烤食物的摄入。<br>保持良好生活习惯：规律作息，适度运动，减轻压力。<br>定期体检：早期发现癌症，有助于提高治疗成功率.</p>
+<h2 id="重金属中毒"><a href="#重金属中毒" class="headerlink" title="重金属中毒"></a>重金属中毒</h2><ol>
+<li>重金属中毒的来源与危害<br>重金属如铅、汞、镉、砷等，因其在环境中难以降解且易在生物体内累积，长期暴露可能导致严重健康问题。铅中毒尤为常见，常见来源包括：</li>
+</ol>
+<p>环境污染：老旧含铅油漆、污染的土壤或水源（如含铅管道）。<br>工业暴露：电池制造、采矿、冶炼等行业工人易受影响。<br>生活用品：某些劣质玩具、化妆品、陶瓷制品或传统药物可能含铅。<br>食品链：通过受污染的土壤或水进入食物链。</p>
+<p>铅中毒对人体危害很大，尤其是儿童和孕妇：</p>
+<p>儿童：可能导致神经系统损伤、智商下降、行为问题和发育迟缓。<br>成人：可引发肾功能损伤、心血管疾病、神经系统问题等。<br>孕妇：可能影响胎儿发育，导致流产或先天缺陷。</p>
+<h2 id="中国自来水的问题：可用-≠-可饮"><a href="#中国自来水的问题：可用-≠-可饮" class="headerlink" title="中国自来水的问题：可用 ≠ 可饮"></a>中国自来水的问题：可用 ≠ 可饮</h2><p>中国自来水是“生活用水标准”，不是“直饮水标准”。</p>
+<table>
+    <tr>
+        <td>指标</td>
+        <td>实际情况</td>
+        <td>健康影响</td>
+    </tr>
+    <tr>
+        <td>硬度（钙镁离子）</td>
+        <td>高，易结水垢</td>
+        <td>虽不算有害，但影响口感与加热器具寿命</td>
+    </tr>
+    <tr>
+        <td>消毒方式</td>
+        <td>氯消毒为主</td>
+        <td>氯气副产物可能致癌（如三卤甲烷）</td>
+    </tr>
+    <tr>
+        <td>运输过程</td>
+        <td>老旧管网二次污染严重</td>
+        <td>铁锈、重金属、细菌可能超标</td>
+    </tr>
+    <tr>
+        <td>出厂水质量</td>
+        <td>达标率高（&gt;98%）</td>
+        <td>但“最后一公里”输水管+楼顶水箱问题多</td>
+    </tr>
+    <tr>
+        <td>可饮用性</td>
+        <td>法规不要求直饮（和欧洲、日本不同）</td>
+        <td>所以出厂目标是“安全洗澡和烧开饮用”</td>
+    </tr>
+</table>
+
+<h3 id="中日饮水安全与寿命对比"><a href="#中日饮水安全与寿命对比" class="headerlink" title="中日饮水安全与寿命对比"></a>中日饮水安全与寿命对比</h3><p>日本人饮水习惯、饮食结构、健康制度、社会压力、环境污染程度等多重因素综合造就其更长寿，但“饮水质量”是基础而关键的一环。</p>
+<table>
+    <tr>
+        <td>对比项目</td>
+        <td>日本</td>
+        <td>中国</td>
+    </tr>
+    <tr>
+        <td>是否可直饮</td>
+        <td>✅ 可</td>
+        <td>❌ 不可</td>
+    </tr>
+    <tr>
+        <td>水处理技术</td>
+        <td>高度自动化 + 活性炭 + 臭氧消毒</td>
+        <td>仍以氯消毒+沉淀为主</td>
+    </tr>
+    <tr>
+        <td>管网老化</td>
+        <td>极少（高度维护）</td>
+        <td>普遍老化、跑冒滴漏严重</td>
+    </tr>
+    <tr>
+        <td>饮水观念</td>
+        <td>普通家庭直接饮用水龙头水</td>
+        <td>大多数家庭烧开水或买桶装水</td>
+    </tr>
+    <tr>
+        <td>人均寿命（2024数据）</td>
+        <td>约 84.5岁</td>
+        <td>约 78.2岁</td>
+    </tr>
+</table>
+
+<h3 id="应对建议：在不理想环境中保护自己"><a href="#应对建议：在不理想环境中保护自己" class="headerlink" title="应对建议：在不理想环境中保护自己"></a>应对建议：在不理想环境中保护自己</h3><ul>
+<li>净水设备</li>
+</ul>
+<p>安装家用净水器，如反渗透（RO）系统，可有效去除重金属、化学物质和微生物（过滤精度达0.0001微米）。<br>活性炭净水器可去除氯和部分有机物，但对重金属效果有限。</p>
+<ul>
+<li>煮沸水</li>
+</ul>
+<p>煮沸可杀灭微生物，但无法去除重金属或化学污染物。建议煮沸后配合净水器使用。</p>
+<ul>
+<li>定期检测</li>
+</ul>
+<p>使用家用水质测试仪（如TDS计或重金属测试条）检测水中总溶解固体（TDS）或特定污染物。<br>联系当地水务部门获取水质报告，了解铅、砷等指标是否超标。</p>
+<ul>
+<li>水壶维护</li>
+</ul>
+<p>每月用白醋（1:10稀释）浸泡热水壶内胆30分钟，清洗水垢。<br>选择不锈钢或玻璃内胆的热水壶，避免劣质材料释放有害物质。</p>
+<h4 id="家庭净水组合建议"><a href="#家庭净水组合建议" class="headerlink" title="家庭净水组合建议"></a>家庭净水组合建议</h4><table>
+    <tr>
+        <td>设备类型</td>
+        <td>功能</td>
+        <td>推荐用途</td>
+    </tr>
+    <tr>
+        <td>前置过滤器</td>
+        <td>拦截铁锈、泥沙</td>
+        <td>装在入户水表后</td>
+    </tr>
+    <tr>
+        <td>活性炭过滤器</td>
+        <td>去除异味、氯</td>
+        <td>厨房用水</td>
+    </tr>
+    <tr>
+        <td>超滤/RO反渗透机</td>
+        <td>去除重金属、细菌</td>
+        <td>饮水使用，尤其适合儿童/孕妇</td>
+    </tr>
+    <tr>
+        <td>电水壶烧开</td>
+        <td>杀灭细菌</td>
+        <td>不能去除重金属等污染物，仅作加热用途</td>
+    </tr>
+</table>
+
+<h2 id="空气质量"><a href="#空气质量" class="headerlink" title="空气质量"></a>空气质量</h2><h3 id="空气质量问题的现状"><a href="#空气质量问题的现状" class="headerlink" title="空气质量问题的现状"></a>空气质量问题的现状</h3><h4 id="主要污染物"><a href="#主要污染物" class="headerlink" title="主要污染物"></a>主要污染物</h4><ol>
+<li>颗粒物（PM2.5和PM10）</li>
+</ol>
+<p>PM2.5（直径小于2.5微米的颗粒物）可深入肺部和血液，增加心血管疾病、肺癌和呼吸系统疾病风险。<br>PM10（直径小于10微米）易沉积在鼻腔和上呼吸道，导致你描述的“鼻子里黑乎乎”现象，通常是碳黑、粉尘或重金属颗粒。<br>来源：燃煤、机动车尾气、工业排放、建筑扬尘、冬季燃煤取暖等。</p>
+<ol start="2">
+<li>有害气体</li>
+</ol>
+<p>二氧化硫（SO₂）、氮氧化物（NOx）、臭氧（O₃）、一氧化碳（CO）等，来自燃煤电厂、车辆和工业过程。</p>
+<ol start="3">
+<li>重金属</li>
+</ol>
+<p>空气中的铅、镉等重金属颗粒可能来自工业排放或土壤扬尘，与你之前提到的铅中毒问题相关。</p>
+<ol start="4">
+<li>挥发性有机化合物（VOCs）</li>
+</ol>
+<p>来源于喷漆、化工生产等，易形成臭氧和二次颗粒物，加重雾霾。</p>
+<h4 id="雾霾的成因"><a href="#雾霾的成因" class="headerlink" title="雾霾的成因"></a>雾霾的成因</h4><ol>
+<li>工业和能源结构</li>
+</ol>
+<p>中国长期依赖煤炭作为主要能源（约占能源消费的50-60%），燃煤排放大量PM2.5、SO₂和NOx。<br>重工业（如钢铁、水泥）和化工企业排放是雾霾的重要来源。</p>
+<ol start="2">
+<li>机动车排放</li>
+</ol>
+<p>城市车辆激增，尾气排放的NOx和VOCs是雾霾的重要前体物。</p>
+<ol start="3">
+<li>地理和气候因素</li>
+</ol>
+<p>华北地区（如京津冀）地形封闭，冬季静稳天气多，污染物不易扩散，导致雾霾频发。<br>例如，北京冬季常受“逆温层”影响，污染物被困在低空。</p>
+<ol start="4">
+<li>农业和生活排放</li>
+</ol>
+<p>秸秆焚烧、垃圾露天燃烧、家庭燃煤取暖等加剧污染。</p>
+<h3 id="空气质量差的健康影响"><a href="#空气质量差的健康影响" class="headerlink" title="空气质量差的健康影响"></a>空气质量差的健康影响</h3><ul>
+<li>短期影响</li>
+</ul>
+<p>呼吸道刺激：咳嗽、喉咙痛、鼻腔不适（如你提到的“黑乎乎”）。<br>过敏加重：雾霾中的颗粒物和化学物质可能引发哮喘或鼻炎。<br>眼部刺激：PM2.5和VOCs导致眼睛干涩、红肿。</p>
+<ul>
+<li>长期影响</li>
+</ul>
+<p>心血管疾病：PM2.5可进入血液，增加心脏病、中风风险。WHO估计，空气污染每年导致全球约700万人过早死亡。<br>呼吸系统疾病：长期暴露于PM2.5可能导致慢性阻塞性肺病（COPD）、肺癌。<br>重金属中毒：空气中的铅、镉颗粒可能通过呼吸道进入人体，增加铅中毒风险，影响儿童神经发育和成人肾功能。<br>寿命影响：研究表明，长期暴露于PM2.5浓度每增加10μg&#x2F;m³，预期寿命可能缩短0.5-1年。中国PM2.5浓度高于日本（平均约10μg&#x2F;m³），是中日寿命差距（78岁 vs 84岁）的次要因素之一。</p>
+<h3 id="雾霾究竟是什么？为何这么可怕？"><a href="#雾霾究竟是什么？为何这么可怕？" class="headerlink" title="雾霾究竟是什么？为何这么可怕？"></a>雾霾究竟是什么？为何这么可怕？</h3><p>雾霾 ≠ 雾气</p>
+<p>最可怕的一点是<br>雾霾不是你“闻到的”，而是你“看不见的毒气”。PM2.5几乎无色无味，却长期侵蚀你的肺。</p>
+<table>
+    <tr>
+        <td>项目</td>
+        <td>雾霾成分</td>
+        <td>危害</td>
+    </tr>
+    <tr>
+        <td>PM2.5</td>
+        <td>极细颗粒物（直径小于2.5微米）</td>
+        <td>可穿透肺泡进入血液，诱发心肺病、癌症</td>
+    </tr>
+    <tr>
+        <td>PM10</td>
+        <td>灰尘、粉尘</td>
+        <td>阻塞呼吸道</td>
+    </tr>
+    <tr>
+        <td>臭氧</td>
+        <td>VOCs + 氮氧化物生成</td>
+        <td>强烈刺激气管</td>
+    </tr>
+    <tr>
+        <td>二氧化硫、氮氧化物</td>
+        <td>工业+尾气</td>
+        <td>导致呼吸系统疾病</td>
+    </tr>
+</table>
+
+<h2 id="口罩防护标准：防病毒-≠-防污染"><a href="#口罩防护标准：防病毒-≠-防污染" class="headerlink" title="口罩防护标准：防病毒 ≠ 防污染"></a>口罩防护标准：防病毒 ≠ 防污染</h2><p>常见口罩类型和标准对比</p>
+<p>口罩在应对空气污染（如PM2.5或含铅颗粒）以及保护呼吸系统免受重金属颗粒侵害方面至关重要。</p>
+<blockquote>
+<p>注意：KN95&#x2F;N95要选带“GB2626-2019”标准认证的，才是真正有效的口罩。某些电商售卖的“工业KN95”无医用标准，不推荐防病毒使用。</p>
+</blockquote>
+<table>
+    <tr>
+        <td>类型</td>
+        <td>执行标准</td>
+        <td>防颗粒物</td>
+        <td>防病毒</td>
+        <td>备注</td>
+    </tr>
+    <tr>
+        <td>医用外科口罩</td>
+        <td>YY 0469</td>
+        <td>中等</td>
+        <td>有效阻挡飞沫</td>
+        <td>一般医疗场所使用</td>
+    </tr>
+    <tr>
+        <td>N95 / KN95</td>
+        <td>NIOSH / GB 2626</td>
+        <td>高效（≥95% PM0.3）</td>
+        <td>可过滤细菌病毒颗粒</td>
+        <td>防疫、防雾霾均可</td>
+    </tr>
+    <tr>
+        <td>N100 / P100</td>
+        <td>NIOSH</td>
+        <td>≈99.97%</td>
+        <td>更强过滤</td>
+        <td>更厚重、透气性差</td>
+    </tr>
+    <tr>
+        <td>棉布口罩 / 时尚口罩</td>
+        <td>无标准</td>
+        <td>几乎无效</td>
+        <td>无防护功能</td>
+        <td>仅用于保暖、形象</td>
+    </tr>
+    <tr>
+        <td>KF94（韩国标准）</td>
+        <td>KFDA</td>
+        <td>≈94%</td>
+        <td>类似N95</td>
+        <td>韩国常用防疫口罩</td>
+    </tr>
+</table>
+
+<p>个人防护策略一览表</p>
+<table>
+    <tr>
+        <td>场景</td>
+        <td>推荐措施</td>
+    </tr>
+    <tr>
+        <td>雾霾天出门</td>
+        <td>戴 N95 / KN95 口罩，减少户外活动</td>
+    </tr>
+    <tr>
+        <td>家中空气质量差</td>
+        <td>使用空气净化器 + 经常通风</td>
+    </tr>
+    <tr>
+        <td>担心水质污染</td>
+        <td>使用正规净水设备，不饮生水</td>
+    </tr>
+    <tr>
+        <td>居住环境靠近工业区</td>
+        <td>定期体检（检测重金属）、使用空气水质检测仪</td>
+    </tr>
+    <tr>
+        <td>新装修房入住</td>
+        <td>持续通风 + 第三方甲醛检测</td>
+    </tr>
+</table>
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 食品安全问题与健康指导</li>
+        <li><strong>作者:</strong> Allen Shaw</li>
+        <li><strong>创建于
+                :</strong> 2025-08-07 11:04:37</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-08-08 02:01:34
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://mirror.blog.xiaoww.com/posts/food-safety-issues-and-health-guidance/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E5%81%A5%E5%BA%B7/">#健康</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8/">#食品安全</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/posts/carcinogenic-substances-list/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">致癌物质清单</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/posts/sex-gene-revelation-from-science-to-life/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item truncate max-w-48">两性基因揭秘：从科学到生活的观察</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">食品安全问题与健康指导</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E5%BB%BA%E8%AE%AE"><span class="nav-text">购买建议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%90%E6%9D%A1%E8%A7%A3%E6%9E%90%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%84%E4%B8%AA%E6%96%B9%E9%9D%A2"><span class="nav-text">逐条解析食品安全的各个方面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%B9%E4%BE%BF%E9%9D%A2"><span class="nav-text">1. 方便面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B2%B9%E6%9D%A1"><span class="nav-text">2. 油条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B1%86%E6%B5%86"><span class="nav-text">3. 豆浆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%9D%A2%E5%8C%85"><span class="nav-text">4. 面包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8C%85%E5%AD%90"><span class="nav-text">5. 包子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%B0%B4%E8%B4%A8"><span class="nav-text">6. 水质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E9%A3%9F%E7%94%A8%E6%B2%B9%E7%B1%BB"><span class="nav-text">7. 食用油类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%B0%E6%B2%9F%E6%B2%B9"><span class="nav-text">地沟油</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%89%E7%B1%B3%E6%B2%B9"><span class="nav-text">玉米油</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%A5%B6%E7%B2%89%E7%B1%BB"><span class="nav-text">8. 奶粉类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E8%81%9A%E6%B0%B0%E8%83%BA%E5%A5%B6%E7%B2%89"><span class="nav-text">三聚氰胺奶粉</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%8E%E8%83%B6%E9%85%B8%E5%A5%B6"><span class="nav-text">明胶酸奶</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E9%A5%BC%E5%B9%B2%E7%B1%BB"><span class="nav-text">9. 饼干类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E9%A3%9F%E7%94%A8%E7%9B%90%E7%B1%BB"><span class="nav-text">10. 食用盐类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E8%B0%83%E6%96%99%E7%B1%BB"><span class="nav-text">11. 调料类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%B1%E6%B2%B9%E7%B1%BB"><span class="nav-text">酱油类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%80%81%E5%B9%B2%E5%A6%88%E3%80%81%E8%80%81%E5%B9%B2%E7%88%B9"><span class="nav-text">老干妈、老干爹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E8%80%81%E5%9D%9B%E9%85%B8%E8%8F%9C"><span class="nav-text">12. 老坛酸菜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E9%BB%84%E7%84%96%E9%B8%A1%E3%80%81%E9%B8%A1%E5%85%AC%E7%85%B2"><span class="nav-text">13. 黄焖鸡、鸡公煲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E7%8C%AA%E8%82%89%E3%80%81%E9%B8%A1%E8%82%89"><span class="nav-text">14. 猪肉、鸡肉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E8%94%AC%E8%8F%9C%E7%B1%BB"><span class="nav-text">15. 蔬菜类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8C%84%E5%AD%90%E3%80%81%E7%BB%BF%E5%8F%B6%E8%8F%9C%E7%AD%89"><span class="nav-text">茄子、绿叶菜等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%92%E7%94%9F%E5%A7%9C"><span class="nav-text">毒生姜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%92%E8%98%91%E8%8F%87"><span class="nav-text">毒蘑菇</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E7%81%AB%E8%85%BF%E8%82%A0"><span class="nav-text">16. 火腿肠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E8%8B%8F%E4%B8%B9%E7%BA%A2"><span class="nav-text">17. 苏丹红</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E6%BB%91%E7%9F%B3%E7%B2%89%E9%9D%A2%E7%B2%89"><span class="nav-text">18. 滑石粉面粉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E9%95%89%E5%A4%A7%E7%B1%B3"><span class="nav-text">19. 镉大米</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E7%A7%91%E6%8A%80%E8%8F%9C"><span class="nav-text">20. 科技菜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E9%A2%84%E5%88%B6%E8%8F%9C"><span class="nav-text">21. 预制菜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E8%82%89%E7%B1%BB%E5%8F%8A%E7%86%9F%E9%A3%9F%E7%B1%BB"><span class="nav-text">22. 肉类及熟食类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E4%BA%BA%E5%B7%A5%E9%80%A0%E5%81%87%E9%A3%9F%E5%93%81"><span class="nav-text">23. 人工造假食品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E5%A5%B6%E8%8C%B6"><span class="nav-text">24. 奶茶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E4%BD%9C%E5%9D%8A%E4%B8%8E%E4%B8%89%E6%97%A0%E5%A4%96%E5%8D%96"><span class="nav-text">黑作坊与三无外卖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD%EF%BC%9A%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%EF%BC%8C%E4%B8%8D%E8%83%BD%E5%8F%AA%E9%9D%A0%E2%80%9C%E8%BF%90%E6%B0%94%E2%80%9D"><span class="nav-text">结语：食品安全，不能只靠“运气”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E5%91%BC%E5%90%81%EF%BC%9A"><span class="nav-text">我们呼吁：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%94%AC%E8%8F%9C%E6%8A%97%E6%B0%A7%E5%8C%96"><span class="nav-text">蔬菜抗氧化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%94%AC%E8%8F%9C%E6%8A%97%E6%B0%A7%E5%8C%96%E5%8F%8D%E5%BA%94%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-text">蔬菜抗氧化反应的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%87%8F%E5%B0%91%E8%94%AC%E8%8F%9C%E7%9A%84%E6%B0%A7%E5%8C%96%E5%8F%8D%E5%BA%94"><span class="nav-text">如何减少蔬菜的氧化反应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8A%97%E6%B0%A7%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-text">一些常见的抗氧化方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E6%98%AF%EF%BC%8C%E6%9C%89%E4%BA%9B%E8%94%AC%E8%8F%9C%E7%9A%84%E6%B0%A7%E5%8C%96%E5%8F%8D%E5%BA%94%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%B8%80%E4%BA%9B%E6%9C%89%E7%9B%8A%E7%9A%84%E7%89%A9%E8%B4%A8"><span class="nav-text">需要注意的是，有些蔬菜的氧化反应会产生一些有益的物质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E6%B7%BB%E5%8A%A0%E5%89%82"><span class="nav-text">食品添加剂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E4%BF%9D%E9%B2%9C%E6%96%B9%E6%B3%95"><span class="nav-text">食品保鲜方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E8%84%8F%E8%84%82%E8%82%AA%E8%B6%85%E6%A0%87"><span class="nav-text">内脏脂肪超标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%96%E7%B1%BB"><span class="nav-text">糖类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E3%80%81%E6%B7%BB%E5%8A%A0%E7%B3%96"><span class="nav-text">第一、添加糖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E3%80%81%E7%B3%96%E9%86%87"><span class="nav-text">第二、糖醇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E3%80%81%E4%BD%8E%E8%81%9A%E7%B3%96"><span class="nav-text">第三、低聚糖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E4%B8%89%E7%B1%BB%E7%B3%96%E5%88%86%E5%88%AB%E4%BB%8E%E5%93%AA%E9%87%8C%E6%9D%A5%EF%BC%9F"><span class="nav-text">这三类糖分别从哪里来？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%EF%BC%8C%E7%A7%91%E5%AD%A6%E6%8E%A7%E7%B3%96%E6%80%8E%E6%A0%B7%E5%81%9A%EF%BC%9F"><span class="nav-text">那么，科学控糖怎样做？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%9C%E6%AE%8B%E8%BE%83%E5%B0%91%E7%9A%84%E8%94%AC%E8%8F%9C"><span class="nav-text">农残较少的蔬菜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6"><span class="nav-text">食品安全事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%B3%E5%88%B6%E5%93%81%E8%A1%8C%E4%B8%9A"><span class="nav-text">乳制品行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E6%B7%BB%E5%8A%A0%E5%89%82-1"><span class="nav-text">食品添加剂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%AE%E6%B2%B9%E5%8F%8A%E8%B0%83%E5%91%B3%E5%93%81"><span class="nav-text">粮油及调味品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%82%89%E5%88%B6%E5%93%81%E8%A1%8C%E4%B8%9A"><span class="nav-text">肉制品行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E4%BA%A7%E5%93%81%E8%A1%8C%E4%B8%9A"><span class="nav-text">水产品行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%AE%E9%A3%9F%E4%B8%8E%E8%94%AC%E6%9E%9C"><span class="nav-text">粮食与蔬果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A5%AE%E6%96%99%E8%A1%8C%E4%B8%9A"><span class="nav-text">饮料行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%98%E7%84%99%E5%8F%8A%E9%9B%B6%E9%A3%9F%E8%A1%8C%E4%B8%9A"><span class="nav-text">烘焙及零食行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6"><span class="nav-text">其他相关事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8D%AF%E5%93%81%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6"><span class="nav-text">药品安全事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E5%92%8C%E8%B4%A8%E9%87%8F%E9%97%AE%E9%A2%98"><span class="nav-text">生产和质量问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%AF%E5%93%81%E6%88%90%E5%88%86%E4%B8%8E%E6%B7%BB%E5%8A%A0%E5%89%82%E9%97%AE%E9%A2%98"><span class="nav-text">药品成分与添加剂问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%AF%E5%93%81%E6%B5%81%E9%80%9A%E4%B8%8E%E9%94%80%E5%94%AE%E9%97%AE%E9%A2%98"><span class="nav-text">药品流通与销售问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%AF%E7%89%A9%E4%B8%8D%E8%89%AF%E5%8F%8D%E5%BA%94%E4%B8%8E%E8%8D%AF%E5%AE%B3%E4%BA%8B%E4%BB%B6"><span class="nav-text">药物不良反应与药害事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BB%E7%96%97%E5%99%A8%E6%A2%B0%E9%97%AE%E9%A2%98"><span class="nav-text">医疗器械问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E7%AE%A1%E4%B8%8E%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98"><span class="nav-text">监管与法律问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E8%8D%AF%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="nav-text">中药相关问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="nav-text">其他相关问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%B4%E7%99%8C%E7%89%A9%E8%B4%A8"><span class="nav-text">致癌物质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC1%E7%B1%BB%E8%87%B4%E7%99%8C%E7%89%A9%EF%BC%88%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%98%8E%E7%A1%AE%E8%87%B4%E7%99%8C%EF%BC%89"><span class="nav-text">第1类致癌物（对人类明确致癌）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E7%9B%B8%E5%85%B3%E9%83%A8%E5%88%86%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-text">食品相关部分（重点）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC2A%E7%B1%BB%E8%87%B4%E7%99%8C%E7%89%A9%EF%BC%88%E5%8F%AF%E8%83%BD%E5%AF%B9%E4%BA%BA%E7%B1%BB%E8%87%B4%E7%99%8C%EF%BC%89"><span class="nav-text">第2A类致癌物（可能对人类致癌）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E7%9B%B8%E5%85%B3%E9%83%A8%E5%88%86%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89-1"><span class="nav-text">食品相关部分（重点）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC2B%E7%B1%BB%E8%87%B4%E7%99%8C%E7%89%A9%EF%BC%88%E5%AF%B9%E4%BA%BA%E7%B1%BB%E5%8F%AF%E8%83%BD%E8%87%B4%E7%99%8C%EF%BC%89"><span class="nav-text">第2B类致癌物（对人类可能致癌）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%9F%E5%93%81%E7%9B%B8%E5%85%B3%E9%83%A8%E5%88%86%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89-2"><span class="nav-text">食品相关部分（重点）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC3%E7%B1%BB%E8%87%B4%E7%99%8C%E7%89%A9%EF%BC%88%E5%AF%B9%E4%BA%BA%E7%B1%BB%E8%87%B4%E7%99%8C%E6%80%A7%E5%B0%9A%E4%B8%8D%E6%98%8E%E7%A1%AE%EF%BC%89"><span class="nav-text">第3类致癌物（对人类致癌性尚不明确）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E8%87%B4%E7%99%8C%E7%89%A9%E8%B4%A8"><span class="nav-text">需要注意的致癌物质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%87%8F%E5%B0%91%E8%87%B4%E7%99%8C%E9%A3%8E%E9%99%A9"><span class="nav-text">如何减少致癌风险</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E9%87%91%E5%B1%9E%E4%B8%AD%E6%AF%92"><span class="nav-text">重金属中毒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E8%87%AA%E6%9D%A5%E6%B0%B4%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%8F%AF%E7%94%A8-%E2%89%A0-%E5%8F%AF%E9%A5%AE"><span class="nav-text">中国自来水的问题：可用 ≠ 可饮</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%97%A5%E9%A5%AE%E6%B0%B4%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%BF%E5%91%BD%E5%AF%B9%E6%AF%94"><span class="nav-text">中日饮水安全与寿命对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E5%AF%B9%E5%BB%BA%E8%AE%AE%EF%BC%9A%E5%9C%A8%E4%B8%8D%E7%90%86%E6%83%B3%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BF%9D%E6%8A%A4%E8%87%AA%E5%B7%B1"><span class="nav-text">应对建议：在不理想环境中保护自己</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%B6%E5%BA%AD%E5%87%80%E6%B0%B4%E7%BB%84%E5%90%88%E5%BB%BA%E8%AE%AE"><span class="nav-text">家庭净水组合建议</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F"><span class="nav-text">空气质量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E9%97%AE%E9%A2%98%E7%9A%84%E7%8E%B0%E7%8A%B6"><span class="nav-text">空气质量问题的现状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%B1%A1%E6%9F%93%E7%89%A9"><span class="nav-text">主要污染物</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%BE%E9%9C%BE%E7%9A%84%E6%88%90%E5%9B%A0"><span class="nav-text">雾霾的成因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E5%B7%AE%E7%9A%84%E5%81%A5%E5%BA%B7%E5%BD%B1%E5%93%8D"><span class="nav-text">空气质量差的健康影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%BE%E9%9C%BE%E7%A9%B6%E7%AB%9F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%B8%BA%E4%BD%95%E8%BF%99%E4%B9%88%E5%8F%AF%E6%80%95%EF%BC%9F"><span class="nav-text">雾霾究竟是什么？为何这么可怕？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A3%E7%BD%A9%E9%98%B2%E6%8A%A4%E6%A0%87%E5%87%86%EF%BC%9A%E9%98%B2%E7%97%85%E6%AF%92-%E2%89%A0-%E9%98%B2%E6%B1%A1%E6%9F%93"><span class="nav-text">口罩防护标准：防病毒 ≠ 防污染</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2025</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Allen Shaw</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 38 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">Github 驱动</span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+            
+                
+        
+                
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+		<li class="right-bottom-tools rss flex justify-center items-center">
+			<a class="flex justify-center items-center" href="/atom.xml" target="_blank">
+				<i class="fa-regular fa-rss"></i>
+			</a>
+		</li>
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="站内搜索您需要的内容..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+    
+<script src="/js/build/libs/minimasonry.min.js"></script>
+
+    
+<script src="/js/build/plugins/masonry.js" type="module"></script>
+
+
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+    
+<script src="/js/build/libs/pangu.min.js"></script>
+
+<script src="/js/build/plugins/pangu.js"></script>
+
+
+
+
+	
+	<div id="aplayer"></div>
+
+<script src="/js/build/libs/APlayer.min.js"></script>
+
+
+<script src="/js/build/plugins/aplayer.js"></script>
+
+
+	
+</body>
+
+</html>
